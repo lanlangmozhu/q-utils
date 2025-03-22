@@ -1,0 +1,112 @@
+{
+  "name": "q-utils",
+  "version": "1.0.0",
+  "description": "前端实用工具函数库，提供字符串、数组、对象、日期等操作函数",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./string": {
+      "import": "./dist/string/index.esm.js",
+      "require": "./dist/string/index.js",
+      "types": "./dist/string/index.d.ts"
+    },
+    "./array": {
+      "import": "./dist/array/index.esm.js",
+      "require": "./dist/array/index.js",
+      "types": "./dist/array/index.d.ts"
+    },
+    "./object": {
+      "import": "./dist/object/index.esm.js",
+      "require": "./dist/object/index.js",
+      "types": "./dist/object/index.d.ts"
+    },
+    "./number": {
+      "import": "./dist/number/index.esm.js",
+      "require": "./dist/number/index.js",
+      "types": "./dist/number/index.d.ts"
+    },
+    "./date": {
+      "import": "./dist/date/index.esm.js",
+      "require": "./dist/date/index.js",
+      "types": "./dist/date/index.d.ts"
+    },
+    "./function": {
+      "import": "./dist/function/index.esm.js",
+      "require": "./dist/function/index.js",
+      "types": "./dist/function/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags",
+    "docs": "typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/q-utils.git"
+  },
+  "keywords": [
+    "utils",
+    "javascript",
+    "typescript",
+    "string",
+    "number",
+    "date",
+    "array",
+    "object",
+    "function",
+    "frontend",
+    "browser",
+    "tools",
+    "utility"
+  ],
+  "author": "Q Utils Team <your-email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/q-utils/issues"
+  },
+  "homepage": "https://github.com/your-username/q-utils#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.2.5",
+    "rollup": "^4.12.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-jest": "^29.2.6",
+    "tslib": "^2.6.2",
+    "typedoc": "^0.25.12",
+    "typescript": "^5.8.2"
+  }
+}

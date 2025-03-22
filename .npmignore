@@ -1,0 +1,44 @@
+# 源文件目录
+src/
+
+# 测试文件
+test/
+*.test.ts
+*.spec.ts
+jest.config.js
+
+# 构建配置
+tsconfig.json
+rollup.config.mjs
+.eslintrc.js
+.prettierrc
+
+# 编辑器配置
+.vscode/
+.idea/
+.editorconfig
+
+# 临时文件
+coverage/
+.nyc_output/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# 开发工具和环境
+node_modules/
+.github/
+.husky/
+.circleci/
+
+# 配置和示例文件
+*.tgz
+.gitignore
+.npmrc
+renovate.json 
+BUILD_CHANGELOG.md
+
+# ai 配置
+.cursorrules

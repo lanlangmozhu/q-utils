@@ -1,0 +1,1 @@
+{"version":3,"file":"getFileSize.d.ts","sourceRoot":"","sources":["../../../src/file/getFileSize.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GAkCG;AACH,wBAAgB,WAAW,CACzB,IAAI,EAAE,IAAI,EACV,OAAO,GAAE;IACP,SAAS,CAAC,EAAE,OAAO,CAAC;IACpB,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,MAAM,CAAC,EAAE,MAAM,GAAG,MAAM,EAAE,CAAC;CACvB,GACL,MAAM,GAAG,MAAM,CA2CjB"}

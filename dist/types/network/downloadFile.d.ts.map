@@ -1,0 +1,1 @@
+{"version":3,"file":"downloadFile.d.ts","sourceRoot":"","sources":["../../../src/network/downloadFile.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;GA4BG;AACH,wBAAsB,YAAY,CAChC,GAAG,EAAE,MAAM,EACX,OAAO,GAAE;IACP,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,aAAa,CAAC,EAAE,OAAO,CAAC;IACxB,OAAO,CAAC,EAAE,MAAM,CAAC,MAAM,EAAE,MAAM,CAAC,CAAC;CAC7B,GACL,OAAO,CAAC,IAAI,CAAC,CAqFf"}
