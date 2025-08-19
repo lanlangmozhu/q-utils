@@ -1,102 +1,200 @@
-# Q-Utils 重构说明
+# Q-Utils 重构记录
 
 ## 重构概述
 
-在这次重构中，我们对 Q-Utils 工具函数库的结构进行了优化，主要目的是提高代码的组织性和可维护性。我们将原来集中在 `utils` 目录下的功能按照其功能类别分散到各个专门的目录中，使得每个目录专注于一个特定的功能领域。
+本项目进行了重大重构，将测试代码和模块文档迁移到源代码目录内，实现了更好的模块化组织结构。
 
-## 重构详情
+## 重构内容
 
-### 代码组织变更
+### 1. 测试代码迁移
 
-1. **剪贴板相关操作**：从 `utils` 移动到 `dom` 目录
-   - `copyToClipboard.ts` 移动到 `src/dom/copyToClipboard.ts`
-
-2. **浏览器和设备检测**：创建专门的 `browser` 目录
-   - `browser.ts` 移动到 `src/browser/browser.ts`
-   - `device.ts` 移动到 `src/browser/device.ts`
-
-3. **存储管理功能**：创建专门的 `storage` 目录
-   - `localStorage.ts` 移动到 `src/storage/localStorage.ts`
-   - `sessionStorage.ts` 移动到 `src/storage/sessionStorage.ts`
-   - `cookie.ts` 移动到 `src/storage/cookie.ts`
-
-4. **UUID生成功能**：移动到字符串操作目录
-   - `uuid.ts` 移动到 `src/string/uuid.ts`
-
-5. **URL操作功能**：移动到网络操作目录
-   - `url.ts` 移动到 `src/network/url.ts`
-
-6. **类型检测功能**：保留在 `utils` 目录中
-   - `type.ts` 保留在 `src/utils/type.ts`
-
-### 命名冲突解决
-
-由于各个模块间存在同名函数，为了避免命名冲突，我们采取了命名空间策略：
-
-1. 在主入口文件 `index.ts` 中，我们使用命名空间方式导出所有模块：
-   ```typescript
-   // 导入并创建命名空间
-   import * as functionUtils from './function';
-   import * as domUtils from './dom';
-   
-   export const func = functionUtils;
-   export const dom = domUtils;
-   ```
-
-2. 用户可以通过命名空间明确访问不同模块中的同名函数：
-   ```typescript
-   import { func, dom } from 'q-utils';
-   
-   // 使用函数模块中的 once
-   const initOnce = func.once(() => console.log('只执行一次'));
-   
-   // 使用DOM模块中的 once
-   dom.once(button, 'click', handleClick);
-   ```
-
-3. 我们**不再**直接导出所有函数（这会导致命名冲突），只使用命名空间方式导出，这样既避免了冲突，又使API更加清晰：
-   ```typescript
-   // 原来的做法（放弃了）
-   // export * from './function';
-   // export * from './dom';
-   
-   // 现在只使用命名空间导出
-   export const func = functionUtils;
-   export const dom = domUtils;
-   ```
-
-## 导入方式变更
-
-用户现在可以使用以下方式导入功能：
-
-```typescript
-// 导入整个库
-import * as qUtils from 'q-utils';
-qUtils.string.capitalize('hello'); // 'Hello'
-
-// 使用命名空间方式访问（推荐）
-import { func, dom, string } from 'q-utils';
-const initOnce = func.once(() => console.log('只执行一次'));
-dom.once(button, 'click', handleClick);
-string.trim(' hello ');
-
-// 按功能类别直接导入（需从特定模块路径导入）
-import { trim, capitalize } from 'q-utils/string';
-import { request, fetchWithTimeout } from 'q-utils/network';
-import { isMobile, isTablet } from 'q-utils/browser';
+**迁移前结构：**
+```
+test/
+├── array/
+│   ├── basic.test.ts
+│   ├── compare.test.ts
+│   └── ...
+├── string/
+│   ├── basic.test.ts
+│   ├── compare.test.ts
+│   └── ...
+└── ...
 ```
 
-## 好处
+**迁移后结构：**
+```
+src/
+├── array/
+│   ├── __tests__/
+│   │   ├── basic.test.ts
+│   │   ├── compare.test.ts
+│   │   └── ...
+│   ├── README.md
+│   └── *.ts
+├── string/
+│   ├── __tests__/
+│   │   ├── basic.test.ts
+│   │   ├── compare.test.ts
+│   │   └── ...
+│   ├── README.md
+│   └── *.ts
+└── ...
+```
 
-1. **更好的代码组织**：每个目录专注于单一功能领域，使代码更易于浏览和理解
-2. **更清晰的职责划分**：明确每个模块的功能边界
-3. **更方便的按需导入**：用户可以只导入所需的功能模块，减少不必要的代码引入
-4. **避免命名冲突**：通过命名空间方式提供明确的访问路径，避免函数名冲突
-5. **更好的可维护性**：功能分散化后，修改某一功能不会影响到其他不相关的功能
-6. **简洁的 API**：相比之前的方案，API 更加简洁直观
+### 2. 模块文档迁移
 
-## 后续工作
+**迁移前结构：**
+```
+docs/
+├── array.md
+├── string.md
+├── number.md
+└── ...
+```
 
-1. 为每个新的目录更新和补充单元测试
-2. 优化文档，更新API参考
-3. 考虑将未来功能按照相同的模式组织和分类 
+**迁移后结构：**
+```
+src/
+├── array/
+│   ├── README.md          # 原 docs/array.md
+│   └── ...
+├── string/
+│   ├── README.md          # 原 docs/string.md
+│   └── ...
+└── ...
+```
+
+### 3. Jest 配置更新
+
+**更新前配置：**
+```javascript
+// 扫描所有 test/ 目录下的测试文件
+testMatch: [
+  '<rootDir>/test/**/*.test.ts'
+]
+```
+
+**更新后配置：**
+```javascript
+// 只扫描 src/**/__tests__/ 目录下的测试文件
+testMatch: [
+  '<rootDir>/src/**/__tests__/*.test.ts'
+]
+```
+
+### 4. 导入路径更新
+
+**更新前：**
+```typescript
+import { ... } from '../../src/array/basic';
+```
+
+**更新后：**
+```typescript
+import { ... } from '@/array/basic';
+```
+
+## 重构优势
+
+### 1. 就近原则
+- 每个模块的测试和文档都放在对应的源代码目录下
+- 修改代码时，相关的测试和文档就在同一目录
+
+### 2. 易于维护
+- 模块内部的文件组织更加清晰
+- 新增功能时，测试和文档就在同一目录
+
+### 3. 清晰结构
+- 每个模块都是完整的、自包含的功能单元
+- 项目结构更加直观易懂
+
+### 4. 便于扩展
+- 新增模块时，只需在对应目录下创建相关文件
+- 模块间的依赖关系更加清晰
+
+## 重构过程
+
+### 1. 创建目录结构
+```bash
+mkdir -p src/*/__tests__
+```
+
+### 2. 移动测试文件
+```bash
+mv test/*/*.test.ts src/*/__tests__/
+```
+
+### 3. 移动模块文档
+```bash
+mv docs/*.md src/*/README.md
+```
+
+### 4. 更新导入路径
+```bash
+# 批量替换导入路径
+find src -name "*.test.ts" -exec sed -i '' 's#../../src/#@/#g' {} \;
+```
+
+### 5. 更新 Jest 配置
+- 修改 `testMatch` 配置
+- 移除对不存在文件的引用
+
+### 6. 更新文档
+- 更新 `README.md` 项目结构说明
+- 更新 `docs/index.md` 项目结构说明
+- 更新 `docs/SUMMARY.md` 项目结构说明
+- 更新 `docs/USAGE.md` 项目结构说明
+
+## 重构结果
+
+### 1. 测试验证
+- 所有 28 个测试套件均通过
+- 总共 314 个测试用例全部通过
+- Jest 配置正确限制测试扫描范围
+
+### 2. 文件组织
+- 测试文件：28 个测试文件分布在 10 个模块的 `__tests__` 目录下
+- 模块文档：20 个模块都有对应的 `README.md` 文档
+- 源代码：保持原有的模块化结构不变
+
+### 3. 构建验证
+- 项目构建不受影响
+- 类型定义生成正常
+- 包发布流程保持不变
+
+## 注意事项
+
+### 1. 导入路径
+- 测试文件中的导入路径已从 `../../src/` 更新为 `@/`
+- Jest 配置中的 `moduleNameMapper` 确保别名解析正确
+
+### 2. 文档维护
+- 模块级文档现在位于 `src/<module>/README.md`
+- 项目级文档仍位于 `docs/` 目录
+- 更新代码时需同步更新对应的模块文档
+
+### 3. 测试维护
+- 新增功能时，测试文件应放在对应模块的 `__tests__` 目录下
+- 测试文件命名规范：`<function>.test.ts`
+
+## 未来改进
+
+### 1. 自动化工具
+- 开发脚本自动创建新模块的目录结构
+- 自动生成模块文档模板
+- 自动生成测试文件模板
+
+### 2. 文档生成
+- 集成 TypeDoc 自动生成 API 文档
+- 自动更新模块文档中的函数列表
+- 自动生成使用示例
+
+### 3. 测试覆盖
+- 为所有模块添加完整的测试覆盖
+- 集成测试覆盖率报告
+- 自动化测试流程
+
+## 总结
+
+本次重构成功实现了测试代码和模块文档的模块化组织，提高了项目的可维护性和可扩展性。重构后的项目结构更加清晰，开发体验更加友好，为后续的功能扩展和维护奠定了良好的基础。 

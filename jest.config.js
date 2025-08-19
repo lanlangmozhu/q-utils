@@ -10,7 +10,9 @@ module.exports = {
       tsconfig: 'tsconfig.json'
     }]
   },
-  setupFiles: ['<rootDir>/test/setup.js'],
+  testMatch: [
+    '<rootDir>/src/**/__tests__/*.test.ts'
+  ],
   globals: {
     'ts-jest': {
       tsconfig: 'tsconfig.json'
