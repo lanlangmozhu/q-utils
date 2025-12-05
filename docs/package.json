@@ -1,0 +1,22 @@
+{
+  "name": "q-utils-docs",
+  "version": "1.0.0",
+  "description": "Q-Utils 文档网站",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "generate-api": "typedoc",
+    "generate-pages": "node scripts/generate-api-pages.mjs",
+    "api": "pnpm run generate-api && pnpm run generate-pages"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.11.1",
+    "typedoc": "^0.28.15",
+    "typedoc-plugin-markdown": "4.9.0",
+    "typescript": "^5.4.0",
+    "vitepress": "1.6.4"
+  }
+}

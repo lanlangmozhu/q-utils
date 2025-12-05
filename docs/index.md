@@ -25,7 +25,6 @@ features:
     details: 提供丰富的工具函数，覆盖日常开发中的各种场景，无需重复造轮子
   - icon: 📦
     title: 按需导入
-    title: 按需导入
     details: 支持命名空间导入和按需导入，支持 Tree Shaking，减小打包体积
   - icon: 🔒
     title: 类型安全

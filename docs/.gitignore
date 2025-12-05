@@ -1,0 +1,22 @@
+# VitePress 构建产物
+.vitepress/dist
+.vitepress/cache
+
+# TypeDoc 生成的原始 API 文档（已转换到新格式）
+api/q-utils/
+[object Object]/
+
+# 依赖
+node_modules/
+
+# 日志
+*.log
+
+# 系统文件
+.DS_Store
+
+# 备份文件
+*.bak
+*.old
+*.tmp
+
