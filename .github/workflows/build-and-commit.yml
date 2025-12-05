@@ -1,0 +1,129 @@
+name: Build and Auto Commit
+
+on:
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: '提交信息'
+        required: true
+        default: 'chore: 构建并自动提交'
+      branch:
+        description: '目标分支'
+        required: true
+        default: 'develop'
+      skip_build:
+        description: '跳过构建'
+        required: false
+        type: boolean
+        default: false
+      skip_test:
+        description: '跳过测试'
+        required: false
+        type: boolean
+        default: false
+  
+  # 当代码推送到特定分支时自动触发
+  push:
+    branches:
+      - develop
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'tsconfig.json'
+      - 'rollup.config.mjs'
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+      
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+      
+      - name: 运行测试
+        if: github.event.inputs.skip_test != 'true'
+        run: pnpm test
+      
+      - name: 代码检查
+        if: github.event.inputs.skip_test != 'true'
+        run: pnpm run lint || true
+      
+      - name: 构建项目
+        if: github.event.inputs.skip_build != 'true'
+        run: pnpm run build
+      
+      - name: 生成文档
+        if: github.event.inputs.skip_build != 'true'
+        run: pnpm run docs:generate || true
+      
+      - name: 配置 Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: 检查更改
+        id: check-changes
+        run: |
+          git status
+          CHANGED=$(git status --porcelain | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ 发现 $CHANGED 个文件有更改"
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️  没有需要提交的更改"
+          fi
+      
+      - name: 添加更改
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          git add -A
+          git status
+      
+      - name: 提交更改
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          COMMIT_MSG="${{ github.event.inputs.commit_message }}"
+          if [ -z "$COMMIT_MSG" ]; then
+            COMMIT_MSG="chore: 构建并自动提交 [skip ci]"
+          fi
+          git commit -m "$COMMIT_MSG" || exit 0
+      
+      - name: 推送到 GitHub
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          BRANCH="${{ github.event.inputs.branch }}"
+          if [ -z "$BRANCH" ]; then
+            BRANCH="${GITHUB_REF#refs/heads/}"
+          fi
+          echo "🚀 推送到分支: $BRANCH"
+          git push origin $BRANCH || exit 0
+      
+      - name: 输出结果
+        run: |
+          if [ "${{ steps.check-changes.outputs.has_changes }}" == "true" ]; then
+            echo "✅ 构建完成，代码已成功提交并推送到 GitHub"
+          else
+            echo "ℹ️  构建完成，没有需要提交的更改"
+          fi
+

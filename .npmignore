@@ -42,3 +42,21 @@ BUILD_CHANGELOG.md
 
 # ai 配置
 .cursorrules
+.cursor/
+
+# 文档和示例
+docs/
+examples/
+CHANGELOG.md
+CONTRIBUTING.md
+PROJECT_UPDATES.md
+PUBLISHING.md
+TODO.md
+
+# 依赖管理
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# 文档生成工具配置
+typedoc.json
