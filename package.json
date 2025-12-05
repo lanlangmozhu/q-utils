@@ -55,15 +55,20 @@
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm test",
     "preversion": "npm run lint",
     "version": "git add -A",
     "postversion": "git push && git push --tags",
-    "docs": "typedoc"
+    "docs": "typedoc",
+    "docs:generate": "typedoc",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "serve:examples": "node examples/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/q-utils.git"
+    "url": "git+https://github.com/lanlangmozhu/q-utils.git"
   },
   "keywords": [
     "utils",
@@ -80,12 +85,12 @@
     "tools",
     "utility"
   ],
-  "author": "Q Utils Team <your-email@example.com>",
+  "author": "Q Utils Team <lanlangmozhu@163.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/your-username/q-utils/issues"
+    "url": "https://github.com/lanlangmozhu/q-utils/issues"
   },
-  "homepage": "https://github.com/your-username/q-utils#readme",
+  "homepage": "https://github.com/lanlangmozhu/q-utils#readme",
   "engines": {
     "node": ">=12.0.0"
   },
@@ -106,7 +111,9 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "ts-jest": "^29.2.6",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.12",
-    "typescript": "^5.8.2"
+    "typedoc": "^0.28.15",
+    "typedoc-plugin-markdown": "4.9.0",
+    "typescript": "^5.4.0",
+    "vitepress": "1.6.4"
   }
 }

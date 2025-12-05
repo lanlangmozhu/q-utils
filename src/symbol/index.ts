@@ -1,5 +1,6 @@
 /**
  * Symbol 工具函数
+ * @packageDocumentation
  */
 
 /**

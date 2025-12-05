@@ -1,5 +1,6 @@
 /**
  * 布尔值工具函数
+ * @packageDocumentation
  */
 
 /**

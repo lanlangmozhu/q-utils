@@ -1,1 +1,0 @@
-{"version":3,"file":"jsonp.d.ts","sourceRoot":"","sources":["../../../src/network/jsonp.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;;;;GAyBG;AACH,wBAAgB,KAAK,CAAC,CAAC,GAAG,GAAG,EAC3B,GAAG,EAAE,MAAM,EACX,OAAO,GAAE;IACP,aAAa,CAAC,EAAE,MAAM,CAAC;IACvB,YAAY,CAAC,EAAE,MAAM,CAAC;IACtB,OAAO,CAAC,EAAE,MAAM,CAAC;CACb,GACL,OAAO,CAAC,CAAC,CAAC,CA2DZ"}

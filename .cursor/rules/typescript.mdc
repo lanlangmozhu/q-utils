@@ -1,0 +1,62 @@
+---
+description: 
+globs: **/*.ts, **/*.tsx, **/*.d.ts
+alwaysApply: false
+---
+---
+description: TypeScript coding standards and best practices for modern web development
+globs: **/*.ts, **/*.tsx, **/*.d.ts
+---
+
+# TypeScript最佳实践
+
+##类型系统
+在对象定义中，首选接口而不是类型
+—对于联合、交集和映射类型使用type
+-避免使用“any”，使用“unknown”来表示未知类型
+-使用严格的TypeScript配置
+-利用TypeScript内置的实用程序类型
+对可重用的类型模式使用泛型
+
+命名约定
+—类型名称和接口使用PascalCase
+—变量和函数使用camelCase
+-常量使用UPPER_CASE
+-使用带有助动词的描述性名称（例如，isLoading, hasError）
+-用‘ props ’作为React props的前缀接口（例如，ButtonProps）
+
+##代码组织
+保持类型定义靠近使用它们的地方
+—共享时从专用类型文件导出类型和接口
+-使用桶出口（index.ts）来组织出口
+-将共享类型放在“types”目录中
+-将组件道具与其组件一起定位
+
+# #功能
+-对公共函数使用显式返回类型
+-使用箭头函数回调和方法
+-通过自定义错误类型实现正确的错误处理
+—在复杂类型场景下使用函数重载
+-首选async/await而不是Promises
+
+最佳实践
+—在tsconfig.json中开启严格模式
+对不可变属性使用只读
+-利用有区别的联合来保证类型安全
+-使用类型保护进行运行时类型检查
+—正确检查空值
+除非必要，否则避免类型断言
+
+##错误处理
+—为特定于域的错误创建自定义错误类型
+—对于可能失败的操作，使用“结果”类型
+—合理设置错误边界
+-使用try-catch块和输入的catch子句
+-正确处理承诺拒绝
+
+# #模式
+-使用Builder模式创建复杂对象
+—实现数据访问的Repository模式
+-使用工厂模式创建对象
+-利用依赖注入
+—使用Module模式进行封装

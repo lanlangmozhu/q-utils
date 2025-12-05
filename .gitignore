@@ -1,0 +1,65 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Production - 构建产物
+dist
+build
+*.map
+*.tsbuildinfo
+
+# Testing - 测试相关
+coverage
+*.lcov
+
+
+
+# Environment - 环境配置文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.npmrc
+
+# System - 系统文件
+.DS_Store
+**/.DS_Store
+*.pem
+
+# Editor - 编辑器配置
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+
+# Logs - 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temporary - 临时文件和缓存
+.cache/
+.temp/
+*.tmp
+
+# Scripts - 临时脚本
+publish.sh
+*.sh
+
+# TypeDoc 生成的错误目录
+[object Object]/
+
+# Old files - 旧版本文件
+*-old.html
+*-old.*
