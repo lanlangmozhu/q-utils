@@ -44,3 +44,6 @@ docs/api
 docs/.vitepress/dist
 docs/.vitepress/cache
 
+# NPM config (包含敏感 token)
+.npmrc
+

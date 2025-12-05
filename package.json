@@ -55,7 +55,7 @@
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm test",
     "preversion": "npm run lint",
     "version": "git add -A",
     "postversion": "git push && git push --tags",
@@ -111,7 +111,9 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "ts-jest": "^29.2.6",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.12",
-    "typescript": "^5.4.0"
+    "typedoc": "^0.28.15",
+    "typedoc-plugin-markdown": "4.9.0",
+    "typescript": "^5.4.0",
+    "vitepress": "1.6.4"
   }
 }
