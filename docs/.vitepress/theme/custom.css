@@ -1,0 +1,36 @@
+/* 自定义样式 */
+:root {
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #9499ff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #454ce1;
+}
+
+/* 自定义组件样式 */
+.custom-block {
+  border-radius: 8px;
+}
+
+/* API 文档样式优化 */
+.api-docs {
+  margin-top: 2rem;
+}
+
+.api-docs h2 {
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.api-docs h3 {
+  margin-top: 1.5rem;
+}
+
+.api-docs code {
+  background-color: var(--vp-c-bg-soft);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+

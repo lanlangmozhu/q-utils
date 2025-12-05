@@ -5,18 +5,15 @@
 ```typescript
 src/number/
 ├── index.ts       // 导出所有功能
-├── basic.ts       // 基础操作
+├── basic.ts       // 基础操作（包含：基础操作、进制转换、性能优化）
 ├── format.ts      // 格式化
 ├── finance.ts     // 金融计算
 ├── math.ts        // 数学计算
-├── radix.ts       // 进制转换
 ├── random.ts      // 随机数
-├── range.ts       // 范围处理
+├── range.ts       // 范围处理（包含：范围处理、动画计算）
 ├── special.ts     // 特殊处理
 ├── statistics.ts  // 统计分析
 ├── unit.ts        // 单位转换
-├── animation.ts   // 动画计算
-├── performance.ts // 性能优化
 └── analysis.ts    // 数据分析
 ```
 

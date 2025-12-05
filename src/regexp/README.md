@@ -4,7 +4,15 @@
 
 ```
 src/regexp/
-├── index.ts
+├── index.ts       // 导出所有功能
+├── basic.ts       // 基础操作（escapeRegExp, createRegExp, clone）
+├── match.ts       // 匹配相关（match, matchAll, exec, execAll）
+├── replace.ts     // 替换相关（replace, replaceAll）
+├── search.ts      // 搜索相关（search, test, split）
+├── groups.ts      // 捕获组相关（getCaptureGroups, allCaptureGroups等）
+├── flags.ts       // 标志相关（getFlags, hasFlag, addFlag, removeFlag）
+├── utils.ts       // 工具函数（getSource, toString, combine等）
+└── advanced.ts    // 高级功能（allMatchPositions, allMatchRanges等）
 ```
 
 ## 功能描述

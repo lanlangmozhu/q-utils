@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 工具函数文档 - Q-Utils</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f6fa;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    .main-content {
+      flex: 1;
+      min-width: 0;
+      order: 1;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar {
+      width: 240px;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      order: 2;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+    .sidebar-nav {
+      background: transparent;
+      padding: 0;
+    }
+    .sidebar-nav h3 {
+      font-size: 16px;
+      color: #2c3e50;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e1e8ed;
+      font-weight: 600;
+    }
+    .nav-section {
+      margin-bottom: 0;
+    }
+    .nav-section-title {
+      display: none;
+    }
+    .nav-item {
+      display: block;
+      padding: 6px 0;
+      color: #555;
+      text-decoration: none;
+      margin-bottom: 0;
+      transition: color 0.2s;
+      font-size: 14px;
+      line-height: 1.6;
+      border-left: 2px solid transparent;
+      padding-left: 12px;
+    }
+    .nav-item:hover {
+      color: #3498db;
+    }
+    .nav-item.active {
+      color: #3498db;
+      font-weight: 500;
+      border-left-color: #3498db;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .subtitle {
+      color: #7f8c8d;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+    .section-title {
+      font-size: 24px;
+      color: #34495e;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #3498db;
+    }
+    .function-item {
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e1e8ed;
+    }
+    .function-item:last-child {
+      border-bottom: none;
+    }
+    .function-item {
+      scroll-margin-top: 20px;
+    }
+    .function-name {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-weight: 600;
+      position: relative;
+    }
+    .function-name a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .function-name a:hover {
+      color: #3498db;
+    }
+    .function-name a::before {
+      content: '# ';
+      color: #27ae60;
+      font-weight: bold;
+      margin-right: 4px;
+    }
+    .function-name a:hover::before {
+      color: #3498db;
+    }
+    .function-description {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .type-section {
+      margin-bottom: 20px;
+    }
+    .type-label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #7f8c8d;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .code-block {
+      background: #282c34;
+      color: #abb2bf;
+      padding: 20px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .code-block::before {
+      content: 'ts';
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 12px;
+      color: #7f8c8d;
+      font-weight: bold;
+    }
+    .code-block.js::before {
+      content: 'js';
+    }
+    .code-block code {
+      color: inherit;
+      font-family: inherit;
+    }
+    .code-block .keyword {
+      color: #c678dd;
+    }
+    .code-block .function {
+      color: #61afef;
+    }
+    .code-block .type {
+      color: #56b6c2;
+    }
+    .code-block .string {
+      color: #98c379;
+    }
+    .code-block .number {
+      color: #d19a66;
+    }
+    .code-block .comment {
+      color: #5c6370;
+      font-style: italic;
+    }
+    .details-section {
+      margin-bottom: 20px;
+    }
+    .details-label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #7f8c8d;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .details-content {
+      color: #555;
+      line-height: 1.8;
+    }
+    .details-content ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .details-content li {
+      margin-bottom: 8px;
+    }
+    .example-section {
+      margin-bottom: 20px;
+    }
+    .example-label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #7f8c8d;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .example-text {
+      color: #555;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .param-list {
+      list-style: none;
+      margin-left: 0;
+    }
+    .param-list li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .param-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #3498db;
+      font-weight: bold;
+    }
+    .param-name {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    .param-type {
+      color: #e74c3c;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+    }
+    .param-desc {
+      color: #555;
+      margin-top: 4px;
+    }
+    .returns {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #e1e8ed;
+    }
+    .returns-label {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    .returns-type {
+      color: #e74c3c;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+    }
+    .returns-desc {
+      color: #555;
+      margin-top: 4px;
+    }
+    .test-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e1e8ed;
+    }
+    .test-label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #7f8c8d;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .test-controls {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+      margin-bottom: 15px;
+      align-items: flex-start;
+    }
+    .test-controls-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: flex-start;
+      flex: 1;
+      min-width: 0;
+    }
+    .test-controls-wrapper:not(:has(textarea)) {
+      align-items: center;
+    }
+    .test-controls input[type="text"],
+    .test-controls input[type="number"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: 'Courier New', monospace;
+      width: 100%;
+      height: 42px;
+      box-sizing: border-box;
+    }
+    .test-controls textarea {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: 'Courier New', monospace;
+      min-height: 60px;
+      width: 100%;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    .test-controls button {
+      padding: 10px 20px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+      white-space: nowrap;
+      height: 42px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .test-controls:not(:has(textarea)) button {
+      align-self: center;
+    }
+    .test-controls:has(textarea) button {
+      align-self: flex-start;
+    }
+    .test-controls button:hover {
+      background: #2980b9;
+    }
+    .test-result {
+      margin-top: 15px;
+      padding: 15px;
+      background: #f8f9fa;
+      border: 1px solid #e1e8ed;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-height: 300px;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+    .test-result.success {
+      border-color: #27ae60;
+      background: #f1f8f4;
+      color: #2c3e50;
+    }
+    .test-result.error {
+      border-color: #e74c3c;
+      background: #ffebee;
+      color: #c0392b;
+    }
+    .test-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      min-width: 0;
+    }
+    .test-input-group label {
+      font-size: 12px;
+      color: #7f8c8d;
+      font-weight: 500;
+    }
+    @media (max-width: 1024px) {
+      body {
+        flex-direction: column;
+      }
+      .main-content {
+        order: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <h1>Array 工具函数</h1>
+      <p class="subtitle">数组操作相关的所有工具函数文档</p>
+
+  <!-- 基础操作 -->
+    <div class="section">
+      <h2 class="section-title">基础操作</h2>
+    
+      <!-- isEmpty -->
+    <div class="function-item" id="isEmpty">
+        <div class="function-name"><a href="#isEmpty">isEmpty()</a></div>
+        <div class="function-description">判断数组是否为空</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">isEmpty</span>&lt;T&gt;(<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>): <span class="type">boolean</span>
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要检查的数组</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">boolean</div>
+              <div class="returns-desc">如果数组为空或不是数组，返回 true；否则返回 false</div>
+      </div>
+          </div>
+    </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">可以直接检查数组是否为空:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">isEmpty</span>([])<br>
+              <span class="comment">// 返回 true</span><br><br>
+              <span class="function">isEmpty</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])<br>
+              <span class="comment">// 返回 false</span>
+            </code>
+      </div>
+    </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="isEmpty-input" placeholder="例如: [1,2,3]" value="[1,2,3]">
+      </div>
+            </div>
+            <button onclick="testIsEmpty()">运行测试</button>
+          </div>
+          <div id="isEmpty-result" class="test-result"></div>
+        </div>
+    </div>
+
+      <!-- first -->
+    <div class="function-item" id="first">
+        <div class="function-name"><a href="#first">first()</a></div>
+        <div class="function-description">获取数组第一个元素</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">first</span>&lt;T&gt;(<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>): T | <span class="keyword">undefined</span>
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">源数组</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T | undefined</div>
+              <div class="returns-desc">返回数组的第一个元素，如果数组为空或不是数组，返回 undefined</div>
+      </div>
+          </div>
+    </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">获取数组的第一个元素:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">first</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])<br>
+              <span class="comment">// 返回 1</span>
+            </code>
+      </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="first-input" placeholder="例如: [1,2,3,4,5]" value="[1,2,3,4,5]">
+              </div>
+            </div>
+            <button onclick="testFirst()">运行测试</button>
+          </div>
+          <div id="first-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- last -->
+    <div class="function-item" id="last">
+        <div class="function-name"><a href="#last">last()</a></div>
+        <div class="function-description">获取数组最后一个元素</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">last</span>&lt;T&gt;(<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>): T | <span class="keyword">undefined</span>
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">源数组</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T | undefined</div>
+              <div class="returns-desc">返回数组的最后一个元素，如果数组为空或不是数组，返回 undefined</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">获取数组的最后一个元素:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">last</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])<br>
+              <span class="comment">// 返回 3</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="last-input" placeholder="例如: [1,2,3,4,5]" value="[1,2,3,4,5]">
+              </div>
+            </div>
+            <button onclick="testLast()">运行测试</button>
+          </div>
+          <div id="last-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- chunk -->
+      <div class="function-item" id="chunk">
+        <div class="function-name"><a href="#chunk">chunk()</a></div>
+        <div class="function-description">将数组分割成指定大小的块</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">chunk</span>&lt;T&gt;(<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>, <span class="function">size</span>: <span class="type">number</span>): T[][]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要分割的数组</div>
+              </li>
+              <li>
+                <span class="param-name">size</span> - <span class="param-type">number</span>
+                <div class="param-desc">每个块的大小</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[][]</div>
+              <div class="returns-desc">返回分割后的数组块，每个块包含最多 size 个元素</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">将数组分割成指定大小的块:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">chunk</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="number">2</span>)<br>
+              <span class="comment">// 返回 [[1, 2], [3, 4], [5]]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="chunk-arr" placeholder="例如: [1,2,3,4,5,6,7,8]" value="[1,2,3,4,5,6,7,8]">
+              </div>
+              <div class="test-input-group">
+                <label>块大小</label>
+                <input type="number" id="chunk-size" placeholder="例如: 3" value="3">
+              </div>
+            </div>
+            <button onclick="testChunk()">运行测试</button>
+          </div>
+          <div id="chunk-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- flatten -->
+      <div class="function-item" id="flatten">
+        <div class="function-name"><a href="#flatten">flatten()</a></div>
+        <div class="function-description">将多维数组扁平化为一维数组</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">flatten</span>&lt;T&gt;(<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>, <span class="function">depth</span>?: <span class="type">number</span>): T[]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要扁平化的数组</div>
+              </li>
+              <li>
+                <span class="param-name">depth</span> - <span class="param-type">number</span> (可选)
+                <div class="param-desc">扁平化的深度，默认为 Infinity</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回扁平化后的数组</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">扁平化嵌套数组:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">flatten</span>([<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, [<span class="number">5</span>, <span class="number">6</span>]]])<br>
+              <span class="comment">// 返回 [1, 2, 3, 4, 5, 6]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper" style="width: 100%;">
+              <div class="test-input-group" style="width: 100%;">
+                <label>输入嵌套数组 (JSON 格式)</label>
+                <textarea id="flatten-input" placeholder="例如: [1,[2,[3,4]],5]">[1,[2,[3,4]],5]</textarea>
+              </div>
+            </div>
+            <button onclick="testFlatten()">运行测试</button>
+          </div>
+          <div id="flatten-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- unique -->
+      <div class="function-item" id="unique">
+        <div class="function-name"><a href="#unique">unique()</a></div>
+        <div class="function-description">数组去重</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">unique</span>&lt;T&gt;(<span class="function">arr</span>: T[]): T[]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[]</span>
+                <div class="param-desc">要去重的数组</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回去重后的数组</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">去除数组中的重复元素:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">unique</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>])<br>
+              <span class="comment">// 返回 [1, 2, 3]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="unique-input" placeholder="例如: [1,2,2,3,3,4]" value="[1,2,2,3,3,4]">
+              </div>
+            </div>
+            <button onclick="testUnique()">运行测试</button>
+          </div>
+          <div id="unique-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- uniqueBy -->
+      <div class="function-item" id="uniqueBy">
+        <div class="function-name"><a href="#uniqueBy">uniqueBy()</a></div>
+        <div class="function-description">根据指定条件去重</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">uniqueBy</span>&lt;T, K <span class="keyword">extends</span> <span class="type">keyof</span> T | <span class="type">string</span>&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr</span>: T[],<br>
+              &nbsp;&nbsp;<span class="function">keyOrFn</span>: K | ((<span class="function">a</span>: T, <span class="function">b</span>: T) =&gt; <span class="type">boolean</span>)<br>
+              ): T[]
+            </code>
+      </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[]</span>
+                <div class="param-desc">要去重的数组</div>
+              </li>
+              <li>
+                <span class="param-name">keyOrFn</span> - <span class="param-type">K | ((a: T, b: T) => boolean)</span>
+                <div class="param-desc">去重的键或比较函数</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回去重后的数组</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">根据对象的某个属性去重:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">uniqueBy</span>([<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">1</span>, <span class="string">value</span>: <span class="number">1</span> },<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">2</span>, <span class="string">value</span>: <span class="number">1</span> },<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">3</span>, <span class="string">value</span>: <span class="number">2</span> }<br>
+              ], <span class="string">'value'</span>)<br>
+              <span class="comment">// 返回 [{ id: 1, value: 1 }, { id: 3, value: 2 }]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper" style="width: 100%;">
+              <div class="test-input-group" style="width: 100%;">
+                <label>输入对象数组 (JSON 格式)</label>
+                <textarea id="uniqueBy-input" placeholder='例如: [{"id":1,"name":"a"},{"id":1,"name":"b"},{"id":2,"name":"c"}]'>[{"id":1,"name":"a"},{"id":1,"name":"b"},{"id":2,"name":"c"}]</textarea>
+              </div>
+              <div class="test-input-group">
+                <label>键名</label>
+                <input type="text" id="uniqueBy-key" placeholder="例如: id" value="id">
+              </div>
+            </div>
+            <button onclick="testUniqueBy()">运行测试</button>
+          </div>
+          <div id="uniqueBy-result" class="test-result"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 数组比较 -->
+    <div class="section">
+      <h2 class="section-title">数组比较</h2>
+    
+      <!-- difference -->
+      <div class="function-item" id="difference">
+        <div class="function-name"><a href="#difference">difference()</a></div>
+        <div class="function-description">计算数组差集</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">difference</span>&lt;T&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr1</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">arr2</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">compareFn</span>?: (<span class="function">a</span>: T, <span class="function">b</span>: T) =&gt; <span class="type">boolean</span><br>
+              ): T[]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr1</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">第一个数组</div>
+              </li>
+              <li>
+                <span class="param-name">arr2</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">第二个数组</div>
+              </li>
+              <li>
+                <span class="param-name">compareFn</span> - <span class="param-type">(a: T, b: T) => boolean</span> (可选)
+                <div class="param-desc">可选的比较函数</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回在 arr1 中但不在 arr2 中的元素数组</div>
+      </div>
+          </div>
+    </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">计算两个数组的差集:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">difference</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])<br>
+              <span class="comment">// 返回 [1]</span>
+            </code>
+      </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>数组1 (JSON 格式)</label>
+                <input type="text" id="difference-arr1" placeholder="例如: [1,2,3,4]" value="[1,2,3,4]">
+              </div>
+              <div class="test-input-group">
+                <label>数组2 (JSON 格式)</label>
+                <input type="text" id="difference-arr2" placeholder="例如: [2,3,5]" value="[2,3,5]">
+              </div>
+            </div>
+            <button onclick="testDifference()">运行测试</button>
+          </div>
+          <div id="difference-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- intersection -->
+      <div class="function-item" id="intersection">
+        <div class="function-name"><a href="#intersection">intersection()</a></div>
+        <div class="function-description">计算数组交集</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">intersection</span>&lt;T&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr1</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">arr2</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">compareFn</span>?: (<span class="function">a</span>: T, <span class="function">b</span>: T) =&gt; <span class="type">boolean</span><br>
+              ): T[]
+            </code>
+      </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr1</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">第一个数组</div>
+              </li>
+              <li>
+                <span class="param-name">arr2</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">第二个数组</div>
+              </li>
+              <li>
+                <span class="param-name">compareFn</span> - <span class="param-type">(a: T, b: T) => boolean</span> (可选)
+                <div class="param-desc">可选的比较函数</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回同时在 arr1 和 arr2 中的元素数组</div>
+            </div>
+    </div>
+  </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">计算两个数组的交集:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">intersection</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])<br>
+              <span class="comment">// 返回 [2, 3]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>数组1 (JSON 格式)</label>
+                <input type="text" id="intersection-arr1" placeholder="例如: [1,2,3,4]" value="[1,2,3,4]">
+              </div>
+              <div class="test-input-group">
+                <label>数组2 (JSON 格式)</label>
+                <input type="text" id="intersection-arr2" placeholder="例如: [2,3,5]" value="[2,3,5]">
+              </div>
+            </div>
+            <button onclick="testIntersection()">运行测试</button>
+          </div>
+          <div id="intersection-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- union -->
+      <div class="function-item" id="union">
+        <div class="function-name"><a href="#union">union()</a></div>
+        <div class="function-description">计算数组并集</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">union</span>&lt;T&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr1</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">arr2</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">compareFn</span>?: (<span class="function">a</span>: T, <span class="function">b</span>: T) =&gt; <span class="type">boolean</span><br>
+              ): T[]
+            </code>
+      </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr1</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">第一个数组</div>
+              </li>
+              <li>
+                <span class="param-name">arr2</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">第二个数组</div>
+              </li>
+              <li>
+                <span class="param-name">compareFn</span> - <span class="param-type">(a: T, b: T) => boolean</span> (可选)
+                <div class="param-desc">可选的比较函数</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回 arr1 和 arr2 的并集，去除重复元素</div>
+            </div>
+    </div>
+  </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">计算两个数组的并集:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">union</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])<br>
+              <span class="comment">// 返回 [1, 2, 3, 4]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>数组1 (JSON 格式)</label>
+                <input type="text" id="union-arr1" placeholder="例如: [1,2,3]" value="[1,2,3]">
+              </div>
+              <div class="test-input-group">
+                <label>数组2 (JSON 格式)</label>
+                <input type="text" id="union-arr2" placeholder="例如: [3,4,5]" value="[3,4,5]">
+              </div>
+            </div>
+            <button onclick="testUnion()">运行测试</button>
+          </div>
+          <div id="union-result" class="test-result"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 数组分组 -->
+    <div class="section">
+      <h2 class="section-title">数组分组</h2>
+    
+      <!-- groupBy -->
+      <div class="function-item" id="groupBy">
+        <div class="function-name"><a href="#groupBy">groupBy()</a></div>
+        <div class="function-description">按指定条件将数组元素分组</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">groupBy</span>&lt;T, K <span class="keyword">extends</span> <span class="type">keyof</span> T | <span class="type">string</span>&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">keyOrFn</span>: K | ((<span class="function">item</span>: T) =&gt; <span class="type">string</span> | <span class="type">number</span>)<br>
+              ): <span class="type">Record</span>&lt;<span class="type">string</span>, T[]&gt;
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要分组的数组</div>
+              </li>
+              <li>
+                <span class="param-name">keyOrFn</span> - <span class="param-type">K | ((item: T) => string | number)</span>
+                <div class="param-desc">分组的键或转换函数</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">Record&lt;string, T[]&gt;</div>
+              <div class="returns-desc">返回分组后的对象，键为分组条件，值为该组的所有元素</div>
+      </div>
+    </div>
+  </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">按条件将数组分组:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">groupBy</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], <span class="function">n</span> =&gt; n % <span class="number">2</span> === <span class="number">0</span> ? <span class="string">'偶数'</span> : <span class="string">'奇数'</span>)<br>
+              <span class="comment">// 返回 { '偶数': [2, 4, 6], '奇数': [1, 3, 5] }</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper" style="width: 100%;">
+              <div class="test-input-group" style="width: 100%;">
+                <label>输入对象数组 (JSON 格式)</label>
+                <textarea id="groupBy-input" placeholder='例如: [{"age":20,"name":"a"},{"age":20,"name":"b"},{"age":30,"name":"c"}]'>[{"age":20,"name":"a"},{"age":20,"name":"b"},{"age":30,"name":"c"}]</textarea>
+              </div>
+              <div class="test-input-group">
+                <label>键名</label>
+                <input type="text" id="groupBy-key" placeholder="例如: age" value="age">
+              </div>
+            </div>
+            <button onclick="testGroupBy()">运行测试</button>
+          </div>
+          <div id="groupBy-result" class="test-result"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 数组操作 -->
+    <div class="section">
+      <h2 class="section-title">数组操作</h2>
+    
+      <!-- shuffle -->
+      <div class="function-item" id="shuffle">
+        <div class="function-name"><a href="#shuffle">shuffle()</a></div>
+        <div class="function-description">随机打乱数组</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">shuffle</span>&lt;T&gt;(<span class="function">arr</span>: T[]): T[]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[]</span>
+                <div class="param-desc">要打乱的数组</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回打乱后的新数组，原数组不会被修改</div>
+      </div>
+    </div>
+    </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">随机打乱数组元素:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">shuffle</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])<br>
+              <span class="comment">// 可能返回 [3, 1, 5, 2, 4] 等任意排列</span>
+            </code>
+      </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="shuffle-input" placeholder="例如: [1,2,3,4,5,6,7,8,9,10]" value="[1,2,3,4,5,6,7,8,9,10]">
+              </div>
+            </div>
+            <button onclick="testShuffle()">运行测试</button>
+          </div>
+          <div id="shuffle-result" class="test-result"></div>
+        </div>
+    </div>
+
+      <!-- move -->
+      <div class="function-item" id="move">
+        <div class="function-name"><a href="#move">move()</a></div>
+        <div class="function-description">移动数组元素到指定位置</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">move</span>&lt;T&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">fromIndex</span>: <span class="type">number</span>,<br>
+              &nbsp;&nbsp;<span class="function">toIndex</span>: <span class="type">number</span><br>
+              ): T[]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要操作的数组</div>
+              </li>
+              <li>
+                <span class="param-name">fromIndex</span> - <span class="param-type">number</span>
+                <div class="param-desc">要移动的元素的索引</div>
+              </li>
+              <li>
+                <span class="param-name">toIndex</span> - <span class="param-type">number</span>
+                <div class="param-desc">目标位置的索引</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回移动后的数组，原数组不会被修改</div>
+      </div>
+    </div>
+  </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">移动数组元素:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">move</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">1</span>, <span class="number">3</span>)<br>
+              <span class="comment">// 返回 [1, 3, 4, 2]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="move-arr" placeholder="例如: [1,2,3,4,5]" value="[1,2,3,4,5]">
+              </div>
+              <div class="test-input-group">
+                <label>源索引</label>
+                <input type="number" id="move-from" placeholder="例如: 0" value="0">
+              </div>
+              <div class="test-input-group">
+                <label>目标索引</label>
+                <input type="number" id="move-to" placeholder="例如: 3" value="3">
+              </div>
+            </div>
+            <button onclick="testMove()">运行测试</button>
+          </div>
+          <div id="move-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- rotate -->
+      <div class="function-item" id="rotate">
+        <div class="function-name"><a href="#rotate">rotate()</a></div>
+        <div class="function-description">旋转数组元素</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">rotate</span>&lt;T&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">count</span>: <span class="type">number</span><br>
+              ): T[]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要操作的数组</div>
+              </li>
+              <li>
+                <span class="param-name">count</span> - <span class="param-type">number</span>
+                <div class="param-desc">旋转的次数，正数向右旋转，负数向左旋转</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回旋转后的数组，原数组不会被修改</div>
+      </div>
+    </div>
+  </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">旋转数组元素:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">rotate</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">1</span>)<br>
+              <span class="comment">// 返回 [4, 1, 2, 3]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper">
+              <div class="test-input-group">
+                <label>输入数组 (JSON 格式)</label>
+                <input type="text" id="rotate-arr" placeholder="例如: [1,2,3,4,5]" value="[1,2,3,4,5]">
+              </div>
+              <div class="test-input-group">
+                <label>旋转次数</label>
+                <input type="number" id="rotate-count" placeholder="例如: 2" value="2">
+              </div>
+            </div>
+            <button onclick="testRotate()">运行测试</button>
+          </div>
+          <div id="rotate-result" class="test-result"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 数组排序 -->
+    <div class="section">
+      <h2 class="section-title">数组排序</h2>
+
+      <!-- sortBy -->
+      <div class="function-item" id="sortBy">
+        <div class="function-name"><a href="#sortBy">sortBy()</a></div>
+        <div class="function-description">根据指定条件对数组元素进行排序</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">sortBy</span>&lt;T, K <span class="keyword">extends</span> <span class="type">keyof</span> T | <span class="type">string</span>&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">keyOrFn</span>: K | ((<span class="function">a</span>: T, <span class="function">b</span>: T) =&gt; <span class="type">number</span>),<br>
+              &nbsp;&nbsp;<span class="function">order</span>?: <span class="string">'asc'</span> | <span class="string">'desc'</span><br>
+              ): T[]
+            </code>
+      </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要排序的数组</div>
+              </li>
+              <li>
+                <span class="param-name">keyOrFn</span> - <span class="param-type">K | ((a: T, b: T) => number)</span>
+                <div class="param-desc">排序的键或比较函数</div>
+              </li>
+              <li>
+                <span class="param-name">order</span> - <span class="param-type">'asc' | 'desc'</span> (可选)
+                <div class="param-desc">排序顺序，默认为 'asc'</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回排序后的数组，原数组不会被修改</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">按对象的某个属性排序:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">sortBy</span>([<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">1</span>, <span class="string">value</span>: <span class="number">3</span> },<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">2</span>, <span class="string">value</span>: <span class="number">1</span> },<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">3</span>, <span class="string">value</span>: <span class="number">2</span> }<br>
+              ], <span class="string">'value'</span>)<br>
+              <span class="comment">// 返回 [{ id: 2, value: 1 }, { id: 3, value: 2 }, { id: 1, value: 3 }]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper" style="width: 100%;">
+              <div class="test-input-group" style="width: 100%;">
+                <label>输入对象数组 (JSON 格式)</label>
+                <textarea id="sortBy-input" placeholder='例如: [{"age":30,"name":"c"},{"age":20,"name":"a"},{"age":25,"name":"b"}]'>[{"age":30,"name":"c"},{"age":20,"name":"a"},{"age":25,"name":"b"}]</textarea>
+              </div>
+              <div class="test-input-group">
+                <label>键名</label>
+                <input type="text" id="sortBy-key" placeholder="例如: age" value="age">
+              </div>
+            </div>
+            <button onclick="testSortBy()">运行测试</button>
+          </div>
+          <div id="sortBy-result" class="test-result"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 数组转换 -->
+    <div class="section">
+      <h2 class="section-title">数组转换</h2>
+
+      <!-- toObject -->
+      <div class="function-item" id="toObject">
+        <div class="function-name"><a href="#toObject">toObject()</a></div>
+        <div class="function-description">将数组转换为对象</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">toObject</span>&lt;T, K <span class="keyword">extends</span> <span class="type">string</span> | <span class="type">number</span>, V&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">keyFn</span>: (<span class="function">item</span>: T) =&gt; K,<br>
+              &nbsp;&nbsp;<span class="function">valueFn</span>: (<span class="function">item</span>: T) =&gt; V<br>
+              ): <span class="type">Record</span>&lt;K, V&gt;
+            </code>
+      </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">源数组</div>
+              </li>
+              <li>
+                <span class="param-name">keyFn</span> - <span class="param-type">(item: T) => K</span>
+                <div class="param-desc">生成键的函数</div>
+              </li>
+              <li>
+                <span class="param-name">valueFn</span> - <span class="param-type">(item: T) => V</span>
+                <div class="param-desc">生成值的函数</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">Record&lt;K, V&gt;</div>
+              <div class="returns-desc">返回转换后的对象</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">将对象数组转换为键值对对象:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">toObject</span>(<br>
+              &nbsp;&nbsp;[{ <span class="string">id</span>: <span class="number">1</span>, <span class="string">name</span>: <span class="string">'a'</span> }, { <span class="string">id</span>: <span class="number">2</span>, <span class="string">name</span>: <span class="string">'b'</span> }],<br>
+              &nbsp;&nbsp;<span class="function">item</span> =&gt; item.<span class="string">id</span>,<br>
+              &nbsp;&nbsp;<span class="function">item</span> =&gt; item.<span class="string">name</span><br>
+              )<br>
+              <span class="comment">// 返回 { 1: 'a', 2: 'b' }</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper" style="width: 100%;">
+              <div class="test-input-group" style="width: 100%;">
+                <label>输入对象数组 (JSON 格式)</label>
+                <textarea id="toObject-input" placeholder='例如: [{"id":1,"name":"a"},{"id":2,"name":"b"}]'>[{"id":1,"name":"a"},{"id":2,"name":"b"}]</textarea>
+              </div>
+              <div class="test-input-group">
+                <label>键字段</label>
+                <input type="text" id="toObject-key" placeholder="例如: id" value="id">
+              </div>
+              <div class="test-input-group">
+                <label>值字段 (可选)</label>
+                <input type="text" id="toObject-value" placeholder="例如: name" value="name">
+              </div>
+            </div>
+            <button onclick="testToObject()">运行测试</button>
+          </div>
+          <div id="toObject-result" class="test-result"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- 树形结构 -->
+    <div class="section">
+      <h2 class="section-title">树形结构</h2>
+
+      <!-- arrayToTree -->
+      <div class="function-item" id="arrayToTree">
+        <div class="function-name"><a href="#arrayToTree">arrayToTree()</a></div>
+        <div class="function-description">将数组转换为树结构</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">arrayToTree</span>&lt;T <span class="keyword">extends</span> { [<span class="function">key</span>: <span class="type">string</span>]: <span class="keyword">any</span> }&gt;(<br>
+              &nbsp;&nbsp;<span class="function">arr</span>: T[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">options</span>?: {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">idKey</span>?: <span class="type">string</span>;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">parentKey</span>?: <span class="type">string</span>;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">childrenKey</span>?: <span class="type">string</span>;<br>
+              &nbsp;&nbsp;}<br>
+              ): (T & { [<span class="function">key</span>: <span class="type">string</span>]: <span class="keyword">any</span> })[]
+            </code>
+      </div>
+    </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">arr</span> - <span class="param-type">T[] | null | undefined</span>
+                <div class="param-desc">要转换的数组</div>
+              </li>
+              <li>
+                <span class="param-name">options</span> - <span class="param-type">object</span> (可选)
+                <div class="param-desc">配置选项，包含 idKey（ID字段名，默认'id'）、parentKey（父ID字段名，默认'parentId'）、childrenKey（子节点字段名，默认'children'）</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">(T & { [key: string]: any })[]</div>
+              <div class="returns-desc">返回树结构数组</div>
+      </div>
+    </div>
+  </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">将扁平数组转换为树结构:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">arrayToTree</span>([<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">1</span>, <span class="string">parentId</span>: <span class="keyword">null</span> },<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">2</span>, <span class="string">parentId</span>: <span class="number">1</span> },<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">3</span>, <span class="string">parentId</span>: <span class="number">1</span> }<br>
+              ])<br>
+              <span class="comment">// 返回 [{ id: 1, children: [{ id: 2 }, { id: 3 }] }]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper" style="width: 100%;">
+              <div class="test-input-group" style="width: 100%;">
+                <label>输入扁平数组 (JSON 格式)</label>
+                <textarea id="arrayToTree-input" placeholder='例如: [{"id":1,"parentId":null},{"id":2,"parentId":1},{"id":3,"parentId":1}]'>[{"id":1,"parentId":null},{"id":2,"parentId":1},{"id":3,"parentId":1}]</textarea>
+              </div>
+            </div>
+            <button onclick="testArrayToTree()">运行测试</button>
+          </div>
+          <div id="arrayToTree-result" class="test-result"></div>
+        </div>
+      </div>
+
+      <!-- treeToArray -->
+      <div class="function-item" id="treeToArray">
+        <div class="function-name"><a href="#treeToArray">treeToArray()</a></div>
+        <div class="function-description">将树结构转换为数组</div>
+        
+        <div class="type-section">
+          <div class="type-label">类型</div>
+          <div class="code-block">
+            <code>
+              <span class="keyword">function</span> <span class="function">treeToArray</span>&lt;T <span class="keyword">extends</span> { [<span class="function">key</span>: <span class="type">string</span>]: <span class="keyword">any</span> }&gt;(<br>
+              &nbsp;&nbsp;<span class="function">tree</span>: (T & { [<span class="function">key</span>: <span class="type">string</span>]: <span class="keyword">any</span> })[] | <span class="keyword">null</span> | <span class="keyword">undefined</span>,<br>
+              &nbsp;&nbsp;<span class="function">options</span>?: {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">idKey</span>?: <span class="type">string</span>;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">parentKey</span>?: <span class="type">string</span>;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">childrenKey</span>?: <span class="type">string</span>;<br>
+              &nbsp;&nbsp;}<br>
+              ): T[]
+            </code>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-label">详细信息</div>
+          <div class="details-content">
+            <ul class="param-list">
+              <li>
+                <span class="param-name">tree</span> - <span class="param-type">(T & { [key: string]: any })[] | null | undefined</span>
+                <div class="param-desc">要转换的树结构</div>
+              </li>
+              <li>
+                <span class="param-name">options</span> - <span class="param-type">object</span> (可选)
+                <div class="param-desc">配置选项，包含 idKey（ID字段名，默认'id'）、parentKey（父ID字段名，默认'parentId'）、childrenKey（子节点字段名，默认'children'）</div>
+              </li>
+            </ul>
+            <div class="returns">
+              <div class="returns-label">返回值</div>
+              <div class="returns-type">T[]</div>
+              <div class="returns-desc">返回扁平化的数组</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-section">
+          <div class="example-label">示例</div>
+          <div class="example-text">将树结构转换为扁平数组:</div>
+          <div class="code-block js">
+            <code>
+              <span class="function">treeToArray</span>([<br>
+              &nbsp;&nbsp;{ <span class="string">id</span>: <span class="number">1</span>, <span class="string">children</span>: [{ <span class="string">id</span>: <span class="number">2</span> }, { <span class="string">id</span>: <span class="number">3</span> }] }<br>
+              ])<br>
+              <span class="comment">// 返回 [{ id: 1, parentId: null }, { id: 2, parentId: 1 }, { id: 3, parentId: 1 }]</span>
+            </code>
+          </div>
+        </div>
+
+        <div class="test-section">
+          <div class="test-label">在线测试</div>
+          <div class="test-controls">
+            <div class="test-controls-wrapper" style="width: 100%;">
+              <div class="test-input-group" style="width: 100%;">
+                <label>输入树结构 (JSON 格式)</label>
+                <textarea id="treeToArray-input" placeholder='例如: [{"id":1,"children":[{"id":2},{"id":3}]}]'>[{"id":1,"children":[{"id":2},{"id":3}]}]</textarea>
+              </div>
+            </div>
+            <button onclick="testTreeToArray()">运行测试</button>
+          </div>
+          <div id="treeToArray-result" class="test-result"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- 右侧目录导航 -->
+  <aside class="sidebar">
+    <div class="sidebar-nav">
+      <h3>本页目录</h3>
+      
+      <a href="#isEmpty" class="nav-item">isEmpty()</a>
+      <a href="#first" class="nav-item">first()</a>
+      <a href="#last" class="nav-item">last()</a>
+      <a href="#chunk" class="nav-item">chunk()</a>
+      <a href="#flatten" class="nav-item">flatten()</a>
+      <a href="#unique" class="nav-item">unique()</a>
+      <a href="#uniqueBy" class="nav-item">uniqueBy()</a>
+      <a href="#difference" class="nav-item">difference()</a>
+      <a href="#intersection" class="nav-item">intersection()</a>
+      <a href="#union" class="nav-item">union()</a>
+      <a href="#groupBy" class="nav-item">groupBy()</a>
+      <a href="#shuffle" class="nav-item">shuffle()</a>
+      <a href="#move" class="nav-item">move()</a>
+      <a href="#rotate" class="nav-item">rotate()</a>
+      <a href="#sortBy" class="nav-item">sortBy()</a>
+      <a href="#toObject" class="nav-item">toObject()</a>
+      <a href="#arrayToTree" class="nav-item">arrayToTree()</a>
+      <a href="#treeToArray" class="nav-item">treeToArray()</a>
+    </div>
+  </aside>
+
+  <script src="../dist/index.umd.js"></script>
+  <script>
+    // UMD 版本会暴露为全局变量 QUtils
+    // 将其转换为命名空间格式以匹配示例代码
+    window.qUtils = QUtils;
+
+    // 解析输入数组
+    function parseArray(str) {
+      try {
+        return JSON.parse(str);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // 显示结果
+    function showResult(id, result, isError = false) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = typeof result === 'object' ? JSON.stringify(result, null, 2) : String(result);
+      el.className = 'test-result ' + (isError ? 'error' : 'success');
+    }
+
+    // 基础操作测试
+    window.testIsEmpty = function() {
+      const input = parseArray(document.getElementById('isEmpty-input').value);
+      if (input === null) {
+        showResult('isEmpty-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.isEmpty(input);
+      showResult('isEmpty-result', `输入: ${JSON.stringify(input)}\n结果: ${result}`);
+    };
+
+    window.testFirst = function() {
+      const input = parseArray(document.getElementById('first-input').value);
+      if (input === null) {
+        showResult('first-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.first(input);
+      showResult('first-result', `输入: ${JSON.stringify(input)}\n结果: ${result}`);
+    };
+
+    window.testLast = function() {
+      const input = parseArray(document.getElementById('last-input').value);
+      if (input === null) {
+        showResult('last-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.last(input);
+      showResult('last-result', `输入: ${JSON.stringify(input)}\n结果: ${result}`);
+    };
+
+    window.testChunk = function() {
+      const arr = parseArray(document.getElementById('chunk-arr').value);
+      const size = parseInt(document.getElementById('chunk-size').value);
+      if (arr === null) {
+        showResult('chunk-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.chunk(arr, size);
+      showResult('chunk-result', `输入: ${JSON.stringify(arr)}, 块大小: ${size}\n结果: ${JSON.stringify(result, null, 2)}`);
+    };
+
+    window.testFlatten = function() {
+      const input = parseArray(document.getElementById('flatten-input').value);
+      if (input === null) {
+        showResult('flatten-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.flatten(input);
+      showResult('flatten-result', `输入: ${JSON.stringify(input)}\n结果: ${JSON.stringify(result)}`);
+    };
+
+    window.testUnique = function() {
+      const input = parseArray(document.getElementById('unique-input').value);
+      if (input === null) {
+        showResult('unique-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.unique(input);
+      showResult('unique-result', `输入: ${JSON.stringify(input)}\n结果: ${JSON.stringify(result)}`);
+    };
+
+    window.testUniqueBy = function() {
+      const arr = parseArray(document.getElementById('uniqueBy-input').value);
+      const key = document.getElementById('uniqueBy-key').value;
+      if (arr === null) {
+        showResult('uniqueBy-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.uniqueBy(arr, key);
+      showResult('uniqueBy-result', `输入: ${JSON.stringify(arr)}, 键: ${key}\n结果: ${JSON.stringify(result, null, 2)}`);
+    };
+
+    // 数组比较测试
+    window.testDifference = function() {
+      const arr1 = parseArray(document.getElementById('difference-arr1').value);
+      const arr2 = parseArray(document.getElementById('difference-arr2').value);
+      if (arr1 === null || arr2 === null) {
+        showResult('difference-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.difference(arr1, arr2);
+      showResult('difference-result', `数组1: ${JSON.stringify(arr1)}\n数组2: ${JSON.stringify(arr2)}\n差集: ${JSON.stringify(result)}`);
+    };
+
+    window.testIntersection = function() {
+      const arr1 = parseArray(document.getElementById('intersection-arr1').value);
+      const arr2 = parseArray(document.getElementById('intersection-arr2').value);
+      if (arr1 === null || arr2 === null) {
+        showResult('intersection-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.intersection(arr1, arr2);
+      showResult('intersection-result', `数组1: ${JSON.stringify(arr1)}\n数组2: ${JSON.stringify(arr2)}\n交集: ${JSON.stringify(result)}`);
+    };
+
+    window.testUnion = function() {
+      const arr1 = parseArray(document.getElementById('union-arr1').value);
+      const arr2 = parseArray(document.getElementById('union-arr2').value);
+      if (arr1 === null || arr2 === null) {
+        showResult('union-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.union(arr1, arr2);
+      showResult('union-result', `数组1: ${JSON.stringify(arr1)}\n数组2: ${JSON.stringify(arr2)}\n并集: ${JSON.stringify(result)}`);
+    };
+
+    // 数组分组测试
+    window.testGroupBy = function() {
+      const arr = parseArray(document.getElementById('groupBy-input').value);
+      const key = document.getElementById('groupBy-key').value;
+      if (arr === null) {
+        showResult('groupBy-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.groupBy(arr, key);
+      showResult('groupBy-result', `输入: ${JSON.stringify(arr)}, 键: ${key}\n结果: ${JSON.stringify(result, null, 2)}`);
+    };
+
+    // 数组操作测试
+    window.testShuffle = function() {
+      const input = parseArray(document.getElementById('shuffle-input').value);
+      if (input === null) {
+        showResult('shuffle-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.shuffle([...input]);
+      showResult('shuffle-result', `输入: ${JSON.stringify(input)}\n打乱后: ${JSON.stringify(result)}`);
+    };
+
+    window.testMove = function() {
+      const arr = parseArray(document.getElementById('move-arr').value);
+      const from = parseInt(document.getElementById('move-from').value);
+      const to = parseInt(document.getElementById('move-to').value);
+      if (arr === null) {
+        showResult('move-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.move([...arr], from, to);
+      showResult('move-result', `输入: ${JSON.stringify(arr)}, 从索引${from}移动到索引${to}\n结果: ${JSON.stringify(result)}`);
+    };
+
+    window.testRotate = function() {
+      const arr = parseArray(document.getElementById('rotate-arr').value);
+      const count = parseInt(document.getElementById('rotate-count').value);
+      if (arr === null) {
+        showResult('rotate-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.rotate([...arr], count);
+      showResult('rotate-result', `输入: ${JSON.stringify(arr)}, 旋转${count}次\n结果: ${JSON.stringify(result)}`);
+    };
+
+    // 数组排序测试
+    window.testSortBy = function() {
+      const arr = parseArray(document.getElementById('sortBy-input').value);
+      const key = document.getElementById('sortBy-key').value;
+      if (arr === null) {
+        showResult('sortBy-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.sortBy([...arr], key);
+      showResult('sortBy-result', `输入: ${JSON.stringify(arr)}, 按${key}排序\n结果: ${JSON.stringify(result, null, 2)}`);
+    };
+
+    // 数组转换测试
+    window.testToObject = function() {
+      const arr = parseArray(document.getElementById('toObject-input').value);
+      const key = document.getElementById('toObject-key').value;
+      const value = document.getElementById('toObject-value').value;
+      if (arr === null) {
+        showResult('toObject-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      try {
+        const result = qUtils.array.toObject(arr, item => item[key], value ? item => item[value] : item => item);
+      showResult('toObject-result', `输入: ${JSON.stringify(arr)}, 键: ${key}${value ? ', 值: ' + value : ''}\n结果: ${JSON.stringify(result, null, 2)}`);
+      } catch (e) {
+        showResult('toObject-result', `错误: ${e.message}`, true);
+      }
+    };
+
+    // 树形结构测试
+    window.testArrayToTree = function() {
+      const arr = parseArray(document.getElementById('arrayToTree-input').value);
+      if (arr === null) {
+        showResult('arrayToTree-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.arrayToTree(arr);
+      showResult('arrayToTree-result', `输入: ${JSON.stringify(arr, null, 2)}\n结果: ${JSON.stringify(result, null, 2)}`);
+    };
+
+    window.testTreeToArray = function() {
+      const tree = parseArray(document.getElementById('treeToArray-input').value);
+      if (tree === null) {
+        showResult('treeToArray-result', '错误: 无效的数组格式', true);
+        return;
+      }
+      const result = qUtils.array.treeToArray(tree);
+      showResult('treeToArray-result', `输入: ${JSON.stringify(tree, null, 2)}\n结果: ${JSON.stringify(result, null, 2)}`);
+    };
+
+    // 目录导航高亮当前项
+    function updateActiveNav() {
+      const hash = window.location.hash.slice(1);
+      const navItems = document.querySelectorAll('.nav-item');
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + hash) {
+          item.classList.add('active');
+        }
+      });
+    }
+
+    // 监听 hash 变化
+    window.addEventListener('hashchange', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // 更新 URL hash
+          window.history.pushState(null, null, this.getAttribute('href'));
+          updateActiveNav();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

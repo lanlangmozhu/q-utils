@@ -4,7 +4,12 @@
 
 ```
 src/bigint/
-├── index.ts
+├── index.ts       // 导出所有功能
+├── basic.ts       // 基础操作（createBigInt, isBigInt, isValidBigInt）
+├── conversion.ts  // 转换操作（bigIntToString, stringToBigInt）
+├── math.ts        // 数学运算（bigIntAbs, bigIntSign, bigIntSqrt等）
+├── gcd.ts         // 最大公约数和最小公倍数（bigIntGcd, bigIntLcm）
+└── validation.ts  // 验证操作（isBigIntEven, isBigIntOdd, isBigIntPrime）
 ```
 
 ## 功能描述

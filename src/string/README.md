@@ -1,5 +1,21 @@
 # 字符串工具函数
 
+## 目录结构
+
+```typescript
+src/string/
+├── index.ts       // 导出所有功能
+├── basic.ts       // 基础操作（包含：基础操作、统计、分割合并）
+├── transform.ts   // 转换操作
+├── substring.ts   // 截取和填充
+├── search.ts      // 查找和替换
+├── format.ts      // 清理和格式化
+├── validate.ts    // 验证
+├── encode.ts      // 编码和解码
+├── compare.ts     // 比较
+└── uuid.ts        // ID生成
+```
+
 ## 基础操作 (basic.ts)
 
 ### isEmpty

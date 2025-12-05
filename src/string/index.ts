@@ -3,7 +3,7 @@
  * @packageDocumentation
  */
 
-// 基础操作类
+// 基础操作类（包含：基础操作、统计、分割合并）
 export * from './basic';
 
 // 转换类
@@ -23,12 +23,6 @@ export * from './validate';
 
 // 编码和解码类
 export * from './encode';
-
-// 分割和合并类
-export * from './split';
-
-// 统计类
-export * from './stats';
 
 // 比较类
 export * from './compare';

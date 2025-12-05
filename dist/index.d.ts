@@ -87,6 +87,57 @@ declare function chunk<T>(arr: T[] | null | undefined, size: number): T[][];
  * ```
  */
 declare function flatten<T>(arr: T[] | null | undefined, depth?: number): T[];
+/**
+ * 数组去重
+ * @param arr - 要去重的数组
+ * @returns 去重后的数组
+ * @example
+ * ```typescript
+ * unique([1, 2, 1, 3, 2, 1])
+ * // 返回 [1, 2, 3]
+ * ```
+ */
+declare function unique<T>(arr: T[]): T[];
+/**
+ * 根据指定条件去重
+ * @param arr - 要去重的数组
+ * @param keyOrFn - 去重的键或比较函数
+ * @returns 去重后的数组
+ * @example
+ * ```typescript
+ * uniqueBy([{ id: 1, value: 1 }, { id: 2, value: 1 }, { id: 3, value: 2 }], 'value')
+ * // 返回 [{ id: 1, value: 1 }, { id: 3, value: 2 }]
+ * ```
+ */
+declare function uniqueBy<T, K extends keyof T | string>(arr: T[], keyOrFn: K | ((a: T, b: T) => boolean)): T[];
+/**
+ * 统计数组元素出现次数
+ * @param arr - 要统计的数组
+ * @returns 元素出现次数的对象
+ * @example
+ * ```typescript
+ * count([1, 2, 1, 3, 2, 1])
+ * // 返回 { 1: 3, 2: 2, 3: 1 }
+ * ```
+ */
+declare function count<T>(arr: T[] | null | undefined): Record<string, number>;
+/**
+ * 计算数组的统计信息
+ * @param arr - 要计算的数组
+ * @returns 统计信息对象
+ * @example
+ * ```typescript
+ * stats([1, 2, 3, 4, 5])
+ * // 返回 { sum: 15, avg: 3, min: 1, max: 5, length: 5 }
+ * ```
+ */
+declare function stats(arr: number[] | null | undefined): {
+    sum: number;
+    avg: number;
+    min: number;
+    max: number;
+    length: number;
+};
 
 /**
  * 数组比较相关工具函数
@@ -352,39 +403,6 @@ declare function sortWith<T>(arr: T[] | null | undefined, compareFn: (a: T, b: T
 declare function stableSort<T>(arr: T[] | null | undefined, compareFn: (a: T, b: T) => number): T[];
 
 /**
- * 统计相关工具函数
- * @packageDocumentation
- */
-/**
- * 统计数组元素出现次数
- * @param arr - 要统计的数组
- * @returns 元素出现次数的对象
- * @example
- * ```typescript
- * count([1, 2, 1, 3, 2, 1])
- * // 返回 { 1: 3, 2: 2, 3: 1 }
- * ```
- */
-declare function count$1<T>(arr: T[] | null | undefined): Record<string, number>;
-/**
- * 计算数组的统计信息
- * @param arr - 要计算的数组
- * @returns 统计信息对象
- * @example
- * ```typescript
- * stats([1, 2, 3, 4, 5])
- * // 返回 { sum: 15, avg: 3, min: 1, max: 5, length: 5 }
- * ```
- */
-declare function stats(arr: number[] | null | undefined): {
-    sum: number;
-    avg: number;
-    min: number;
-    max: number;
-    length: number;
-};
-
-/**
  * 数组转换相关工具函数
  * @packageDocumentation
  */
@@ -551,108 +569,14 @@ declare function filterTree<T extends {
 })[];
 
 /**
- * 去重相关工具函数
- * @packageDocumentation
- */
-/**
- * 数组去重
- * @param arr - 要去重的数组
- * @returns 去重后的数组
- * @example
- * ```typescript
- * unique([1, 2, 1, 3, 2, 1])
- * // 返回 [1, 2, 3]
- * ```
- */
-declare function unique<T>(arr: T[]): T[];
-/**
- * 根据指定条件去重
- * @param arr - 要去重的数组
- * @param keyOrFn - 去重的键或比较函数
- * @returns 去重后的数组
- * @example
- * ```typescript
- * uniqueBy([{ id: 1, value: 1 }, { id: 2, value: 1 }, { id: 3, value: 2 }], 'value')
- * // 返回 [{ id: 1, value: 1 }, { id: 3, value: 2 }]
- * ```
- */
-declare function uniqueBy<T, K extends keyof T | string>(arr: T[], keyOrFn: K | ((a: T, b: T) => boolean)): T[];
-
-/**
- * 验证相关工具函数
- * @packageDocumentation
- */
-/**
- * 验证数组是否有效
- * @param arr - 要验证的数组
- * @returns 是否有效
- * @example
- * ```typescript
- * isValid([1, 2, 3])
- * // 返回 true
- * ```
- */
-declare function isValid<T>(arr: T[]): boolean;
-/**
- * 比较两个数组是否相等
- * @param arr1 - 第一个数组
- * @param arr2 - 第二个数组
- * @param compareFn - 可选的比较函数
- * @returns 是否相等
- * @example
- * ```typescript
- * isEqual([1, 2, 3], [1, 2, 3])
- * // 返回 true
- * ```
- */
-declare function isEqual$1<T>(arr1: T[], arr2: T[], compareFn?: (a: T, b: T) => boolean): boolean;
-/**
- * 检查是否所有元素都满足条件
- * @param arr - 要检查的数组
- * @param predicate - 判断函数
- * @returns 是否所有元素都满足条件
- * @example
- * ```typescript
- * allMatch([1, 2, 3], n => n > 0)
- * // 返回 true
- * ```
- */
-declare function allMatch<T>(arr: T[], predicate: (item: T) => boolean): boolean;
-/**
- * 检查是否存在满足条件的元素
- * @param arr - 要检查的数组
- * @param predicate - 判断函数
- * @returns 是否存在满足条件的元素
- * @example
- * ```typescript
- * anyMatch([1, 2, 3], n => n === 2)
- * // 返回 true
- * ```
- */
-declare function anyMatch<T>(arr: T[], predicate: (item: T) => boolean): boolean;
-/**
- * 检查是否没有元素满足条件
- * @param arr - 要检查的数组
- * @param predicate - 判断函数
- * @returns 是否没有元素满足条件
- * @example
- * ```typescript
- * noneMatch([1, 2, 3], n => n < 0)
- * // 返回 true
- * ```
- */
-declare function noneMatch<T>(arr: T[], predicate: (item: T) => boolean): boolean;
-
-/**
  * 数组操作相关工具函数
  * @packageDocumentation
  */
 
-declare const array_allMatch: typeof allMatch;
-declare const array_anyMatch: typeof anyMatch;
 declare const array_arrayToTree: typeof arrayToTree;
 declare const array_chunk: typeof chunk;
 declare const array_chunkGroups: typeof chunkGroups;
+declare const array_count: typeof count;
 declare const array_difference: typeof difference;
 declare const array_filterTree: typeof filterTree;
 declare const array_findTreeNode: typeof findTreeNode;
@@ -660,10 +584,8 @@ declare const array_first: typeof first;
 declare const array_flatten: typeof flatten;
 declare const array_groupBy: typeof groupBy;
 declare const array_intersection: typeof intersection;
-declare const array_isValid: typeof isValid;
 declare const array_last: typeof last;
 declare const array_move: typeof move;
-declare const array_noneMatch: typeof noneMatch;
 declare const array_randomItem: typeof randomItem;
 declare const array_randomItems: typeof randomItems;
 declare const array_randomRange: typeof randomRange;
@@ -684,7 +606,7 @@ declare const array_union: typeof union;
 declare const array_unique: typeof unique;
 declare const array_uniqueBy: typeof uniqueBy;
 declare namespace array {
-  export { array_allMatch as allMatch, array_anyMatch as anyMatch, array_arrayToTree as arrayToTree, array_chunk as chunk, array_chunkGroups as chunkGroups, count$1 as count, array_difference as difference, array_filterTree as filterTree, array_findTreeNode as findTreeNode, array_first as first, array_flatten as flatten, get$1 as get, array_groupBy as groupBy, includes$1 as includes, array_intersection as intersection, isEmpty$2 as isEmpty, isEqual$1 as isEqual, array_isValid as isValid, array_last as last, array_move as move, array_noneMatch as noneMatch, array_randomItem as randomItem, array_randomItems as randomItems, array_randomRange as randomRange, array_range as range, array_rotate as rotate, shuffle$1 as shuffle, array_sortBy as sortBy, array_sortByMultiple as sortByMultiple, array_sortWith as sortWith, array_splitIntoGroups as splitIntoGroups, array_stableSort as stableSort, array_stats as stats, array_swap as swap, array_toMap as toMap, array_toObject as toObject, array_toSet as toSet, toString$1 as toString, array_treeToArray as treeToArray, array_union as union, array_unique as unique, array_uniqueBy as uniqueBy };
+  export { array_arrayToTree as arrayToTree, array_chunk as chunk, array_chunkGroups as chunkGroups, array_count as count, array_difference as difference, array_filterTree as filterTree, array_findTreeNode as findTreeNode, array_first as first, array_flatten as flatten, get$1 as get, array_groupBy as groupBy, includes$1 as includes, array_intersection as intersection, isEmpty$2 as isEmpty, array_last as last, array_move as move, array_randomItem as randomItem, array_randomItems as randomItems, array_randomRange as randomRange, array_range as range, array_rotate as rotate, shuffle$1 as shuffle, array_sortBy as sortBy, array_sortByMultiple as sortByMultiple, array_sortWith as sortWith, array_splitIntoGroups as splitIntoGroups, array_stableSort as stableSort, array_stats as stats, array_swap as swap, array_toMap as toMap, array_toObject as toObject, array_toSet as toSet, toString$1 as toString, array_treeToArray as treeToArray, array_union as union, array_unique as unique, array_uniqueBy as uniqueBy };
 }
 
 /**
@@ -2256,7 +2178,7 @@ declare namespace file {
  * }, 300, true);
  * ```
  */
-declare function debounce$2<T extends (...args: any[]) => any>(func: T, wait?: number, immediate?: boolean): T & {
+declare function debounce$1<T extends (...args: any[]) => any>(func: T, wait?: number, immediate?: boolean): T & {
     cancel: () => void;
 };
 /**
@@ -2297,7 +2219,7 @@ declare function cancelDebounce(debouncedFn: Function): void;
  * }, 300, { leading: false, trailing: true });
  * ```
  */
-declare function throttle$2<T extends (...args: any[]) => any>(func: T, wait?: number, options?: {
+declare function throttle$1<T extends (...args: any[]) => any>(func: T, wait?: number, options?: {
     leading?: boolean;
     trailing?: boolean;
 }): (this: ThisParameterType<T>, ...args: Parameters<T>) => ReturnType<T> | undefined;
@@ -2481,7 +2403,7 @@ declare const func_once: typeof once;
 declare const func_pipe: typeof pipe;
 declare const func_sleep: typeof sleep;
 declare namespace func {
-  export { func_cancelDebounce as cancelDebounce, func_cancelThrottle as cancelThrottle, func_compose as compose, func_curry as curry, debounce$2 as debounce, func_memoize as memoize, func_once as once, func_pipe as pipe, func_sleep as sleep, throttle$2 as throttle };
+  export { func_cancelDebounce as cancelDebounce, func_cancelThrottle as cancelThrottle, func_compose as compose, func_curry as curry, debounce$1 as debounce, func_memoize as memoize, func_once as once, func_pipe as pipe, func_sleep as sleep, throttle$1 as throttle };
 }
 
 /**
@@ -2966,59 +2888,6 @@ declare const length$1: (value: number | null | undefined) => number;
  * factorial(5) // 120
  */
 declare const factorial: (value: number | null | undefined) => number;
-
-/**
- * 进制转换工具函数
- * @packageDocumentation
- */
-/**
- * 获取数字的二进制表示
- * @param value - 数字
- * @returns 二进制表示
- * @example
- * toBinary(123) // '1111011'
- */
-declare const toBinary: (value: number) => string;
-/**
- * 获取数字的八进制表示
- * @param value - 数字
- * @returns 八进制表示
- * @example
- * toOctal(123) // '173'
- */
-declare const toOctal: (value: number) => string;
-/**
- * 获取数字的十六进制表示
- * @param value - 数字
- * @returns 十六进制表示
- * @example
- * toHex(123) // '7b'
- */
-declare const toHex: (value: number) => string;
-/**
- * 将二进制字符串转换为数字
- * @param value - 二进制字符串
- * @returns 数字
- * @example
- * fromBinary('1111011') // 123
- */
-declare const fromBinary: (value: string) => number;
-/**
- * 将八进制字符串转换为数字
- * @param value - 八进制字符串
- * @returns 数字
- * @example
- * fromOctal('173') // 123
- */
-declare const fromOctal: (value: string) => number;
-/**
- * 将十六进制字符串转换为数字
- * @param value - 十六进制字符串
- * @returns 数字
- * @example
- * fromHex('7b') // 123
- */
-declare const fromHex: (value: string) => number;
 
 /**
  * 数字格式化工具函数
@@ -3708,106 +3577,6 @@ declare const roi: (initialInvestment: number, finalValue: number) => number;
 declare const irr: (cashFlows: number[]) => number;
 
 /**
- * 性能优化相关函数
- * @packageDocumentation
- */
-/**
- * 优化数字精度
- * @param value - 要优化的数字
- * @param precision - 精度
- * @returns 优化后的数字
- * @example
- * optimizePrecision(1.23456789, 2) // 1.23
- */
-declare function optimizePrecision(value: number, precision: number): number;
-/**
- * 缓存计算结果
- * @param fn - 要缓存的函数
- * @returns 缓存后的函数
- * @example
- * const cachedFn = cache((x) => x * x);
- * cachedFn(2) // 4
- * cachedFn(2) // 4 (从缓存返回)
- */
-declare function cache<T extends (...args: any[]) => any>(fn: T): T;
-/**
- * 节流函数
- * @param fn - 要节流的函数
- * @param wait - 等待时间（毫秒）
- * @returns 节流后的函数
- * @example
- * const throttledFn = throttle((x) => console.log(x), 1000);
- * throttledFn(1); // 立即执行
- * throttledFn(2); // 被节流
- */
-declare function throttle$1<T extends (...args: any[]) => any>(fn: T, wait: number): T;
-/**
- * 优化四舍五入
- * @param value - 要优化的数字
- * @param decimals - 小数位数
- * @returns 优化后的数字
- * @example
- * optimizeRound(1.23456789, 2) // 1.23
- */
-declare function optimizeRound(value: number, decimals: number): number;
-/**
- * 防抖函数
- * @param fn - 要防抖的函数
- * @param wait - 等待时间（毫秒）
- * @returns 防抖后的函数
- * @example
- * const debouncedFn = debounce((x) => console.log(x), 1000);
- * debouncedFn(1); // 延迟执行
- * debouncedFn(2); // 取消之前的执行
- */
-declare function debounce$1<T extends (...args: any[]) => any>(fn: T, wait: number): T;
-
-/**
- * 动画计算相关函数
- * @packageDocumentation
- */
-/**
- * 线性插值计算（使用 range.ts 中的实现）
- */
-/**
- * 缓动函数
- * @param t - 时间（0-1）
- * @param type - 缓动类型
- * @returns 缓动后的值
- * @example
- * ease(0.5, 'linear') // 0.5
- * ease(0.5, 'easeIn') // 0.25
- */
-declare function ease(t: number, type?: 'linear' | 'easeIn' | 'easeOut' | 'easeInOut'): number;
-/**
- * 弹簧动画
- * @param t - 时间（0-1）
- * @param options - 弹簧选项
- * @param options.tension - 张力，默认为170
- * @param options.friction - 摩擦力，默认为26
- * @returns 弹簧动画值
- * @example
- * spring(0.5) // 0.5
- * spring(0.5, { tension: 200, friction: 20 }) // 0.5
- */
-declare function spring(t: number, options?: {
-    tension?: number;
-    friction?: number;
-}): number;
-/**
- * 贝塞尔曲线
- * @param t - 时间（0-1）
- * @param p0 - 起点
- * @param p1 - 控制点1
- * @param p2 - 控制点2
- * @param p3 - 终点
- * @returns 贝塞尔曲线上的点
- * @example
- * bezier(0.5, 0, 0.5, 0.5, 1) // 0.5
- */
-declare function bezier(t: number, p0: number, p1: number, p2: number, p3: number): number;
-
-/**
  * 特殊数字相关函数
  * @packageDocumentation
  */
@@ -3929,9 +3698,7 @@ declare const constants: {
 declare const number_abs: typeof abs;
 declare const number_afterTax: typeof afterTax;
 declare const number_annualReturnRate: typeof annualReturnRate;
-declare const number_bezier: typeof bezier;
 declare const number_byte2size: typeof byte2size;
-declare const number_cache: typeof cache;
 declare const number_celsius2fahrenheit: typeof celsius2fahrenheit;
 declare const number_clamp: typeof clamp;
 declare const number_compound: typeof compound;
@@ -3944,7 +3711,6 @@ declare const number_depreciation: typeof depreciation;
 declare const number_discount: typeof discount;
 declare const number_discountRate: typeof discountRate;
 declare const number_distribution: typeof distribution;
-declare const number_ease: typeof ease;
 declare const number_em2px: typeof em2px;
 declare const number_exponentialMovingAverage: typeof exponentialMovingAverage;
 declare const number_factorial: typeof factorial;
@@ -3952,9 +3718,6 @@ declare const number_fahrenheit2celsius: typeof fahrenheit2celsius;
 declare const number_fibonacci: typeof fibonacci;
 declare const number_forecast: typeof forecast;
 declare const number_formatNumber: typeof formatNumber;
-declare const number_fromBinary: typeof fromBinary;
-declare const number_fromHex: typeof fromHex;
-declare const number_fromOctal: typeof fromOctal;
 declare const number_futureValue: typeof futureValue;
 declare const number_gcd: typeof gcd;
 declare const number_growthRate: typeof growthRate;
@@ -3977,8 +3740,6 @@ declare const number_mile2km: typeof mile2km;
 declare const number_mode: typeof mode;
 declare const number_movingAverage: typeof movingAverage;
 declare const number_normalize: typeof normalize;
-declare const number_optimizePrecision: typeof optimizePrecision;
-declare const number_optimizeRound: typeof optimizeRound;
 declare const number_outliers: typeof outliers;
 declare const number_parse: typeof parse;
 declare const number_percentage: typeof percentage;
@@ -4004,22 +3765,18 @@ declare const number_shuffle: typeof shuffle;
 declare const number_sign: typeof sign;
 declare const number_size2byte: typeof size2byte;
 declare const number_skewness: typeof skewness;
-declare const number_spring: typeof spring;
 declare const number_sqrt: typeof sqrt;
 declare const number_standardDeviation: typeof standardDeviation;
 declare const number_tax: typeof tax;
-declare const number_toBinary: typeof toBinary;
 declare const number_toChineseNumber: typeof toChineseNumber;
 declare const number_toCurrency: typeof toCurrency;
 declare const number_toFixed: typeof toFixed;
-declare const number_toHex: typeof toHex;
-declare const number_toOctal: typeof toOctal;
 declare const number_toScientific: typeof toScientific;
 declare const number_trend: typeof trend;
 declare const number_variance: typeof variance;
 declare const number_vw2px: typeof vw2px;
 declare namespace number {
-  export { number_abs as abs, number_afterTax as afterTax, number_annualReturnRate as annualReturnRate, number_bezier as bezier, number_byte2size as byte2size, number_cache as cache, number_celsius2fahrenheit as celsius2fahrenheit, number_clamp as clamp, number_compound as compound, number_compoundGrowthRate as compoundGrowthRate, number_compoundInterest as compoundInterest, number_constants as constants, number_correlation as correlation, debounce$1 as debounce, number_degree2radian as degree2radian, number_depreciation as depreciation, number_discount as discount, number_discountRate as discountRate, number_distribution as distribution, number_ease as ease, number_em2px as em2px, number_exponentialMovingAverage as exponentialMovingAverage, number_factorial as factorial, number_fahrenheit2celsius as fahrenheit2celsius, number_fibonacci as fibonacci, number_forecast as forecast, number_formatNumber as formatNumber, number_fromBinary as fromBinary, number_fromHex as fromHex, number_fromOctal as fromOctal, number_futureValue as futureValue, number_gcd as gcd, number_growthRate as growthRate, number_inRange as inRange, number_irr as irr, number_isEven as isEven, isFiniteNumber$1 as isFiniteNumber, isInteger$1 as isInteger, isNaN$1 as isNaN, isNumber$1 as isNumber, number_isOdd as isOdd, number_isPrime as isPrime, number_kg2lb as kg2lb, number_km2mile as km2mile, number_kurtosis as kurtosis, number_lb2kg as lb2kg, number_lcm as lcm, length$1 as length, number_lerp as lerp, number_loan as loan, number_loanInterest as loanInterest, number_mean as mean, number_median as median, number_mile2km as mile2km, number_mode as mode, number_movingAverage as movingAverage, number_normalize as normalize, number_optimizePrecision as optimizePrecision, number_optimizeRound as optimizeRound, number_outliers as outliers, number_parse as parse, number_percentage as percentage, number_percentile as percentile, number_pow as pow, number_precision as precision, number_presentValue as presentValue, number_primes as primes, number_px2em as px2em, number_px2rem as px2rem, number_px2vw as px2vw, number_quartiles as quartiles, number_radian2degree as radian2degree, number_random as random, number_randomDigits as randomDigits, number_randomInt as randomInt, number_randomUUID as randomUUID, number_rem2px as rem2px, number_roi as roi, number_round as round, number_seasonality as seasonality, number_shuffle as shuffle, number_sign as sign, number_size2byte as size2byte, number_skewness as skewness, number_spring as spring, number_sqrt as sqrt, number_standardDeviation as standardDeviation, number_tax as tax, throttle$1 as throttle, number_toBinary as toBinary, number_toChineseNumber as toChineseNumber, number_toCurrency as toCurrency, number_toFixed as toFixed, number_toHex as toHex, number_toOctal as toOctal, number_toScientific as toScientific, number_trend as trend, number_variance as variance, number_vw2px as vw2px };
+  export { number_abs as abs, number_afterTax as afterTax, number_annualReturnRate as annualReturnRate, number_byte2size as byte2size, number_celsius2fahrenheit as celsius2fahrenheit, number_clamp as clamp, number_compound as compound, number_compoundGrowthRate as compoundGrowthRate, number_compoundInterest as compoundInterest, number_constants as constants, number_correlation as correlation, number_degree2radian as degree2radian, number_depreciation as depreciation, number_discount as discount, number_discountRate as discountRate, number_distribution as distribution, number_em2px as em2px, number_exponentialMovingAverage as exponentialMovingAverage, number_factorial as factorial, number_fahrenheit2celsius as fahrenheit2celsius, number_fibonacci as fibonacci, number_forecast as forecast, number_formatNumber as formatNumber, number_futureValue as futureValue, number_gcd as gcd, number_growthRate as growthRate, number_inRange as inRange, number_irr as irr, number_isEven as isEven, isFiniteNumber$1 as isFiniteNumber, isInteger$1 as isInteger, isNaN$1 as isNaN, isNumber$1 as isNumber, number_isOdd as isOdd, number_isPrime as isPrime, number_kg2lb as kg2lb, number_km2mile as km2mile, number_kurtosis as kurtosis, number_lb2kg as lb2kg, number_lcm as lcm, length$1 as length, number_lerp as lerp, number_loan as loan, number_loanInterest as loanInterest, number_mean as mean, number_median as median, number_mile2km as mile2km, number_mode as mode, number_movingAverage as movingAverage, number_normalize as normalize, number_outliers as outliers, number_parse as parse, number_percentage as percentage, number_percentile as percentile, number_pow as pow, number_precision as precision, number_presentValue as presentValue, number_primes as primes, number_px2em as px2em, number_px2rem as px2rem, number_px2vw as px2vw, number_quartiles as quartiles, number_radian2degree as radian2degree, number_random as random, number_randomDigits as randomDigits, number_randomInt as randomInt, number_randomUUID as randomUUID, number_rem2px as rem2px, number_roi as roi, number_round as round, number_seasonality as seasonality, number_shuffle as shuffle, number_sign as sign, number_size2byte as size2byte, number_skewness as skewness, number_sqrt as sqrt, number_standardDeviation as standardDeviation, number_tax as tax, number_toChineseNumber as toChineseNumber, number_toCurrency as toCurrency, number_toFixed as toFixed, number_toScientific as toScientific, number_trend as trend, number_variance as variance, number_vw2px as vw2px };
 }
 
 /**
@@ -5026,107 +4783,6 @@ declare function encodeHtml(str: string | null | undefined): string;
 declare function decodeHtml(str: string | null | undefined): string;
 
 /**
- * 字符串分割和合并工具函数
- * @packageDocumentation
- */
-/**
- * 分割字符串
- * @param str - 要分割的字符串
- * @param separator - 分隔符
- * @returns 分割后的字符串数组
- * @example
- * ```ts
- * split('Hello World', ' '); // ['Hello', 'World']
- * split('a,b,c', ','); // ['a', 'b', 'c']
- * ```
- */
-declare function split$1(str: string, separator: string): string[];
-/**
- * 合并字符串数组
- * @param arr - 要合并的字符串数组
- * @param separator - 分隔符
- * @returns 合并后的字符串
- * @example
- * ```ts
- * join(['Hello', 'World'], ' '); // 'Hello World'
- * join(['a', 'b', 'c'], ','); // 'a,b,c'
- * ```
- */
-declare function join(arr: string[], separator: string): string;
-/**
- * 按长度分割
- * @param str - 要分割的字符串
- * @param length - 每个部分的长度
- * @returns 分割后的字符串数组
- * @example
- * ```ts
- * splitByLength('Hello World', 5); // ['Hello', ' Worl', 'd']
- * splitByLength('123456', 2); // ['12', '34', '56']
- * ```
- */
-declare function splitByLength(str: string, length: number): string[];
-/**
- * 按行分割
- * @param str - 要分割的字符串
- * @returns 分割后的字符串数组
- * @example
- * ```ts
- * splitLines('Hello\nWorld'); // ['Hello', 'World']
- * splitLines('Hello\r\nWorld'); // ['Hello', 'World']
- * ```
- */
-declare function splitLines(str: string): string[];
-
-/**
- * 字符串统计工具函数
- * @packageDocumentation
- */
-/**
- * 统计子字符串出现次数
- * @param str - 要统计的字符串
- * @param searchStr - 要查找的子字符串
- * @returns 出现次数
- * @example
- * ```ts
- * count('Hello World World', 'World'); // 2
- * count('aaa', 'aa'); // 2
- * ```
- */
-declare function count(str: string, searchStr: string): number;
-/**
- * 统计字符出现频率
- * @param str - 要统计的字符串
- * @returns 字符出现频率对象
- * @example
- * ```ts
- * frequency('hello'); // { h: 1, e: 1, l: 2, o: 1 }
- * ```
- */
-declare function frequency(str: string): Record<string, number>;
-/**
- * 获取字符串中的数字
- * @param str - 要处理的字符串
- * @returns 数字数组
- * @example
- * ```ts
- * getNumbers('abc123def456'); // [123, 456]
- * getNumbers('1.23, 4.56'); // [1.23, 4.56]
- * ```
- */
-declare function getNumbers(str: string): number[];
-/**
- * 获取字符串中的字母
- * @param str - 要处理的字符串
- * @returns 字母数组
- * @example
- * ```ts
- * getLetters('abc123def456'); // ['a', 'b', 'c', 'd', 'e', 'f']
- * getLetters('Hello World'); // ['H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd']
- * ```
- */
-declare function getLetters(str: string): string[];
-
-/**
  * 字符串比较工具函数
  * @packageDocumentation
  */
@@ -5248,7 +4904,6 @@ declare const string_capitalize: typeof capitalize;
 declare const string_capitalizeWords: typeof capitalizeWords;
 declare const string_compare: typeof compare;
 declare const string_compareIgnoreCase: typeof compareIgnoreCase;
-declare const string_count: typeof count;
 declare const string_dasherize: typeof dasherize;
 declare const string_decodeBase64: typeof decodeBase64;
 declare const string_decodeHtml: typeof decodeHtml;
@@ -5260,9 +4915,6 @@ declare const string_endsWith: typeof endsWith;
 declare const string_equals: typeof equals;
 declare const string_equalsIgnoreCase: typeof equalsIgnoreCase;
 declare const string_format: typeof format;
-declare const string_frequency: typeof frequency;
-declare const string_getLetters: typeof getLetters;
-declare const string_getNumbers: typeof getNumbers;
 declare const string_includes: typeof includes;
 declare const string_indexOf: typeof indexOf;
 declare const string_isAlpha: typeof isAlpha;
@@ -5272,7 +4924,6 @@ declare const string_isNotEmpty: typeof isNotEmpty;
 declare const string_isNumeric: typeof isNumeric;
 declare const string_isPhone: typeof isPhone;
 declare const string_isUrl: typeof isUrl;
-declare const string_join: typeof join;
 declare const string_left: typeof left;
 declare const string_length: typeof length;
 declare const string_normalizeSpace: typeof normalizeSpace;
@@ -5283,8 +4934,6 @@ declare const string_repeat: typeof repeat;
 declare const string_reverse: typeof reverse;
 declare const string_right: typeof right;
 declare const string_similarity: typeof similarity;
-declare const string_splitByLength: typeof splitByLength;
-declare const string_splitLines: typeof splitLines;
 declare const string_startsWith: typeof startsWith;
 declare const string_toNumber: typeof toNumber;
 declare const string_trim: typeof trim;
@@ -5293,11 +4942,12 @@ declare const string_trimRight: typeof trimRight;
 declare const string_truncate: typeof truncate;
 declare const string_uuid: typeof uuid;
 declare namespace string {
-  export { string_camelize as camelize, string_capitalize as capitalize, string_capitalizeWords as capitalizeWords, string_compare as compare, string_compareIgnoreCase as compareIgnoreCase, string_count as count, string_dasherize as dasherize, string_decodeBase64 as decodeBase64, string_decodeHtml as decodeHtml, string_decodeUrl as decodeUrl, string_encodeBase64 as encodeBase64, string_encodeHtml as encodeHtml, string_encodeUrl as encodeUrl, string_endsWith as endsWith, string_equals as equals, string_equalsIgnoreCase as equalsIgnoreCase, string_format as format, string_frequency as frequency, string_getLetters as getLetters, string_getNumbers as getNumbers, string_includes as includes, string_indexOf as indexOf, string_isAlpha as isAlpha, string_isAlphanumeric as isAlphanumeric, string_isEmail as isEmail, isEmpty$1 as isEmpty, string_isNotEmpty as isNotEmpty, string_isNumeric as isNumeric, string_isPhone as isPhone, string_isUrl as isUrl, string_join as join, string_left as left, string_length as length, string_normalizeSpace as normalizeSpace, string_padEnd as padEnd, string_padStart as padStart, string_randomId as randomId, string_repeat as repeat, replace$1 as replace, replaceAll$1 as replaceAll, string_reverse as reverse, string_right as right, string_similarity as similarity, split$1 as split, string_splitByLength as splitByLength, string_splitLines as splitLines, string_startsWith as startsWith, toBoolean$1 as toBoolean, string_toNumber as toNumber, string_trim as trim, string_trimLeft as trimLeft, string_trimRight as trimRight, string_truncate as truncate, string_uuid as uuid };
+  export { string_camelize as camelize, string_capitalize as capitalize, string_capitalizeWords as capitalizeWords, string_compare as compare, string_compareIgnoreCase as compareIgnoreCase, string_dasherize as dasherize, string_decodeBase64 as decodeBase64, string_decodeHtml as decodeHtml, string_decodeUrl as decodeUrl, string_encodeBase64 as encodeBase64, string_encodeHtml as encodeHtml, string_encodeUrl as encodeUrl, string_endsWith as endsWith, string_equals as equals, string_equalsIgnoreCase as equalsIgnoreCase, string_format as format, string_includes as includes, string_indexOf as indexOf, string_isAlpha as isAlpha, string_isAlphanumeric as isAlphanumeric, string_isEmail as isEmail, isEmpty$1 as isEmpty, string_isNotEmpty as isNotEmpty, string_isNumeric as isNumeric, string_isPhone as isPhone, string_isUrl as isUrl, string_left as left, string_length as length, string_normalizeSpace as normalizeSpace, string_padEnd as padEnd, string_padStart as padStart, string_randomId as randomId, string_repeat as repeat, replace$1 as replace, replaceAll$1 as replaceAll, string_reverse as reverse, string_right as right, string_similarity as similarity, string_startsWith as startsWith, toBoolean$1 as toBoolean, string_toNumber as toNumber, string_trim as trim, string_trimLeft as trimLeft, string_trimRight as trimRight, string_truncate as truncate, string_uuid as uuid };
 }
 
 /**
- * 类型检测工具函数
+ * 基础类型检测工具函数
+ * @packageDocumentation
  */
 /**
  * 获取值的类型
@@ -5370,6 +5020,120 @@ declare const isNull: (value: unknown) => value is null;
  */
 declare const isBoolean: (value: unknown) => value is boolean;
 /**
+ * 检查值是否为数字
+ * @param value - 要检查的值
+ * @returns 是否为数字
+ * @example
+ * isNumber(1) // true
+ * isNumber(1.5) // true
+ * isNumber(NaN) // true
+ * isNumber('1') // false
+ */
+declare const isNumber: (value: unknown) => value is number;
+/**
+ * 检查值是否为整数
+ * @param value - 要检查的值
+ * @returns 是否为整数
+ * @example
+ * isInteger(1) // true
+ * isInteger(1.0) // true
+ * isInteger(1.5) // false
+ * isInteger('1') // false
+ */
+declare const isInteger: (value: unknown) => value is number;
+/**
+ * 检查值是否为有限数字
+ * @param value - 要检查的值
+ * @returns 是否为有限数字
+ * @example
+ * isFiniteNumber(1) // true
+ * isFiniteNumber(1.5) // true
+ * isFiniteNumber(Infinity) // false
+ * isFiniteNumber(NaN) // false
+ */
+declare const isFiniteNumber: (value: unknown) => value is number;
+/**
+ * 检查值是否为 NaN
+ * @param value - 要检查的值
+ * @returns 是否为 NaN
+ * @example
+ * isNaN(NaN) // true
+ * isNaN(1) // false
+ * isNaN('test') // false
+ */
+declare const isNaN: (value: unknown) => value is number;
+/**
+ * 检查值是否为字符串
+ * @param value - 要检查的值
+ * @returns 是否为字符串
+ * @example
+ * isString('test') // true
+ * isString('') // true
+ * isString(1) // false
+ */
+declare const isString: (value: unknown) => value is string;
+
+/**
+ * 对象类型检测工具函数
+ * @packageDocumentation
+ */
+/**
+ * 检查值是否为对象
+ * @param value - 要检查的值
+ * @returns 是否为对象
+ * @example
+ * isObject({}) // true
+ * isObject([]) // true
+ * isObject(null) // false
+ * isObject(undefined) // false
+ */
+declare const isObject: (value: unknown) => value is object;
+/**
+ * 检查值是否为普通对象（由 Object 构造函数创建或原型链上没有其他对象）
+ * @param value - 要检查的值
+ * @returns 是否为普通对象
+ * @example
+ * isPlainObject({}) // true
+ * isPlainObject(Object.create(null)) // true
+ * isPlainObject(new Date()) // false
+ * isPlainObject([]) // false
+ */
+declare const isPlainObject: (value: unknown) => value is Record<string, unknown>;
+/**
+ * 检查值是否为数组
+ * @param value - 要检查的值
+ * @returns 是否为数组
+ * @example
+ * isArray([]) // true
+ * isArray([1, 2, 3]) // true
+ * isArray({}) // false
+ */
+declare const isArray: (value: unknown) => value is unknown[];
+/**
+ * 检查值是否为函数
+ * @param value - 要检查的值
+ * @returns 是否为函数
+ * @example
+ * isFunction(() => {}) // true
+ * isFunction(function() {}) // true
+ * isFunction({}) // false
+ */
+declare const isFunction: (value: unknown) => value is (...args: unknown[]) => unknown;
+/**
+ * 检查值是否为日期对象
+ * @param value - 要检查的值
+ * @returns 是否为日期对象
+ * @example
+ * isDate(new Date()) // true
+ * isDate('2024-03-18') // false
+ */
+declare const isDate: (value: unknown) => value is Date;
+
+/**
+ * 高级类型检测工具函数
+ * @packageDocumentation
+ */
+/**
  * 检查值是否为 Promise
  * @param value - 要检查的值
  * @returns 是否为 Promise
@@ -5419,110 +5183,6 @@ declare const isSymbol$1: (value: unknown) => value is symbol;
  * isBigInt(1) // false
  */
 declare const isBigInt$1: (value: unknown) => value is bigint;
-/**
- * 检查值是否为数字
- * @param value - 要检查的值
- * @returns 是否为数字
- * @example
- * isNumber(1) // true
- * isNumber(1.5) // true
- * isNumber(NaN) // true
- * isNumber('1') // false
- */
-declare const isNumber: (value: unknown) => value is number;
-/**
- * 检查值是否为整数
- * @param value - 要检查的值
- * @returns 是否为整数
- * @example
- * isInteger(1) // true
- * isInteger(1.0) // true
- * isInteger(1.5) // false
- * isInteger('1') // false
- */
-declare const isInteger: (value: unknown) => value is number;
-/**
- * 检查值是否为有限数字
- * @param value - 要检查的值
- * @returns 是否为有限数字
- * @example
- * isFinite(1) // true
- * isFinite(1.5) // true
- * isFinite(Infinity) // false
- * isFinite(NaN) // false
- */
-declare const isFiniteNumber: (value: unknown) => value is number;
-/**
- * 检查值是否为 NaN
- * @param value - 要检查的值
- * @returns 是否为 NaN
- * @example
- * isNaN(NaN) // true
- * isNaN(1) // false
- * isNaN('test') // false
- */
-declare const isNaN: (value: unknown) => value is number;
-/**
- * 检查值是否为字符串
- * @param value - 要检查的值
- * @returns 是否为字符串
- * @example
- * isString('test') // true
- * isString('') // true
- * isString(1) // false
- */
-declare const isString: (value: unknown) => value is string;
-/**
- * 检查值是否为对象
- * @param value - 要检查的值
- * @returns 是否为对象
- * @example
- * isObject({}) // true
- * isObject([]) // true
- * isObject(null) // false
- * isObject(undefined) // false
- */
-declare const isObject: (value: unknown) => value is object;
-/**
- * 检查值是否为普通对象（由 Object 构造函数创建或原型链上没有其他对象）
- * @param value - 要检查的值
- * @returns 是否为普通对象
- * @example
- * isPlainObject({}) // true
- * isPlainObject(Object.create(null)) // true
- * isPlainObject(new Date()) // false
- * isPlainObject([]) // false
- */
-declare const isPlainObject: (value: unknown) => value is Record<string, unknown>;
-/**
- * 检查值是否为数组
- * @param value - 要检查的值
- * @returns 是否为数组
- * @example
- * isArray([]) // true
- * isArray([1, 2, 3]) // true
- * isArray({}) // false
- */
-declare const isArray: (value: unknown) => value is unknown[];
-/**
- * 检查值是否为函数
- * @param value - 要检查的值
- * @returns 是否为函数
- * @example
- * isFunction(() => {}) // true
- * isFunction(function() {}) // true
- * isFunction({}) // false
- */
-declare const isFunction: (value: unknown) => value is Function;
-/**
- * 检查值是否为日期对象
- * @param value - 要检查的值
- * @returns 是否为日期对象
- * @example
- * isDate(new Date()) // true
- * isDate('2024-03-18') // false
- */
-declare const isDate: (value: unknown) => value is Date;
 /**
  * 检查值是否为 Map 对象
  * @param value - 要检查的值
@@ -5584,6 +5244,11 @@ declare const isIterable: (value: unknown) => value is Iterable<unknown>;
  */
 declare const isAsyncIterable: (value: unknown) => value is AsyncIterable<unknown>;
 
+/**
+ * 类型检测工具函数
+ * @packageDocumentation
+ */
+
 declare const type_getType: typeof getType;
 declare const type_isArray: typeof isArray;
 declare const type_isAsyncIterable: typeof isAsyncIterable;
@@ -5613,7 +5278,8 @@ declare namespace type {
 }
 
 /**
- * 空值检测工具函数
+ * 基础空值检测工具函数
+ * @packageDocumentation
  */
 /**
  * 检查值是否为 null 或 undefined
@@ -5641,6 +5307,11 @@ declare const isNil: (value: unknown) => value is null | undefined;
  * isEmpty('0') // false
  */
 declare const isEmpty: (value: unknown) => boolean;
+
+/**
+ * 特定类型空值检测工具函数
+ * @packageDocumentation
+ */
 /**
  * 判断字符串是否为空
  * @param str 要判断的字符串
@@ -5663,6 +5334,38 @@ declare const isEmptyArray: (value: unknown) => value is [];
  * @returns 是否为空对象
  */
 declare function isEmptyObject(obj: object): boolean;
+/**
+ * 检查值是否为空 Date
+ * @param value - 要检查的值
+ * @returns 是否为空 Date
+ * @example
+ * isEmptyDate(new Date('')) // true
+ * isEmptyDate(new Date()) // false
+ */
+declare const isEmptyDate: (value: unknown) => value is Date;
+/**
+ * 检查值是否为空正则表达式
+ * @param value - 要检查的值
+ * @returns 是否为空正则表达式
+ * @example
+ * isEmptyRegExp(new RegExp('')) // true
+ * isEmptyRegExp(/test/) // false
+ */
+declare const isEmptyRegExp: (value: unknown) => value is RegExp;
+/**
+ * 检查值是否为空 Error
+ * @param value - 要检查的值
+ * @returns 是否为空 Error
+ * @example
+ * isEmptyError(new Error('')) // true
+ * isEmptyError(new Error('test')) // false
+ */
+declare const isEmptyError: (value: unknown) => value is Error;
+
+/**
+ * 集合类型空值检测工具函数
+ * @packageDocumentation
+ */
 /**
  * 检查值是否为空 Map
  * @param value - 要检查的值
@@ -5702,39 +5405,6 @@ declare const isEmptyWeakMap: (value: unknown) => value is WeakMap<object, never
  */
 declare const isEmptyWeakSet: (value: unknown) => value is WeakSet<object>;
 /**
- * 检查值是否为空 Date
- * @param value - 要检查的值
- * @returns 是否为空 Date
- * @example
- * isEmptyDate(new Date('')) // true
- * isEmptyDate(new Date()) // false
- */
-declare const isEmptyDate: (value: unknown) => value is Date;
-/**
- * 检查值是否为空正则表达式
- * @param value - 要检查的值
- * @returns 是否为空正则表达式
- * @example
- * isEmptyRegExp(new RegExp('')) // true
- * isEmptyRegExp(/test/) // false
- */
-declare const isEmptyRegExp: (value: unknown) => value is RegExp;
-/**
- * 检查值是否为空 Error
- * @param value - 要检查的值
- * @returns 是否为空 Error
- * @example
- * isEmptyError(new Error('')) // true
- * isEmptyError(new Error('test')) // false
- */
-declare const isEmptyError: (value: unknown) => value is Error;
-/**
- * 判断 Promise 是否为空
- * @param promise 要判断的 Promise
- * @returns 是否为空 Promise
- */
-declare function isEmptyPromise(promise: Promise<unknown>): Promise<boolean>;
-/**
  * 检查值是否为空迭代器
  * @param value - 要检查的值
  * @returns 是否为空迭代器
@@ -5756,6 +5426,17 @@ declare const isEmptyIterator: (value: unknown) => value is Iterator<never>;
  * }[Symbol.asyncIterator]()) // false
  */
 declare const isEmptyAsyncIterator: (value: unknown) => Promise<boolean>;
+
+/**
+ * 高级空值检测工具函数
+ * @packageDocumentation
+ */
+/**
+ * 判断 Promise 是否为空
+ * @param promise 要判断的 Promise
+ * @returns 是否为空 Promise
+ */
+declare function isEmptyPromise(promise: Promise<unknown>): Promise<boolean>;
 /**
  * 检查值是否为空或假值
  * @param value - 要检查的值
@@ -5819,6 +5500,11 @@ declare const isEmptyOrFalsyLoose: (value: unknown) => boolean;
  */
 declare const isEmptyOrFalsyStrictest: (value: unknown) => boolean;
 
+/**
+ * 空值检测工具函数
+ * @packageDocumentation
+ */
+
 declare const empty_isEmpty: typeof isEmpty;
 declare const empty_isEmptyArray: typeof isEmptyArray;
 declare const empty_isEmptyAsyncIterator: typeof isEmptyAsyncIterator;
@@ -5844,6 +5530,7 @@ declare namespace empty {
 
 /**
  * 布尔值工具函数
+ * @packageDocumentation
  */
 /**
  * 将值转换为布尔值
@@ -5901,7 +5588,8 @@ declare namespace boolean {
 }
 
 /**
- * Promise 工具函数
+ * Promise 控制流工具函数
+ * @packageDocumentation
  */
 /**
  * 延迟执行
@@ -5948,6 +5636,11 @@ declare const retry: <T>(fn: () => Promise<T>, retries: number, delay: number) =
  * concurrent(tasks, 2).then(results => console.log(results))
  */
 declare const concurrent: <T>(tasks: (() => Promise<T>)[], limit: number) => Promise<T[]>;
+
+/**
+ * Promise 转换工具函数
+ * @packageDocumentation
+ */
 /**
  * 防抖
  * @param fn - 要执行的函数
@@ -5972,6 +5665,11 @@ declare const debounce: <T extends (...args: any[]) => any>(fn: T, ms: number) =
  * // 1秒内只执行一次
  */
 declare const throttle: <T extends (...args: any[]) => any>(fn: T, ms: number) => ((...args: Parameters<T>) => void);
+
+/**
+ * Promise 高级功能工具函数
+ * @packageDocumentation
+ */
 /**
  * 包装 Promise
  * @param promise - Promise 对象
@@ -6020,6 +5718,11 @@ declare const cancellable: <T>() => [Promise<T>, (reason?: any) => void];
  */
 declare const cancellableAsync: <T>(fn: () => Promise<T>) => () => [Promise<T>, (reason?: any) => void];
 
+/**
+ * Promise 工具函数
+ * @packageDocumentation
+ */
+
 declare const promise_cancellable: typeof cancellable;
 declare const promise_cancellableAsync: typeof cancellableAsync;
 declare const promise_concurrent: typeof concurrent;
@@ -6034,6 +5737,10 @@ declare namespace promise {
   export { promise_cancellable as cancellable, promise_cancellableAsync as cancellableAsync, promise_concurrent as concurrent, promise_debounce as debounce, promise_delay as delay, promise_retry as retry, promise_throttle as throttle, promise_timeout as timeout, promise_wrap as wrap, promise_wrapAsync as wrapAsync };
 }
 
+/**
+ * 正则表达式基础操作工具函数
+ * @packageDocumentation
+ */
 /**
  * 转义正则表达式中的特殊字符
  * @param str - 需要转义的字符串
@@ -6056,6 +5763,21 @@ declare const escapeRegExp: (str: string) => string;
  */
 declare const createRegExp: (pattern: string, flags?: string) => RegExp;
 /**
+ * 克隆正则表达式
+ * @param regexp - 正则表达式
+ * @returns 新的正则表达式
+ * @example
+ * ```ts
+ * clone(/test/gi) // /test/gi
+ * ```
+ */
+declare const clone: (regexp: RegExp) => RegExp;
+
+/**
+ * 正则表达式匹配相关工具函数
+ * @packageDocumentation
+ */
+/**
  * 获取所有匹配结果
  * @param str - 要匹配的字符串
  * @param regexp - 正则表达式
@@ -6066,41 +5788,6 @@ declare const createRegExp: (pattern: string, flags?: string) => RegExp;
  * ```
  */
 declare const matchAll: (str: string, regexp: RegExp) => RegExpMatchArray[];
-/**
- * 替换所有匹配项
- * @param str - 要替换的字符串
- * @param regexp - 正则表达式
- * @param replacement - 替换内容
- * @returns 替换后的字符串
- * @example
- * ```ts
- * replaceAll('test1 test2 test3', /\w+(\d+)/g, 'word$1') // 'word1 word2 word3'
- * ```
- */
-declare const replaceAll: (str: string, regexp: RegExp, replacement: string) => string;
-/**
- * 按正则表达式分割字符串
- * @param str - 要分割的字符串
- * @param regexp - 正则表达式
- * @returns 分割后的字符串数组
- * @example
- * ```ts
- * split('test1,test2;test3', /[,;]/) // ['test1', 'test2', 'test3']
- * ```
- */
-declare const split: (str: string, regexp: RegExp) => string[];
-/**
- * 测试字符串是否匹配正则表达式
- * @param str - 要测试的字符串
- * @param regexp - 正则表达式
- * @returns 是否匹配
- * @example
- * ```ts
- * test('test123', /\d+/) // true
- * test('test', /\d+/) // false
- * ```
- */
-declare const test: (str: string, regexp: RegExp) => boolean;
 /**
  * 执行正则表达式匹配
  * @param str - 要匹配的字符串
@@ -6134,6 +5821,40 @@ declare const execAll: (str: string, regexp: RegExp) => RegExpExecArray[];
  * ```
  */
 declare const match: (str: string, regexp: RegExp) => RegExpMatchArray | null;
+
+/**
+ * 正则表达式替换相关工具函数
+ * @packageDocumentation
+ */
+/**
+ * 替换所有匹配项
+ * @param str - 要替换的字符串
+ * @param regexp - 正则表达式
+ * @param replacement - 替换内容
+ * @returns 替换后的字符串
+ * @example
+ * ```ts
+ * replaceAll('test1 test2 test3', /\w+(\d+)/g, 'word$1') // 'word1 word2 word3'
+ * ```
+ */
+declare const replaceAll: (str: string, regexp: RegExp, replacement: string) => string;
+/**
+ * 替换匹配项
+ * @param str - 要替换的字符串
+ * @param regexp - 正则表达式
+ * @param replacement - 替换内容
+ * @returns 替换后的字符串
+ * @example
+ * ```ts
+ * replace('test123', /(\d+)/, '456') // 'test456'
+ * ```
+ */
+declare const replace: (str: string, regexp: RegExp, replacement: string) => string;
+
+/**
+ * 正则表达式搜索相关工具函数
+ * @packageDocumentation
+ */
 /**
  * 返回匹配位置
  * @param str - 要匹配的字符串
@@ -6147,17 +5868,33 @@ declare const match: (str: string, regexp: RegExp) => RegExpMatchArray | null;
  */
 declare const search: (str: string, regexp: RegExp) => number;
 /**
- * 替换匹配项
- * @param str - 要替换的字符串
+ * 测试字符串是否匹配正则表达式
+ * @param str - 要测试的字符串
  * @param regexp - 正则表达式
- * @param replacement - 替换内容
- * @returns 替换后的字符串
+ * @returns 是否匹配
  * @example
  * ```ts
- * replace('test123', /(\d+)/, '456') // 'test456'
+ * test('test123', /\d+/) // true
+ * test('test', /\d+/) // false
  * ```
  */
-declare const replace: (str: string, regexp: RegExp, replacement: string) => string;
+declare const test: (str: string, regexp: RegExp) => boolean;
+/**
+ * 按正则表达式分割字符串
+ * @param str - 要分割的字符串
+ * @param regexp - 正则表达式
+ * @returns 分割后的字符串数组
+ * @example
+ * ```ts
+ * split('test1,test2;test3', /[,;]/) // ['test1', 'test2', 'test3']
+ * ```
+ */
+declare const split: (str: string, regexp: RegExp) => string[];
+
+/**
+ * 正则表达式捕获组相关工具函数
+ * @packageDocumentation
+ */
 /**
  * 获取正则表达式的所有捕获组
  * @param regexp - 正则表达式
@@ -6168,6 +5905,43 @@ declare const replace: (str: string, regexp: RegExp, replacement: string) => str
  * ```
  */
 declare const getCaptureGroups: (regexp: RegExp) => string[];
+/**
+ * 获取正则表达式的所有捕获组值
+ * @param str - 要匹配的字符串
+ * @param regexp - 正则表达式
+ * @returns 所有捕获组值
+ * @example
+ * ```ts
+ * allCaptureGroups('test1 test2 test3', /\w+(\d+)/g) // [['1'], ['2'], ['3']]
+ * ```
+ */
+declare const allCaptureGroups: (str: string, regexp: RegExp) => string[][];
+/**
+ * 获取正则表达式的所有命名捕获组
+ * @param regexp - 正则表达式
+ * @returns 所有命名捕获组
+ * @example
+ * ```ts
+ * getNamedCaptureGroups(/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/) // ['year', 'month', 'day']
+ * ```
+ */
+declare const getNamedCaptureGroups: (regexp: RegExp) => string[];
+/**
+ * 获取正则表达式的所有命名捕获组值
+ * @param str - 要匹配的字符串
+ * @param regexp - 正则表达式
+ * @returns 所有命名捕获组值
+ * @example
+ * ```ts
+ * allNamedCaptureGroups('2023-01-01', /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/) // [{ year: '2023', month: '01', day: '01' }]
+ * ```
+ */
+declare const allNamedCaptureGroups: (str: string, regexp: RegExp) => Array<Record<string, string>>;
+
+/**
+ * 正则表达式标志相关工具函数
+ * @packageDocumentation
+ */
 /**
  * 获取正则表达式的所有标志
  * @param regexp - 正则表达式
@@ -6212,6 +5986,11 @@ declare const addFlag: (regexp: RegExp, flag: string) => RegExp;
  * ```
  */
 declare const removeFlag: (regexp: RegExp, flag: string) => RegExp;
+
+/**
+ * 正则表达式工具函数
+ * @packageDocumentation
+ */
 /**
  * 获取正则表达式的源字符串
  * @param regexp - 正则表达式
@@ -6232,16 +6011,6 @@ declare const getSource: (regexp: RegExp) => string;
  * ```
  */
 declare const toString: (regexp: RegExp) => string;
-/**
- * 克隆正则表达式
- * @param regexp - 正则表达式
- * @returns 新的正则表达式
- * @example
- * ```ts
- * clone(/test/gi) // /test/gi
- * ```
- */
-declare const clone: (regexp: RegExp) => RegExp;
 /**
  * 合并多个正则表达式
  * @param patterns - 正则表达式数组
@@ -6286,6 +6055,11 @@ declare const firstMatchIndex: (str: string, regexp: RegExp) => number;
  * ```
  */
 declare const lastMatchIndex: (str: string, regexp: RegExp) => number;
+
+/**
+ * 正则表达式高级功能工具函数
+ * @packageDocumentation
+ */
 /**
  * 获取正则表达式的所有匹配位置
  * @param str - 要匹配的字符串
@@ -6319,38 +6093,6 @@ declare const allMatchRanges: (str: string, regexp: RegExp) => [number, number][
  * ```
  */
 declare const allMatchTexts: (str: string, regexp: RegExp) => string[];
-/**
- * 获取正则表达式的所有捕获组值
- * @param str - 要匹配的字符串
- * @param regexp - 正则表达式
- * @returns 所有捕获组值
- * @example
- * ```ts
- * allCaptureGroups('test1 test2 test3', /\w+(\d+)/g) // [['1'], ['2'], ['3']]
- * ```
- */
-declare const allCaptureGroups: (str: string, regexp: RegExp) => string[][];
-/**
- * 获取正则表达式的所有命名捕获组
- * @param regexp - 正则表达式
- * @returns 所有命名捕获组
- * @example
- * ```ts
- * getNamedCaptureGroups(/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/) // ['year', 'month', 'day']
- * ```
- */
-declare const getNamedCaptureGroups: (regexp: RegExp) => string[];
-/**
- * 获取正则表达式的所有命名捕获组值
- * @param str - 要匹配的字符串
- * @param regexp - 正则表达式
- * @returns 所有命名捕获组值
- * @example
- * ```ts
- * allNamedCaptureGroups('2023-01-01', /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/) // [{ year: '2023', month: '01', day: '01' }]
- * ```
- */
-declare const allNamedCaptureGroups: (str: string, regexp: RegExp) => Array<Record<string, string>>;
 /**
  * 获取正则表达式的所有匹配位置和文本
  * @param str - 要匹配的字符串
@@ -6439,6 +6181,11 @@ declare const allMatchRangesWithNamedGroups: (str: string, regexp: RegExp) => Ar
     groups: Record<string, string>;
 }>;
 
+/**
+ * 正则表达式操作相关工具函数
+ * @packageDocumentation
+ */
+
 declare const regexp_addFlag: typeof addFlag;
 declare const regexp_allCaptureGroups: typeof allCaptureGroups;
 declare const regexp_allMatchIndices: typeof allMatchIndices;
@@ -6479,7 +6226,8 @@ declare namespace regexp {
 }
 
 /**
- * 错误处理工具函数
+ * 错误创建工具函数
+ * @packageDocumentation
  */
 /**
  * 创建自定义错误类
@@ -6539,6 +6287,12 @@ declare const createPermissionError: (message: string, code?: string) => CustomE
  * createResourceError('Resource not found', 'E005')
  */
 declare const createResourceError: (message: string, code?: string) => CustomError;
+
+/**
+ * 错误检查工具函数
+ * @packageDocumentation
+ */
+
 /**
  * 检查是否为自定义错误
  * @param error - 错误对象
@@ -6593,6 +6347,11 @@ declare const isPermissionError: (error: unknown) => error is CustomError;
  * isResourceError(new Error('test')) // false
  */
 declare const isResourceError: (error: unknown) => error is CustomError;
+
+/**
+ * 错误工具函数
+ * @packageDocumentation
+ */
 /**
  * 获取错误堆栈信息
  * @param error - 错误对象
@@ -6626,6 +6385,11 @@ declare const getErrorCode: (error: unknown) => string | undefined;
  */
 declare const getErrorName: (error: unknown) => string;
 
+/**
+ * 错误处理工具函数
+ * @packageDocumentation
+ */
+
 type error_CustomError = CustomError;
 declare const error_CustomError: typeof CustomError;
 declare const error_createBusinessError: typeof createBusinessError;
@@ -6649,6 +6413,7 @@ declare namespace error {
 
 /**
  * Symbol 工具函数
+ * @packageDocumentation
  */
 /**
  * 创建唯一的 Symbol
@@ -6784,7 +6549,8 @@ declare namespace symbol {
 }
 
 /**
- * BigInt 工具函数
+ * BigInt 基础操作工具函数
+ * @packageDocumentation
  */
 /**
  * 创建 BigInt
@@ -6814,6 +6580,11 @@ declare const isBigInt: (value: unknown) => value is bigint;
  * isValidBigInt('abc') // false
  */
 declare const isValidBigInt: (value: unknown) => boolean;
+
+/**
+ * BigInt 转换操作工具函数
+ * @packageDocumentation
+ */
 /**
  * 将 BigInt 转换为字符串
  * @param value - BigInt 值
@@ -6834,6 +6605,11 @@ declare const bigIntToString: (value: bigint, radix?: number) => string;
  * stringToBigInt('7b', 16) // 123n
  */
 declare const stringToBigInt: (value: string, radix?: number) => bigint;
+
+/**
+ * BigInt 数学运算工具函数
+ * @packageDocumentation
+ */
 /**
  * 获取 BigInt 的绝对值
  * @param value - BigInt 值
@@ -6861,6 +6637,52 @@ declare const bigIntSign: (value: bigint) => number;
  */
 declare const bigIntLength: (value: bigint) => number;
 /**
+ * 获取 BigInt 的平方根
+ * @param value - BigInt 值
+ * @returns 平方根
+ * @example
+ * bigIntSqrt(16n) // 4n
+ * bigIntSqrt(17n) // 4n
+ */
+declare const bigIntSqrt: (value: bigint) => bigint;
+/**
+ * 获取 BigInt 的幂
+ * @param base - 底数
+ * @param exponent - 指数
+ * @returns 幂
+ * @example
+ * bigIntPow(2n, 3n) // 8n
+ */
+declare const bigIntPow: (base: bigint, exponent: bigint) => bigint;
+
+/**
+ * BigInt 最大公约数和最小公倍数工具函数
+ * @packageDocumentation
+ */
+/**
+ * 获取 BigInt 的最大公约数
+ * @param a - 第一个数
+ * @param b - 第二个数
+ * @returns 最大公约数
+ * @example
+ * bigIntGcd(12n, 18n) // 6n
+ */
+declare const bigIntGcd: (a: bigint, b: bigint) => bigint;
+/**
+ * 获取 BigInt 的最小公倍数
+ * @param a - 第一个数
+ * @param b - 第二个数
+ * @returns 最小公倍数
+ * @example
+ * bigIntLcm(12n, 18n) // 36n
+ */
+declare const bigIntLcm: (a: bigint, b: bigint) => bigint;
+
+/**
+ * BigInt 验证操作工具函数
+ * @packageDocumentation
+ */
+/**
  * 检查 BigInt 是否为偶数
  * @param value - BigInt 值
  * @returns 是否为偶数
@@ -6887,42 +6709,11 @@ declare const isBigIntOdd: (value: bigint) => boolean;
  * isBigIntPrime(18n) // false
  */
 declare const isBigIntPrime: (value: bigint) => boolean;
+
 /**
- * 获取 BigInt 的平方根
- * @param value - BigInt 值
- * @returns 平方根
- * @example
- * bigIntSqrt(16n) // 4n
- * bigIntSqrt(17n) // 4n
+ * BigInt 工具函数
+ * @packageDocumentation
  */
-declare const bigIntSqrt: (value: bigint) => bigint;
-/**
- * 获取 BigInt 的幂
- * @param base - 底数
- * @param exponent - 指数
- * @returns 幂
- * @example
- * bigIntPow(2n, 3n) // 8n
- */
-declare const bigIntPow: (base: bigint, exponent: bigint) => bigint;
-/**
- * 获取 BigInt 的最大公约数
- * @param a - 第一个数
- * @param b - 第二个数
- * @returns 最大公约数
- * @example
- * bigIntGcd(12n, 18n) // 6n
- */
-declare const bigIntGcd: (a: bigint, b: bigint) => bigint;
-/**
- * 获取 BigInt 的最小公倍数
- * @param a - 第一个数
- * @param b - 第二个数
- * @returns 最小公倍数
- * @example
- * bigIntLcm(12n, 18n) // 36n
- */
-declare const bigIntLcm: (a: bigint, b: bigint) => bigint;
 
 declare const bigint_bigIntAbs: typeof bigIntAbs;
 declare const bigint_bigIntGcd: typeof bigIntGcd;

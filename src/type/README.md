@@ -4,7 +4,10 @@
 
 ```
 src/type/
-├── index.ts
+├── index.ts       // 导出所有功能
+├── basic.ts       // 基础类型检测（getType, isType, isUndefined, isNull等）
+├── object.ts      // 对象类型检测（isObject, isPlainObject, isArray等）
+└── advanced.ts    // 高级类型检测（isMap, isSet, isIterable等）
 ```
 
 ## 功能描述

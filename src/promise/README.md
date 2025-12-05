@@ -4,7 +4,10 @@
 
 ```
 src/promise/
-├── index.ts
+├── index.ts       // 导出所有功能
+├── control.ts     // 控制流（delay, timeout, retry, concurrent）
+├── transform.ts   // 转换（debounce, throttle）
+└── advanced.ts    // 高级功能（wrap, wrapAsync, cancellable等）
 ```
 
 ## 功能描述

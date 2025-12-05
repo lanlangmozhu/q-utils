@@ -4,7 +4,11 @@
 
 ```
 src/empty/
-├── index.ts
+├── index.ts       // 导出所有功能
+├── basic.ts       // 基础空值检测（isNil, isEmpty）
+├── specific.ts    // 特定类型空值检测（isEmptyString, isEmptyArray等）
+├── collections.ts // 集合类型空值检测（isEmptyMap, isEmptySet等）
+└── advanced.ts    // 高级空值检测（isEmptyOrFalsy系列）
 ```
 
 ## 功能描述

@@ -3,649 +3,309 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Utils 使用示例</title>
+  <title>Q-Utils 示例文档 - Q-Utils</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+    /* 左侧导航栏 */
+    .sidebar {
+      width: 280px;
+      background: #2c3e50;
+      color: #ecf0f1;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+    .sidebar-header {
       padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
+      background: #34495e;
+      border-bottom: 1px solid #3d566e;
     }
-    .demo {
-      margin-bottom: 30px;
-      padding: 20px;
-      border: 1px solid #eee;
-      border-radius: 5px;
+    .sidebar-header h1 {
+      font-size: 20px;
+      color: #ecf0f1;
+      margin-bottom: 5px;
     }
-    h1, h2 {
-      color: #333;
+    .sidebar-header p {
+      font-size: 12px;
+      color: #95a5a6;
     }
-    h2 {
-      margin-top: 0;
+    .nav-section {
+      margin-top: 10px;
     }
-    input {
-      padding: 8px;
-      width: 300px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+    .nav-section-title {
+      padding: 12px 20px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #7f8c8d;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    button {
-      padding: 8px 16px;
-      background: #4a90e2;
-      color: white;
+    .nav-item {
+      display: block;
+      padding: 10px 20px;
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+      position: relative;
+    }
+    .nav-item:hover {
+      background: #34495e;
+      color: #ecf0f1;
+    }
+    .nav-item.active {
+      background: #34495e;
+      color: #3498db;
+      border-left-color: #3498db;
+    }
+    .nav-item.pending {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .nav-item.pending::after {
+      content: '待创建';
+      position: absolute;
+      right: 20px;
+      font-size: 11px;
+      color: #e67e22;
+    }
+    /* 右侧内容区 */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #f5f6fa;
+      overflow: hidden;
+    }
+    .content-header {
+      padding: 15px 30px;
+      background: white;
+      border-bottom: 1px solid #e1e8ed;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .content-header h2 {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+    .content-header p {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+    .content-frame {
+      flex: 1;
       border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-right: 10px;
+      width: 100%;
+      height: 100%;
+      background: white;
     }
-    .result {
-      margin-top: 15px;
-      padding: 10px;
-      background: #f5f5f5;
-      border-radius: 4px;
+    /* 滚动条样式 */
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
     }
-    pre {
-      margin: 0;
-      white-space: pre-wrap;
+    .sidebar::-webkit-scrollbar-track {
+      background: #2c3e50;
+    }
+    .sidebar::-webkit-scrollbar-thumb {
+      background: #34495e;
+      border-radius: 3px;
+    }
+    .sidebar::-webkit-scrollbar-thumb:hover {
+      background: #3d566e;
     }
   </style>
 </head>
 <body>
-  <h1>Q-Utils 工具库示例</h1>
-  
-  <div class="demo">
-    <h2>字符串工具</h2>
-    <div>
-      <input type="text" id="stringInput" placeholder="输入字符串..." value="hello world">
-      <button onclick="capitalizeDemo()">首字母大写</button>
-      <button onclick="camelizeDemo()">转驼峰式</button>
-      <button onclick="truncateDemo()">截断字符串</button>
-    </div>
-    <div class="result">
-      <pre id="stringResult"></pre>
-    </div>
-  </div>
-  
-  <div class="demo">
-    <h2>数字工具</h2>
-    <div>
-      <input type="number" id="numberInput" placeholder="输入数字..." value="1234.56789">
-      <button onclick="roundDemo()">四舍五入</button>
-      <button onclick="toCurrencyDemo()">货币格式化</button>
-      <button onclick="clampDemo()">范围限制</button>
-    </div>
-    <div class="result">
-      <pre id="numberResult"></pre>
-    </div>
-  </div>
-  
-  <div class="demo">
-    <h2>函数工具</h2>
-    <div>
-      <input type="text" id="funcInput" placeholder="输入内容...">
-      <button id="debounceBtn">防抖效果</button>
-      <button id="throttleBtn">节流效果</button>
-    </div>
-    <div class="result">
-      <pre id="funcResult"></pre>
-    </div>
-  </div>
-  
-  <div class="demo">
-    <h2>数组工具</h2>
-    <div>
-      <button onclick="uniqueDemo()">数组去重</button>
-      <button onclick="flattenDemo()">数组扁平化</button>
-      <button onclick="shuffleDemo()">随机打乱</button>
-      <button onclick="chunkDemo()">数组分块</button>
-    </div>
-    <div class="result">
-      <pre id="arrayResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>类型检测工具</h2>
-    <div>
-      <input type="text" id="typeInput" placeholder="输入任意值...">
-      <button onclick="typeCheckDemo()">类型检测</button>
-    </div>
-    <div class="result">
-      <pre id="typeResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>空值检测工具</h2>
-    <div>
-      <input type="text" id="emptyInput" placeholder="输入任意值...">
-      <button onclick="emptyCheckDemo()">空值检测</button>
-    </div>
-    <div class="result">
-      <pre id="emptyResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>布尔值工具</h2>
-    <div>
-      <input type="text" id="booleanInput" placeholder="输入任意值...">
-      <button onclick="booleanDemo()">布尔值转换</button>
-    </div>
-    <div class="result">
-      <pre id="booleanResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>Promise 工具</h2>
-    <div>
-      <button onclick="delayDemo()">延迟执行</button>
-      <button onclick="timeoutDemo()">超时控制</button>
-      <button onclick="retryDemo()">重试机制</button>
-    </div>
-    <div class="result">
-      <pre id="promiseResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>正则表达式工具</h2>
-    <div>
-      <input type="text" id="regexpInput" placeholder="输入字符串..." value="test1 test2 test3">
-      <button onclick="regexpDemo()">正则匹配</button>
-    </div>
-    <div class="result">
-      <pre id="regexpResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>错误处理工具</h2>
-    <div>
-      <button onclick="errorDemo()">错误处理</button>
-    </div>
-    <div class="result">
-      <pre id="errorResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>Symbol 工具</h2>
-    <div>
-      <button onclick="symbolDemo()">Symbol 操作</button>
-    </div>
-    <div class="result">
-      <pre id="symbolResult"></pre>
-    </div>
-  </div>
-
-  <div class="demo">
-    <h2>BigInt 工具</h2>
-    <div>
-      <input type="text" id="bigintInput" placeholder="输入大整数..." value="12345678901234567890">
-      <button onclick="bigintDemo()">BigInt 操作</button>
-    </div>
-    <div class="result">
-      <pre id="bigintResult"></pre>
-    </div>
-  </div>
-
-  <!-- 数字处理示例 -->
-  <div class="example-section">
-    <h2>数字处理示例</h2>
-    
-    <!-- 基础操作 -->
-    <div class="example-block">
-      <h3>基础操作</h3>
-      <pre><code>
-  // 数值检查
-  const isValid = isNumber('123'); // true
-  const isInt = isInteger(123.45); // false
-  const isPos = isPositive(-123); // false
-
-  // 范围判断
-  const inRange = inRange(5, 0, 10); // true
-  const fixed = toFixed(3.14159, 2); // '3.14'
-      </code></pre>
+  <!-- 左侧导航栏 -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h1>Q-Utils</h1>
+      <p>工具库示例文档</p>
     </div>
 
-    <!-- 格式化 -->
-    <div class="example-block">
-      <h3>格式化</h3>
-      <pre><code>
-  // 千分位
-  const thousands = toThousands(1234567); // '1,234,567'
-
-  // 百分比
-  const percentage = toPercentage(0.1234); // '12.34%'
-
-  // 中文数字
-  const chinese = toChinese(1234); // '一千二百三十四'
-
-  // 货币
-  const currency = toCurrency(1234.56, 'CNY'); // '¥1,234.56'
-      </code></pre>
+    <!-- 核心基础模块 -->
+    <div class="nav-section">
+      <div class="nav-section-title">核心基础模块</div>
+      <a href="#" class="nav-item active" data-module="array" data-title="Array 数组工具" data-desc="数组操作、去重、分组、排序、转换、树形结构等 50+ 函数">array</a>
+      <a href="#" class="nav-item pending" data-module="string" data-title="String 字符串工具" data-desc="字符串操作、转换、格式化、验证、编码解码等 65+ 函数">string</a>
+      <a href="#" class="nav-item pending" data-module="number" data-title="Number 数字工具" data-desc="数字处理、格式化、金融计算、统计分析等 112+ 函数">number</a>
+      <a href="#" class="nav-item pending" data-module="object" data-title="Object 对象工具" data-desc="对象操作、深拷贝、合并、路径访问等 20+ 函数">object</a>
+      <a href="#" class="nav-item pending" data-module="date" data-title="Date 日期工具" data-desc="日期格式化、计算、时区转换、农历等 40+ 函数">date</a>
+      <a href="#" class="nav-item pending" data-module="function" data-title="Function 函数工具" data-desc="防抖、节流、柯里化、组合、记忆化等 10+ 函数">function</a>
     </div>
 
-    <!-- 金融计算 -->
-    <div class="example-block">
-      <h3>金融计算</h3>
-      <pre><code>
-  // 利息计算
-  const interest = calculateInterest(10000, 0.05, 1); // 500
-
-  // 贷款计算
-  const loan = calculateLoan(100000, 0.05, 12); // 每月还款
-
-  // 投资计算
-  const investment = calculateInvestment(10000, 0.1, 5); // 5年收益
-
-  // 税收计算
-  const tax = calculateTax(50000); // 个人所得税
-      </code></pre>
+    <!-- 类型检测和验证模块 -->
+    <div class="nav-section">
+      <div class="nav-section-title">类型检测和验证模块</div>
+      <a href="#" class="nav-item pending" data-module="type" data-title="Type 类型检测" data-desc="类型判断、类型获取、类型验证等 20+ 函数">type</a>
+      <a href="#" class="nav-item pending" data-module="empty" data-title="Empty 空值检测" data-desc="空值判断、集合空值检测、高级空值检测等 15+ 函数">empty</a>
+      <a href="#" class="nav-item pending" data-module="regexp" data-title="RegExp 正则表达式" data-desc="正则匹配、替换、分组、标志位操作等 30+ 函数">regexp</a>
     </div>
 
-    <!-- 数学计算 -->
-    <div class="example-block">
-      <h3>数学计算</h3>
-      <pre><code>
-  // 阶乘
-  const factorial = factorial(5); // 120
-
-  // 斐波那契
-  const fib = fibonacci(10); // 第10个斐波那契数
-
-  // 质数判断
-  const isPrime = isPrime(17); // true
-
-  // 最大公约数
-  const gcd = gcd(12, 18); // 6
-
-  // 最小公倍数
-  const lcm = lcm(4, 6); // 12
-      </code></pre>
+    <!-- 高级数据类型模块 -->
+    <div class="nav-section">
+      <div class="nav-section-title">高级数据类型模块</div>
+      <a href="#" class="nav-item pending" data-module="boolean" data-title="Boolean 布尔值工具" data-desc="布尔值转换、真值判断、假值判断等 3 函数">boolean</a>
+      <a href="#" class="nav-item pending" data-module="promise" data-title="Promise 工具" data-desc="延迟、超时、重试、并发控制、可取消等 10+ 函数">promise</a>
+      <a href="#" class="nav-item pending" data-module="error" data-title="Error 错误处理" data-desc="错误创建、错误检查、错误信息提取等 15+ 函数">error</a>
+      <a href="#" class="nav-item pending" data-module="symbol" data-title="Symbol 工具" data-desc="Symbol 创建、描述获取、全局 Symbol 等 12+ 函数">symbol</a>
+      <a href="#" class="nav-item pending" data-module="bigint" data-title="BigInt 工具" data-desc="BigInt 操作、验证、转换、数学运算等 20+ 函数">bigint</a>
     </div>
 
-    <!-- 进制转换 -->
-    <div class="example-block">
-      <h3>进制转换</h3>
-      <pre><code>
-  // 二进制
-  const binary = toBinary(42); // '101010'
-
-  // 八进制
-  const octal = toOctal(42); // '52'
-
-  // 十六进制
-  const hex = toHex(42); // '2A'
-
-  // 从其他进制转换
-  const fromBinary = fromBinary('101010'); // 42
-  const fromOctal = fromOctal('52'); // 42
-  const fromHex = fromHex('2A'); // 42
-      </code></pre>
+    <!-- 浏览器环境模块 -->
+    <div class="nav-section">
+      <div class="nav-section-title">浏览器环境模块</div>
+      <a href="#" class="nav-item pending" data-module="dom" data-title="DOM 操作工具" data-desc="元素操作、事件处理、样式操作、动画等 30+ 函数">dom</a>
+      <a href="#" class="nav-item pending" data-module="storage" data-title="Storage 存储管理" data-desc="localStorage、sessionStorage、Cookie 操作等 10+ 函数">storage</a>
+      <a href="#" class="nav-item pending" data-module="network" data-title="Network 网络请求" data-desc="HTTP 请求、超时控制、JSONP、URL 操作等 10+ 函数">network</a>
+      <a href="#" class="nav-item pending" data-module="browser" data-title="Browser 浏览器检测" data-desc="浏览器信息、设备检测、特性检测等 10+ 函数">browser</a>
+      <a href="#" class="nav-item pending" data-module="file" data-title="File 文件操作" data-desc="文件读取、保存、Base64 转换、类型验证等 10+ 函数">file</a>
+      <a href="#" class="nav-item pending" data-module="color" data-title="Color 颜色处理" data-desc="颜色转换、颜色调整、RGB/Hex 互转等 5+ 函数">color</a>
     </div>
+  </aside>
 
-    <!-- 随机数 -->
-    <div class="example-block">
-      <h3>随机数</h3>
-      <pre><code>
-  // 随机数
-  const random = random(0, 1); // 0-1之间的随机数
-
-  // 随机整数
-  const randomInt = randomInt(1, 10); // 1-10之间的随机整数
-
-  // 随机浮点数
-  const randomFloat = randomFloat(0, 1, 2); // 0-1之间的随机浮点数，保留2位小数
-
-  // 指定范围随机数
-  const randomRange = randomRange(5, 10); // 5-10之间的随机数
-      </code></pre>
+  <!-- 右侧内容区 -->
+  <main class="content">
+    <div class="content-header">
+      <h2 id="content-title">Array 数组工具</h2>
+      <p id="content-desc">数组操作、去重、分组、排序、转换、树形结构等 50+ 函数</p>
     </div>
+    <iframe id="content-frame" class="content-frame" src="array.html"></iframe>
+  </main>
 
-    <!-- 范围处理 -->
-    <div class="example-block">
-      <h3>范围处理</h3>
-      <pre><code>
-  // 限制范围
-  const clamped = clamp(15, 0, 10); // 10
+  <script>
+    // 模块配置
+    const modules = {
+      array: { available: true },
+      string: { available: false },
+      number: { available: false },
+      object: { available: false },
+      date: { available: false },
+      function: { available: false },
+      type: { available: false },
+      empty: { available: false },
+      regexp: { available: false },
+      boolean: { available: false },
+      promise: { available: false },
+      error: { available: false },
+      symbol: { available: false },
+      bigint: { available: false },
+      dom: { available: false },
+      storage: { available: false },
+      network: { available: false },
+      browser: { available: false },
+      file: { available: false },
+      color: { available: false }
+    };
 
-  // 归一化
-  const normalized = normalize(75, 0, 100); // 0.75
+    // 获取所有导航项
+    const navItems = document.querySelectorAll('.nav-item');
+    const contentFrame = document.getElementById('content-frame');
+    const contentTitle = document.getElementById('content-title');
+    const contentDesc = document.getElementById('content-desc');
 
-  // 线性插值
-  const lerped = lerp(0, 100, 0.5); // 50
+    // 切换模块
+    function switchModule(moduleName, title, desc) {
+      // 更新导航状态
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.dataset.module === moduleName) {
+          item.classList.add('active');
+        }
+      });
 
-  // 范围映射
-  const mapped = map(5, 0, 10, 0, 100); // 50
-      </code></pre>
-    </div>
+      // 更新内容区标题和描述
+      contentTitle.textContent = title;
+      contentDesc.textContent = desc;
 
-    <!-- 特殊处理 -->
-    <div class="example-block">
-      <h3>特殊处理</h3>
-      <pre><code>
-  // 约等于判断
-  const approx = approximatelyEqual(0.1 + 0.2, 0.3); // true
+      // 检查模块是否可用
+      const module = modules[moduleName];
+      if (module && module.available) {
+        contentFrame.src = `${moduleName}.html`;
+      } else {
+        // 如果模块不可用，显示提示页面
+        contentFrame.srcdoc = `
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="UTF-8">
+            <style>
+              body {
+                font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background: #f5f6fa;
+                margin: 0;
+              }
+              .placeholder {
+                text-align: center;
+                padding: 40px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+              }
+              .placeholder h2 {
+                color: #2c3e50;
+                margin-bottom: 10px;
+              }
+              .placeholder p {
+                color: #7f8c8d;
+                font-size: 14px;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="placeholder">
+              <h2>🚧 ${title}</h2>
+              <p>该模块示例页面正在开发中，敬请期待...</p>
+            </div>
+          </body>
+          </html>
+        `;
+      }
+    }
 
-  // 有限数判断
-  const isFinite = isFinite(123); // true
+    // 绑定导航点击事件
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const moduleName = item.dataset.module;
+        const title = item.dataset.title;
+        const desc = item.dataset.desc;
+        
+        // 如果是待创建的模块，不切换
+        if (item.classList.contains('pending')) {
+          return;
+        }
+        
+        switchModule(moduleName, title, desc);
+      });
+    });
 
-  // NaN判断
-  const isNaN = isNaN(NaN); // true
-
-  // 无穷大判断
-  const isInfinity = isInfinity(Infinity); // true
-      </code></pre>
-    </div>
-
-    <!-- 统计分析 -->
-    <div class="example-block">
-      <h3>统计分析</h3>
-      <pre><code>
-  // 平均值
-  const mean = mean([1, 2, 3, 4, 5]); // 3
-
-  // 中位数
-  const median = median([1, 2, 3, 4, 5]); // 3
-
-  // 众数
-  const mode = mode([1, 2, 2, 3, 3, 3]); // 3
-
-  // 标准差
-  const stdDev = standardDeviation([1, 2, 3, 4, 5]); // 1.4142...
-
-  // 方差
-  const variance = variance([1, 2, 3, 4, 5]); // 2
-      </code></pre>
-    </div>
-
-    <!-- 单位转换 -->
-    <div class="example-block">
-      <h3>单位转换</h3>
-      <pre><code>
-  // 字节转换
-  const bytes = formatBytes(1024); // '1 KB'
-
-  // 时间转换
-  const time = formatSeconds(3661); // '1小时1分1秒'
-
-  // 距离转换
-  const distance = formatDistance(1000); // '1公里'
-
-  // 重量转换
-  const weight = formatWeight(1000); // '1公斤'
-      </code></pre>
-    </div>
-
-    <!-- 动画计算 -->
-    <div class="example-block">
-      <h3>动画计算</h3>
-      <pre><code>
-  // 缓入缓出
-  const eased = easeInOut(0.5); // 0.5
-
-  // 弹簧动画
-  const spring = spring(0.5, { tension: 100, friction: 10 }); // 0.5
-
-  // 贝塞尔曲线
-  const bezier = bezier(0.5, [0.4, 0, 0.2, 1]); // 0.5
-
-  // 插值计算
-  const interpolated = interpolate(0, 100, 0.5); // 50
-      </code></pre>
-    </div>
-
-    <!-- 性能优化 -->
-    <div class="example-block">
-      <h3>性能优化</h3>
-      <pre><code>
-  // 精度优化
-  const optimized = optimizePrecision(3.14159); // 3.14
-
-  // 缓存
-  const cached = cache(factorial)(5); // 120
-
-  // 节流
-  const throttled = throttle(() => console.log('throttled'), 1000);
-
-  // 防抖
-  const debounced = debounce(() => console.log('debounced'), 1000);
-      </code></pre>
-    </div>
-
-    <!-- 数据分析 -->
-    <div class="example-block">
-      <h3>数据分析</h3>
-      <pre><code>
-  // 趋势分析
-  const trend = trend([1, 2, 3, 4, 5]); // 上升趋势
-
-  // 相关性分析
-  const correlation = correlation([1, 2, 3], [2, 4, 6]); // 1
-
-  // 回归分析
-  const regression = regression([1, 2, 3], [2, 4, 6]); // y = 2x + 0
-
-  // 预测分析
-  const forecast = forecast([1, 2, 3, 4, 5], 2); // [6, 7]
-      </code></pre>
-    </div>
-  </div>
-
-  <script type="module">
-    import * as qUtils from '../dist/index.esm.js';
-    
-    // 将工具库挂载到全局，方便在HTML中使用
-    window.qUtils = qUtils;
-    
-    // 防抖演示
-    const debounceInput = document.getElementById('funcInput');
-    const debounceBtn = document.getElementById('debounceBtn');
-    const funcResult = document.getElementById('funcResult');
-    
-    const debouncedHandler = qUtils.debounce(function() {
-      const now = new Date().toLocaleTimeString();
-      funcResult.textContent = `[${now}] 防抖函数执行，输入值: ${debounceInput.value}`;
-    }, 500);
-    
-    debounceBtn.addEventListener('click', function() {
-      const now = new Date().toLocaleTimeString();
-      funcResult.textContent = `[${now}] 点击事件触发，500ms后执行`;
-      debouncedHandler();
+    // 初始化：默认加载第一个可用模块
+    const firstAvailable = Array.from(navItems).find(item => {
+      const moduleName = item.dataset.module;
+      return modules[moduleName] && modules[moduleName].available;
     });
     
-    // 节流演示
-    const throttleBtn = document.getElementById('throttleBtn');
-    
-    const throttledHandler = qUtils.throttle(function() {
-      const now = new Date().toLocaleTimeString();
-      funcResult.textContent = `[${now}] 节流函数执行，输入值: ${debounceInput.value}`;
-    }, 1000);
-    
-    throttleBtn.addEventListener('click', function() {
-      const now = new Date().toLocaleTimeString();
-      funcResult.textContent += `\n[${now}] 点击事件触发，但函数最多1秒执行一次`;
-      throttledHandler();
-    });
-    
-    // 暴露函数给全局，方便在HTML中调用
-    window.capitalizeDemo = function() {
-      const input = document.getElementById('stringInput').value;
-      const result = qUtils.capitalize(input);
-      document.getElementById('stringResult').textContent = `原始值: "${input}"\n首字母大写: "${result}"`;
-    }
-    
-    window.camelizeDemo = function() {
-      const input = document.getElementById('stringInput').value;
-      const result = qUtils.camelize(input);
-      document.getElementById('stringResult').textContent = `原始值: "${input}"\n驼峰式: "${result}"`;
-    }
-    
-    window.truncateDemo = function() {
-      const input = document.getElementById('stringInput').value;
-      const result = qUtils.truncate(input, 5);
-      document.getElementById('stringResult').textContent = `原始值: "${input}"\n截断(长度5): "${result}"`;
-    }
-    
-    window.roundDemo = function() {
-      const input = parseFloat(document.getElementById('numberInput').value);
-      const result2 = qUtils.round(input, 2);
-      const result4 = qUtils.round(input, 4);
-      document.getElementById('numberResult').textContent = `原始值: ${input}\n保留2位小数: ${result2}\n保留4位小数: ${result4}`;
-    }
-    
-    window.toCurrencyDemo = function() {
-      const input = parseFloat(document.getElementById('numberInput').value);
-      const resultCNY = qUtils.toCurrency(input);
-      const resultUSD = qUtils.toCurrency(input, { currency: 'USD' });
-      const resultEUR = qUtils.toCurrency(input, { currency: 'EUR', locale: 'de-DE' });
-      document.getElementById('numberResult').textContent = `原始值: ${input}\nCNY: ${resultCNY}\nUSD: ${resultUSD}\nEUR: ${resultEUR}`;
-    }
-    
-    window.clampDemo = function() {
-      const input = parseFloat(document.getElementById('numberInput').value);
-      const result = qUtils.clamp(input, 0, 1000);
-      document.getElementById('numberResult').textContent = `原始值: ${input}\n限制在0-1000范围内: ${result}`;
-    }
-    
-    window.uniqueDemo = function() {
-      const array = [1, 2, 2, 3, 4, 4, 5];
-      const result = qUtils.unique(array);
-      document.getElementById('arrayResult').textContent = `原始数组: [${array}]\n去重后: [${result}]`;
-    }
-    
-    window.flattenDemo = function() {
-      const array = [1, [2, [3, 4], 5]];
-      const result = qUtils.flatten(array);
-      document.getElementById('arrayResult').textContent = `原始嵌套数组: ${JSON.stringify(array)}\n扁平化后: [${result}]`;
-    }
-    
-    window.shuffleDemo = function() {
-      const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const result = qUtils.shuffle(array);
-      document.getElementById('arrayResult').textContent = `原始数组: [${array}]\n打乱后: [${result}]`;
-    }
-    
-    window.chunkDemo = function() {
-      const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      const result = qUtils.chunk(array, 3);
-      document.getElementById('arrayResult').textContent = `原始数组: [${array}]\n分块(大小3): ${JSON.stringify(result)}`;
-    }
-
-    window.typeCheckDemo = function() {
-      const input = document.getElementById('typeInput').value;
-      const result = {
-        isString: qUtils.type.isString(input),
-        isNumber: qUtils.type.isNumber(input),
-        isBoolean: qUtils.type.isBoolean(input),
-        isArray: qUtils.type.isArray(input),
-        isObject: qUtils.type.isObject(input),
-        isFunction: qUtils.type.isFunction(input),
-        isNull: qUtils.type.isNull(input),
-        isUndefined: qUtils.type.isUndefined(input),
-        getType: qUtils.type.getType(input)
-      };
-      document.getElementById('typeResult').textContent = `输入值: "${input}"\n类型检测结果:\n${JSON.stringify(result, null, 2)}`;
-    }
-
-    window.emptyCheckDemo = function() {
-      const input = document.getElementById('emptyInput').value;
-      const result = {
-        isEmpty: qUtils.empty.isEmpty(input),
-        isEmptyString: qUtils.empty.isEmptyString(input),
-        isEmptyArray: qUtils.empty.isEmptyArray(input),
-        isEmptyObject: qUtils.empty.isEmptyObject(input),
-        isNil: qUtils.empty.isNil(input)
-      };
-      document.getElementById('emptyResult').textContent = `输入值: "${input}"\n空值检测结果:\n${JSON.stringify(result, null, 2)}`;
-    }
-
-    window.booleanDemo = function() {
-      const input = document.getElementById('booleanInput').value;
-      const result = {
-        toBoolean: qUtils.boolean.toBoolean(input),
-        isTruthy: qUtils.boolean.isTruthy(input),
-        isFalsy: qUtils.boolean.isFalsy(input)
-      };
-      document.getElementById('booleanResult').textContent = `输入值: "${input}"\n布尔值转换结果:\n${JSON.stringify(result, null, 2)}`;
-    }
-
-    window.delayDemo = async function() {
-      const result = document.getElementById('promiseResult');
-      result.textContent = '开始延迟执行...';
-      await qUtils.promise.delay(1000);
-      result.textContent += '\n延迟1秒后执行完成';
-    }
-
-    window.timeoutDemo = async function() {
-      const result = document.getElementById('promiseResult');
-      try {
-        result.textContent = '开始超时测试...';
-        await qUtils.promise.timeout(new Promise(resolve => setTimeout(resolve, 2000)), 1000);
-      } catch (error) {
-        result.textContent += '\n超时错误: ' + error.message;
-      }
-    }
-
-    window.retryDemo = async function() {
-      const result = document.getElementById('promiseResult');
-      let attempts = 0;
-      try {
-        await qUtils.promise.retry(
-          async () => {
-            attempts++;
-            if (attempts < 3) throw new Error('重试中...');
-            return '成功';
-          },
-          { maxAttempts: 3 }
-        );
-        result.textContent = `重试成功，共尝试${attempts}次`;
-      } catch (error) {
-        result.textContent = `重试失败: ${error.message}`;
-      }
-    }
-
-    window.regexpDemo = function() {
-      const input = document.getElementById('regexpInput').value;
-      const regexp = /\w+(\d+)/g;
-      const result = {
-        matchAll: qUtils.regexp.matchAll(input, regexp),
-        replaceAll: qUtils.regexp.replaceAll(input, regexp, 'word$1'),
-        countMatches: qUtils.regexp.countMatches(input, regexp),
-        allMatchTexts: qUtils.regexp.allMatchTexts(input, regexp)
-      };
-      document.getElementById('regexpResult').textContent = `输入值: "${input}"\n正则匹配结果:\n${JSON.stringify(result, null, 2)}`;
-    }
-
-    window.errorDemo = function() {
-      const result = document.getElementById('errorResult');
-      try {
-        throw qUtils.error.createError('CustomError', '这是一个自定义错误');
-      } catch (error) {
-        result.textContent = `错误信息: ${qUtils.error.getErrorMessage(error)}\n错误名称: ${qUtils.error.getErrorName(error)}\n错误堆栈: ${qUtils.error.getErrorStack(error)}`;
-      }
-    }
-
-    window.symbolDemo = function() {
-      const result = document.getElementById('symbolResult');
-      const sym = qUtils.symbol.createSymbol('test');
-      result.textContent = `Symbol描述: ${qUtils.symbol.getSymbolDescription(sym)}\n是否为Symbol: ${qUtils.symbol.isSymbol(sym)}`;
-    }
-
-    window.bigintDemo = function() {
-      const input = document.getElementById('bigintInput').value;
-      const result = document.getElementById('bigintResult');
-      try {
-        const bigInt = qUtils.bigint.toBigInt(input);
-        result.textContent = `输入值: ${input}\n是否为BigInt: ${qUtils.bigint.isBigInt(bigInt)}\nBigInt值: ${bigInt}`;
-      } catch (error) {
-        result.textContent = `错误: ${error.message}`;
-      }
+    if (firstAvailable) {
+      switchModule(
+        firstAvailable.dataset.module,
+        firstAvailable.dataset.title,
+        firstAvailable.dataset.desc
+      );
     }
   </script>
 </body>
-</html> 
+</html>

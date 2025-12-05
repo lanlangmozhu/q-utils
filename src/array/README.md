@@ -5,17 +5,14 @@
 ```typescript
 src/array/
 ├── index.ts      // 导出所有功能
-├── basic.ts      // 基础操作（查找、过滤、映射等）
-├── compare.ts    // 数组比较
+├── basic.ts      // 基础操作（包含：基础操作、去重、统计）
+├── compare.ts    // 数组比较和验证
 ├── group.ts      // 数组分组
 ├── operation.ts  // 数组操作（合并、分割等）
 ├── random.ts     // 随机操作
 ├── sort.ts       // 排序相关
-├── stats.ts      // 统计相关
 ├── tree.ts       // 树形结构操作
-├── transform.ts  // 数组转换
-├── unique.ts     // 去重相关
-└── validate.ts   // 验证相关
+└── transform.ts  // 数组转换
 ```
 
 ## 功能说明
