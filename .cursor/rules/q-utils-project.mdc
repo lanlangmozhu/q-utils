@@ -1,3 +1,10 @@
+---
+name: q-utils-project
+description: Q-Utils 项目开发规则和规范
+globs: 
+alwaysApply: true
+---
+
 # Q-Utils 项目开发规则
 
 ## 1. 技术栈规范
@@ -290,7 +297,7 @@ import { capitalize } from 'q-utils/string';
 - **不要随意创建新的 MD 文件**
 - 已完成的工作文档应合并到 `PROJECT_UPDATES.md`
 - 待完成的任务应添加到 `TODO.md`
-- 规则和要求应添加到 `.cursorrules` 和 `.github/copilot-instructions.md`
+- 规则和要求应添加到 `.cursor/rules/` 目录和 `.github/copilot-instructions.md`
 
 ### 12.2 保留的核心文档
 - `README.md` - 项目说明
@@ -305,5 +312,4 @@ import { capitalize } from 'q-utils/string';
 - 项目文档：`docs/` 目录
 - 使用示例：`examples/index.html`
 - AI 编码指南：`.github/copilot-instructions.md`
-- Cursor 规则：`.cursorrules`
-
+- Cursor 规则：`.cursor/rules/` 目录
