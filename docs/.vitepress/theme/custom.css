@@ -1,36 +1,37 @@
 /* 自定义样式 */
 :root {
-  --vp-c-brand: #646cff;
-  --vp-c-brand-light: #747bff;
-  --vp-c-brand-lighter: #9499ff;
-  --vp-c-brand-dark: #535bf2;
-  --vp-c-brand-darker: #454ce1;
+  --vp-c-brand: #3b82f6;
+  --vp-c-brand-light: #60a5fa;
+  --vp-c-brand-lighter: #93c5fd;
+  --vp-c-brand-dark: #2563eb;
+  --vp-c-brand-darker: #1d4ed8;
 }
 
-/* 自定义组件样式 */
-.custom-block {
-  border-radius: 8px;
+/* 代码块样式 */
+.vp-doc div[class*="language-"] {
+  background-color: #282c34;
+  color: #abb2bf;
+  border-radius: 6px;
+  padding: 1.25rem;
+  line-height: 1.6;
+  overflow-x: visible;
+  position: relative;
+  margin: 1rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* API 文档样式优化 */
-.api-docs {
-  margin-top: 2rem;
+.vp-doc div[class*="language-"] pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-.api-docs h2 {
-  margin-top: 2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+.vp-doc div[class*="language-"] code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-.api-docs h3 {
-  margin-top: 1.5rem;
+.vp-doc div[class*="language-"]::before {
+  display: none;
 }
-
-.api-docs code {
-  background-color: var(--vp-c-bg-soft);
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-

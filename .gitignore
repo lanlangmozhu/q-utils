@@ -63,3 +63,12 @@ publish.sh
 # Old files - 旧版本文件
 *-old.html
 *-old.*
+
+# Documentation - 文档项目
+docs/node_modules
+docs/.vitepress/dist
+docs/.vitepress/cache
+docs/api
+
+# VitePress 缓存（根目录，如果存在）
+.vitepress/

@@ -1,0 +1,298 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" version="21.0.0" etag="drawio" type="device">
+  <diagram name="项目架构图" id="architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 项目结构层级 -->
+        <mxCell id="config-layer" value="配置层 (Configuration Layer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="package-json" value="package.json&#xa;项目配置、依赖、脚本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tsconfig" value="tsconfig.json&#xa;TypeScript 配置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rollup-config" value="rollup.config.mjs&#xa;构建配置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="170" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="jest-config" value="jest.config.js&#xa;测试配置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="190" y="170" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="typedoc-config" value="typedoc.json&#xa;文档配置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- 源码层 -->
+        <mxCell id="source-layer" value="源码层 (Source Layer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="280" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="src-index" value="src/index.ts&#xa;主入口文件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="module-array" value="src/array/&#xa;数组模块" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="190" y="320" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="module-string" value="src/string/&#xa;字符串模块" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="340" y="320" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="array-files" value="array/&#xa;├── index.ts&#xa;├── basic.ts&#xa;├── compare.ts&#xa;├── __tests__/&#xa;└── README.md" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="190" y="390" width="130" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- 构建层 -->
+        <mxCell id="build-layer" value="构建层 (Build Layer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="530" width="280" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dist-cjs" value="dist/index.js&#xa;(CommonJS)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dist-esm" value="dist/index.esm.js&#xa;(ES Module)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="160" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dist-umd" value="dist/index.umd.js&#xa;(UMD)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="280" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dist-dts" value="dist/index.d.ts&#xa;(TypeScript 类型)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="400" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- 依赖关系箭头 -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="package-json" target="src-index">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow2" value="读取配置" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rollup-config" target="dist-cjs">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow3" value="导出" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="src-index" target="module-array">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow4" value="包含" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="module-array" target="array-files">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 构建流程 -->
+        <mxCell id="build-flow-title" value="构建流程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="build-step1" value="1. 读取配置&#xa;package.json&#xa;tsconfig.json" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="build-step2" value="2. TypeScript 编译&#xa;rollup-plugin-typescript2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="build-step3" value="3. 打包输出&#xa;CJS / ESM / UMD" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="260" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="build-step4" value="4. 生成类型定义&#xa;rollup-plugin-dts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="340" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="build-arrow1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="build-step1" target="build-step2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="build-arrow2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="build-step2" target="build-step3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="build-arrow3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="build-step3" target="build-step4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 文件更新影响链条 -->
+        <mxCell id="impact-title" value="文件更新影响链条" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="700" width="280" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="update-source" value="更新功能文件&#xa;src/array/basic.ts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="760" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="impact-test" value="必须更新&#xa;__tests__/basic.test.ts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="190" y="760" width="130" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="impact-build" value="自动更新&#xa;dist/array/basic.js&#xa;dist/array/basic.d.ts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="830" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="impact-docs" value="自动更新&#xa;docs/api/.../basic.md" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="190" y="830" width="130" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="impact-arrow1" value="直接影响" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="update-source" target="impact-test">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="impact-arrow2" value="构建后" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="update-source" target="impact-build">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="impact-arrow3" value="文档生成后" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="update-source" target="impact-docs">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 状态转换 -->
+        <mxCell id="state-title" value="开发状态转换" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="450" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state-dev" value="开发状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="510" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state-test" value="测试" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="720" y="510" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state-build" value="构建" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="600" y="580" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state-docs" value="文档" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="700" y="580" width="80" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state-arrow1" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="state-dev" target="state-test">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-arrow2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="state-test" target="state-build">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="state-arrow3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="state-build" target="state-docs">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 模块依赖关系 -->
+        <mxCell id="module-deps-title" value="模块依赖关系" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="700" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="main-entry" value="src/index.ts&#xa;(主入口)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="760" width="200" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="module1" value="array/index.ts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="830" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="module2" value="string/index.ts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="710" y="830" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="module3" value="object/index.ts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="890" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="module4" value="... (20个模块)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="710" y="890" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="module-arrow1" value="导出" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="main-entry" target="module1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="module-arrow2" value="导出" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="main-entry" target="module2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="200" as="sourcePoint" />
+            <mxPoint x="750" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 图例 -->
+        <mxCell id="legend-title" value="图例" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="950" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-config" value="配置文件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1000" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-source" value="源码文件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1000" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-build" value="构建产物" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1000" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-test" value="测试文件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1050" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-docs" value="文档文件" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1050" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

@@ -299,6 +299,123 @@ src/
 
 ---
 
+## 文档系统重构
+
+### 重构概述
+
+项目文档系统进行了重大重构，从简单的 Markdown 文档升级为基于 VitePress 的现代化文档网站。
+
+### 重构内容
+
+#### 1. 文档框架升级
+
+**重构前**：
+- 简单的 Markdown 文档
+- 手动维护 API 文档
+- 缺乏交互式文档体验
+
+**重构后**：
+- 使用 VitePress 构建现代化文档网站
+- 自动生成 API 文档（基于 TypeDoc）
+- 提供交互式文档组件和代码示例
+
+#### 2. 文档项目独立化
+
+**新增文件**：
+- `docs/package.json` - 文档项目独立配置
+- `docs/typedoc.json` - TypeDoc 配置
+- `docs/scripts/generate-api-pages.mjs` - API 文档生成脚本
+- `docs/.gitignore` - 文档项目忽略文件
+
+**目录结构**：
+```
+docs/
+├── .vitepress/          # VitePress 配置
+│   ├── theme/           # 主题自定义
+│   │   ├── index.ts    # 主题入口
+│   │   ├── custom.css  # 自定义样式
+│   │   └── components/ # 自定义组件
+│   └── config.mjs      # VitePress 配置
+├── api/                 # API 文档（自动生成）
+├── guide/               # 使用指南
+│   ├── getting-started.md
+│   ├── installation.md
+│   ├── namespace-import.md
+│   ├── tree-shaking.md
+│   └── types.md
+├── index.md             # 首页
+├── README.md            # 文档说明
+├── package.json         # 文档项目配置
+└── typedoc.json         # TypeDoc 配置
+```
+
+#### 3. API 文档自动化
+
+**功能特性**：
+- 使用 TypeDoc 从源代码自动生成 API 文档
+- 自定义脚本解析 TypeDoc 输出并生成 VitePress 页面
+- 自动提取函数签名、参数、返回值、示例代码
+- 自动提取源代码实现（包括注释）
+
+**生成流程**：
+1. TypeDoc 解析 TypeScript 源代码
+2. 生成 Markdown 格式的 API 文档
+3. 自定义脚本解析并转换为 VitePress 页面
+4. 集成到文档网站
+
+#### 4. 文档内容完善
+
+**更新内容**：
+- ✅ 首页（index.md）- 添加项目介绍和快速开始
+- ✅ 指南页面（guide/）- 完善使用指南
+- ✅ 命名空间导入说明
+- ✅ Tree Shaking 说明
+- ✅ TypeScript 类型支持说明
+
+#### 5. 主题自定义
+
+**自定义组件**：
+- `FunctionDoc.vue` - 函数文档展示组件
+  - 显示函数签名、参数、返回值
+  - 展示使用示例
+  - 展示源代码实现
+
+**样式优化**：
+- 自定义 CSS 样式
+- 代码高亮主题配置
+- 响应式布局优化
+
+### 重构效果
+
+- ✅ 文档系统现代化：使用 VitePress 提供更好的用户体验
+- ✅ API 文档自动化：减少手动维护成本
+- ✅ 文档项目独立化：便于单独维护和部署
+- ✅ 交互式文档：提供代码示例和实时预览
+- ✅ 更好的 SEO：静态站点生成，搜索引擎友好
+
+### 使用方式
+
+**开发文档**：
+```bash
+cd docs
+pnpm install
+pnpm run dev
+```
+
+**生成 API 文档**：
+```bash
+cd docs
+pnpm run api  # 生成 TypeDoc 文档并转换为 VitePress 页面
+```
+
+**构建文档**：
+```bash
+cd docs
+pnpm run build
+```
+
+---
+
 **文档创建时间**：2024年  
 **最后更新**：2024年  
 **状态**：✅ 所有更新已完成
