@@ -29,7 +29,7 @@
  * ```
  */
 export function saveFile(
-  content: string | Blob | ArrayBuffer | ArrayBufferView,
+  content: string | Blob | ArrayBuffer | ArrayBufferView<ArrayBuffer>,
   filename: string,
   options: {
     type?: string;
