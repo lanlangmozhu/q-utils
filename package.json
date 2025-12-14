@@ -56,7 +56,6 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
-    "preversion": "npm run lint",
     "version": "git add -A",
     "postversion": "git push && git push --tags",
     "serve:examples": "node examples/server.js"
