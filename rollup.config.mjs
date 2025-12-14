@@ -29,7 +29,13 @@ export default [
       {
         file: pkgContent.unpkg,
         format: 'umd',
-        name: 'QUtils',
+        name: 'qh5-Utils',
+        sourcemap: true,
+      },
+      {
+        file: 'dist/index.iife.js',
+        format: 'iife',
+        name: 'qh5-Utils',
         sourcemap: true,
       },
     ],

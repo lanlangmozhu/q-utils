@@ -150,7 +150,7 @@ export function isEmpty(str: string | null | undefined): boolean {
 Rollup 生成三种格式：
 - `dist/index.js` - CommonJS
 - `dist/index.esm.js` - ES Module
-- `dist/index.umd.js` - UMD（浏览器全局变量 `QUtils`）
+- `dist/index.umd.js` - UMD（浏览器全局变量 `qh5-Utils`）
 - `dist/index.d.ts` - TypeScript 类型定义
 - `dist/types/` - 详细的类型定义文件
 

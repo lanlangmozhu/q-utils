@@ -39,8 +39,8 @@ const { string, array } = require('qh5-utils');
 ```html
 <script src="https://unpkg.com/qh5-utils/dist/index.umd.js"></script>
 <script>
-  // 使用全局变量 QUtils
-  const result = QUtils.string.capitalize('hello');
+  // 使用全局变量 qh5-Utils
+  const result = qh5-Utils.string.capitalize('hello');
 </script>
 ```
 

@@ -81,22 +81,22 @@ object.get({ a: 1 }, 'a');     // 对象的 get
 ## 导入所有模块
 
 ```typescript
-import * as qUtils from 'qh5-utils';
+import * as Qh5Utils from 'qh5-utils';
 
 // 使用
-qUtils.string.capitalize('hello');
-qUtils.array.unique([1, 2, 2, 3]);
-qUtils.object.deepClone({ a: 1 });
+Qh5Utils.string.capitalize('hello');
+Qh5Utils.array.unique([1, 2, 2, 3]);
+Qh5Utils.object.deepClone({ a: 1 });
 ```
 
 ## 默认导入
 
 ```typescript
-import qUtils from 'qh5-utils';
+import Qh5Utils from 'qh5-utils';
 
 // 使用
-qUtils.string.capitalize('hello');
-qUtils.array.unique([1, 2, 2, 3]);
+Qh5Utils.string.capitalize('hello');
+Qh5Utils.array.unique([1, 2, 2, 3]);
 ```
 
 ## 与按需导入结合
@@ -122,7 +122,7 @@ import { string, array } from 'qh5-utils';
 import { string, array } from 'qh5-utils';
 
 // ❌ 不推荐：导入所有模块（如果不需要）
-import * as qUtils from 'qh5-utils';
+import * as Qh5Utils from 'qh5-utils';
 ```
 
 命名空间导入是 qh5-utils 推荐的导入方式，它提供了清晰的模块组织和良好的代码提示。
@@ -159,13 +159,13 @@ const tomorrow = date.addDays(new Date(), 1);
 ## 导入所有模块
 
 ```typescript
-import * as qUtils from 'qh5-utils';
+import * as Qh5Utils from 'qh5-utils';
 
 // 或者使用默认导入
-import qUtils from 'qh5-utils';
+import Qh5Utils from 'qh5-utils';
 
 // 使用
-const result = qUtils.string.capitalize('hello');
+const result = Qh5Utils.string.capitalize('hello');
 ```
 
 ## 按需导入模块

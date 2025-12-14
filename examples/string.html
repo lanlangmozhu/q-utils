@@ -1699,9 +1699,9 @@
 
   <script src="../dist/index.umd.js"></script>
   <script>
-    // UMD 版本会暴露为全局变量 QUtils
+    // UMD 版本会暴露为全局变量 qh5-Utils
     // 将其转换为命名空间格式以匹配示例代码
-    window.qUtils = QUtils;
+    window.Qh5Utils = qh5-Utils;
 
     // 解析输入数组
     function parseArray(str) {
@@ -1727,7 +1727,7 @@
         showResult('isEmpty-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.isEmpty(input);
+      const result = Qh5Utils.array.isEmpty(input);
       showResult('isEmpty-result', `输入: ${JSON.stringify(input)}\n结果: ${result}`);
     };
 
@@ -1737,7 +1737,7 @@
         showResult('first-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.first(input);
+      const result = Qh5Utils.array.first(input);
       showResult('first-result', `输入: ${JSON.stringify(input)}\n结果: ${result}`);
     };
 
@@ -1747,7 +1747,7 @@
         showResult('last-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.last(input);
+      const result = Qh5Utils.array.last(input);
       showResult('last-result', `输入: ${JSON.stringify(input)}\n结果: ${result}`);
     };
 
@@ -1758,7 +1758,7 @@
         showResult('chunk-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.chunk(arr, size);
+      const result = Qh5Utils.array.chunk(arr, size);
       showResult('chunk-result', `输入: ${JSON.stringify(arr)}, 块大小: ${size}\n结果: ${JSON.stringify(result, null, 2)}`);
     };
 
@@ -1768,7 +1768,7 @@
         showResult('flatten-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.flatten(input);
+      const result = Qh5Utils.array.flatten(input);
       showResult('flatten-result', `输入: ${JSON.stringify(input)}\n结果: ${JSON.stringify(result)}`);
     };
 
@@ -1778,7 +1778,7 @@
         showResult('unique-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.unique(input);
+      const result = Qh5Utils.array.unique(input);
       showResult('unique-result', `输入: ${JSON.stringify(input)}\n结果: ${JSON.stringify(result)}`);
     };
 
@@ -1789,7 +1789,7 @@
         showResult('uniqueBy-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.uniqueBy(arr, key);
+      const result = Qh5Utils.array.uniqueBy(arr, key);
       showResult('uniqueBy-result', `输入: ${JSON.stringify(arr)}, 键: ${key}\n结果: ${JSON.stringify(result, null, 2)}`);
     };
 
@@ -1801,7 +1801,7 @@
         showResult('difference-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.difference(arr1, arr2);
+      const result = Qh5Utils.array.difference(arr1, arr2);
       showResult('difference-result', `数组1: ${JSON.stringify(arr1)}\n数组2: ${JSON.stringify(arr2)}\n差集: ${JSON.stringify(result)}`);
     };
 
@@ -1812,7 +1812,7 @@
         showResult('intersection-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.intersection(arr1, arr2);
+      const result = Qh5Utils.array.intersection(arr1, arr2);
       showResult('intersection-result', `数组1: ${JSON.stringify(arr1)}\n数组2: ${JSON.stringify(arr2)}\n交集: ${JSON.stringify(result)}`);
     };
 
@@ -1823,7 +1823,7 @@
         showResult('union-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.union(arr1, arr2);
+      const result = Qh5Utils.array.union(arr1, arr2);
       showResult('union-result', `数组1: ${JSON.stringify(arr1)}\n数组2: ${JSON.stringify(arr2)}\n并集: ${JSON.stringify(result)}`);
     };
 
@@ -1835,7 +1835,7 @@
         showResult('groupBy-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.groupBy(arr, key);
+      const result = Qh5Utils.array.groupBy(arr, key);
       showResult('groupBy-result', `输入: ${JSON.stringify(arr)}, 键: ${key}\n结果: ${JSON.stringify(result, null, 2)}`);
     };
 
@@ -1846,7 +1846,7 @@
         showResult('shuffle-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.shuffle([...input]);
+      const result = Qh5Utils.array.shuffle([...input]);
       showResult('shuffle-result', `输入: ${JSON.stringify(input)}\n打乱后: ${JSON.stringify(result)}`);
     };
 
@@ -1858,7 +1858,7 @@
         showResult('move-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.move([...arr], from, to);
+      const result = Qh5Utils.array.move([...arr], from, to);
       showResult('move-result', `输入: ${JSON.stringify(arr)}, 从索引${from}移动到索引${to}\n结果: ${JSON.stringify(result)}`);
     };
 
@@ -1869,7 +1869,7 @@
         showResult('rotate-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.rotate([...arr], count);
+      const result = Qh5Utils.array.rotate([...arr], count);
       showResult('rotate-result', `输入: ${JSON.stringify(arr)}, 旋转${count}次\n结果: ${JSON.stringify(result)}`);
     };
 
@@ -1881,7 +1881,7 @@
         showResult('sortBy-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.sortBy([...arr], key);
+      const result = Qh5Utils.array.sortBy([...arr], key);
       showResult('sortBy-result', `输入: ${JSON.stringify(arr)}, 按${key}排序\n结果: ${JSON.stringify(result, null, 2)}`);
     };
 
@@ -1895,7 +1895,7 @@
         return;
       }
       try {
-        const result = qUtils.array.toObject(arr, item => item[key], value ? item => item[value] : item => item);
+        const result = Qh5Utils.array.toObject(arr, item => item[key], value ? item => item[value] : item => item);
       showResult('toObject-result', `输入: ${JSON.stringify(arr)}, 键: ${key}${value ? ', 值: ' + value : ''}\n结果: ${JSON.stringify(result, null, 2)}`);
       } catch (e) {
         showResult('toObject-result', `错误: ${e.message}`, true);
@@ -1909,7 +1909,7 @@
         showResult('arrayToTree-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.arrayToTree(arr);
+      const result = Qh5Utils.array.arrayToTree(arr);
       showResult('arrayToTree-result', `输入: ${JSON.stringify(arr, null, 2)}\n结果: ${JSON.stringify(result, null, 2)}`);
     };
 
@@ -1919,7 +1919,7 @@
         showResult('treeToArray-result', '错误: 无效的数组格式', true);
         return;
       }
-      const result = qUtils.array.treeToArray(tree);
+      const result = Qh5Utils.array.treeToArray(tree);
       showResult('treeToArray-result', `输入: ${JSON.stringify(tree, null, 2)}\n结果: ${JSON.stringify(result, null, 2)}`);
     };
 

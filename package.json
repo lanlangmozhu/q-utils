@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.umd.js",
+  "iife": "dist/index.iife.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"

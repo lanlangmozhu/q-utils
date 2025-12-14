@@ -56,10 +56,10 @@ const cloned = deepClone({ a: 1 });
 ### 默认导入
 
 ```typescript
-import qUtils from 'qh5-utils';
+import Qh5Utils from 'qh5-utils';
 
-const capitalized = qUtils.string.capitalize('hello world');
-const first = qUtils.array.first([1, 2, 3]);
+const capitalized = Qh5Utils.string.capitalize('hello world');
+const first = Qh5Utils.array.first([1, 2, 3]);
 ```
 
 ## 在浏览器中使用
@@ -69,8 +69,8 @@ const first = qUtils.array.first([1, 2, 3]);
 ```html
 <script src="https://unpkg.com/qh5-utils/dist/index.umd.js"></script>
 <script>
-  // 使用全局变量 QUtils
-  const capitalized = QUtils.string.capitalize('hello world');
+  // 使用全局变量 qh5-Utils
+  const capitalized = qh5-Utils.string.capitalize('hello world');
   console.log(capitalized); // 'Hello world'
 </script>
 ```
