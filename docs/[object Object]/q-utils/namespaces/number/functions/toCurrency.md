@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / toCurrency
+[qh5-utils](../../../../README.md) / [number](../README.md) / toCurrency
 
 # Function: toCurrency()
 
 > **toCurrency**(`value`, `locale`, `options`): `string`
 
-Defined in: [number/format.ts:15](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/format.ts#L15)
+Defined in: [number/format.ts:15](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/format.ts#L15)
 
 将数字转换为货币格式
 

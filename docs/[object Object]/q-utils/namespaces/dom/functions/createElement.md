@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / createElement
+[qh5-utils](../../../../README.md) / [dom](../README.md) / createElement
 
 # Function: createElement()
 
 > **createElement**\<`K`\>(`tag`, `attributes?`, `children?`): `HTMLElementTagNameMap`\[`K`\]
 
-Defined in: [dom/element.ts:8](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/element.ts#L8)
+Defined in: [dom/element.ts:8](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/element.ts#L8)
 
 创建元素
 

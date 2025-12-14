@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / toString
+[qh5-utils](../../../../README.md) / [array](../README.md) / toString
 
 # Function: toString()
 
 > **toString**\<`T`\>(`arr`, `separator`): `string`
 
-Defined in: [array/transform.ts:104](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/transform.ts#L104)
+Defined in: [array/transform.ts:104](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/transform.ts#L104)
 
 将数组转换为字符串
 

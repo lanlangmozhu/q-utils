@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / isLeapYear
+[qh5-utils](../../../../README.md) / [date](../README.md) / isLeapYear
 
 # Function: isLeapYear()
 
 > **isLeapYear**(`year`): `boolean`
 
-Defined in: [date/special.ts:8](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/special.ts#L8)
+Defined in: [date/special.ts:8](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/special.ts#L8)
 
 判断是否为闰年
 

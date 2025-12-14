@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / toFixed
+[qh5-utils](../../../../README.md) / [number](../README.md) / toFixed
 
 # Function: toFixed()
 
 > **toFixed**(`value`, `digits`): `string`
 
-Defined in: [number/format.ts:51](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/format.ts#L51)
+Defined in: [number/format.ts:51](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/format.ts#L51)
 
 将数字转换为固定小数位数
 

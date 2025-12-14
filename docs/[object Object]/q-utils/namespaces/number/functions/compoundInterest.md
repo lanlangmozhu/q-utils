@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / compoundInterest
+[qh5-utils](../../../../README.md) / [number](../README.md) / compoundInterest
 
 # Function: compoundInterest()
 
 > **compoundInterest**(`principal`, `rate`, `time`, `frequency`): `number`
 
-Defined in: [number/finance.ts:37](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/finance.ts#L37)
+Defined in: [number/finance.ts:37](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/finance.ts#L37)
 
 计算复利利息
 

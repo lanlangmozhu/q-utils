@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / ping
+[qh5-utils](../../../../README.md) / [network](../README.md) / ping
 
 # Function: ping()
 
 > **ping**(`url`, `options`): `Promise`\<`number`\>
 
-Defined in: [network/ping.ts:28](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/ping.ts#L28)
+Defined in: [network/ping.ts:28](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/ping.ts#L28)
 
 检测URL的可用性和响应时间
 

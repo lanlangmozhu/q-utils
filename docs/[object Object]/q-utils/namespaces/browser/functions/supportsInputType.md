@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / supportsInputType
+[qh5-utils](../../../../README.md) / [browser](../README.md) / supportsInputType
 
 # Function: supportsInputType()
 
 > **supportsInputType**(`inputType`): `boolean`
 
-Defined in: [browser/browser.ts:259](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L259)
+Defined in: [browser/browser.ts:259](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L259)
 
 检查浏览器是否支持指定的输入类型
 

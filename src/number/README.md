@@ -114,7 +114,7 @@ import {
   easeInOut,
   optimizePrecision,
   trend
-} from '@q-utils/number';
+} from '@qh5-utils/number';
 
 // 数值检查
 const isValid = isNumber('123'); // true

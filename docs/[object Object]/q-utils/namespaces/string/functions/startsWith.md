@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / startsWith
+[qh5-utils](../../../../README.md) / [string](../README.md) / startsWith
 
 # Function: startsWith()
 
 > **startsWith**(`str`, `searchStr`): `boolean`
 
-Defined in: [string/search.ts:77](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/search.ts#L77)
+Defined in: [string/search.ts:77](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/search.ts#L77)
 
 是否以某字符串开头
 

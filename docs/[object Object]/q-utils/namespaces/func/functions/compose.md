@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / compose
+[qh5-utils](../../../../README.md) / [func](../README.md) / compose
 
 # Function: compose()
 
 > **compose**\<`R`\>(...`funcs`): (`arg`) => `R`
 
-Defined in: [function/compose.ts:22](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/compose.ts#L22)
+Defined in: [function/compose.ts:22](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/compose.ts#L22)
 
 函数组合，从右到左组合多个函数
 组合函数方向为：compose(f, g, h)(x) 等同于 f(g(h(x)))

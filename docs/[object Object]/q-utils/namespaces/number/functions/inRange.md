@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / inRange
+[qh5-utils](../../../../README.md) / [number](../README.md) / inRange
 
 # Function: inRange()
 
 > **inRange**(`value`, `min`, `max`, `inclusive`): `boolean`
 
-Defined in: [number/range.ts:46](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/range.ts#L46)
+Defined in: [number/range.ts:46](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/range.ts#L46)
 
 检查数字是否在指定范围内
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / getTextContent
+[qh5-utils](../../../../README.md) / [dom](../README.md) / getTextContent
 
 # Function: getTextContent()
 
 > **getTextContent**(`element`): `string`
 
-Defined in: [dom/utils.ts:72](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/utils.ts#L72)
+Defined in: [dom/utils.ts:72](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/utils.ts#L72)
 
 获取元素的文本内容
 

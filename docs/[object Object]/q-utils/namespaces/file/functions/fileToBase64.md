@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [file](../README.md) / fileToBase64
+[qh5-utils](../../../../README.md) / [file](../README.md) / fileToBase64
 
 # Function: fileToBase64()
 
 > **fileToBase64**(`file`, `options`): `Promise`\<`string`\>
 
-Defined in: [file/fileToBase64.ts:35](https://github.com/lanlangmozhu/q-utils/blob/main/src/file/fileToBase64.ts#L35)
+Defined in: [file/fileToBase64.ts:35](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/file/fileToBase64.ts#L35)
 
 将文件对象转换为Base64编码的字符串
 

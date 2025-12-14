@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [promise](../README.md) / wrapAsync
+[qh5-utils](../../../../README.md) / [promise](../README.md) / wrapAsync
 
 # Function: wrapAsync()
 
 > **wrapAsync**\<`T`\>(`fn`): (...`args`) => `Promise`\<\[`Error` \| `null`, `ReturnType`\<`T`\> \| `null`\]\>
 
-Defined in: [promise/advanced.ts:36](https://github.com/lanlangmozhu/q-utils/blob/main/src/promise/advanced.ts#L36)
+Defined in: [promise/advanced.ts:36](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/promise/advanced.ts#L36)
 
 包装异步函数
 

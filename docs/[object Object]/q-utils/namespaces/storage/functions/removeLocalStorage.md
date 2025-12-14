@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / removeLocalStorage
+[qh5-utils](../../../../README.md) / [storage](../README.md) / removeLocalStorage
 
 # Function: removeLocalStorage()
 
 > **removeLocalStorage**(`key`): `void`
 
-Defined in: [storage/localStorage.ts:56](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/localStorage.ts#L56)
+Defined in: [storage/localStorage.ts:56](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/localStorage.ts#L56)
 
 删除 localStorage 数据
 

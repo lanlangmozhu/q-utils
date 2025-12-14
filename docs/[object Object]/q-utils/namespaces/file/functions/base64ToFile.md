@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [file](../README.md) / base64ToFile
+[qh5-utils](../../../../README.md) / [file](../README.md) / base64ToFile
 
 # Function: base64ToFile()
 
 > **base64ToFile**(`base64`, `filename`, `options`): `File`
 
-Defined in: [file/base64ToFile.ts:26](https://github.com/lanlangmozhu/q-utils/blob/main/src/file/base64ToFile.ts#L26)
+Defined in: [file/base64ToFile.ts:26](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/file/base64ToFile.ts#L26)
 
 将Base64编码字符串转换为文件对象
 

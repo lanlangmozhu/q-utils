@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / getElementSize
+[qh5-utils](../../../../README.md) / [dom](../README.md) / getElementSize
 
 # Function: getElementSize()
 
 > **getElementSize**(`element`): `object`
 
-Defined in: [dom/position.ts:6](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/position.ts#L6)
+Defined in: [dom/position.ts:6](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/position.ts#L6)
 
 获取元素尺寸
 

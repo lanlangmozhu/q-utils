@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / futureValue
+[qh5-utils](../../../../README.md) / [number](../README.md) / futureValue
 
 # Function: futureValue()
 
 > **futureValue**(`presentValue`, `rate`, `time`): `number`
 
-Defined in: [number/finance.ts:72](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/finance.ts#L72)
+Defined in: [number/finance.ts:72](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/finance.ts#L72)
 
 计算未来值
 

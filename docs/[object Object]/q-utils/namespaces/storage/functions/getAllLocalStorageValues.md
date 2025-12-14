@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / getAllLocalStorageValues
+[qh5-utils](../../../../README.md) / [storage](../README.md) / getAllLocalStorageValues
 
 # Function: getAllLocalStorageValues()
 
 > **getAllLocalStorageValues**(): `any`[]
 
-Defined in: [storage/localStorage.ts:119](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/localStorage.ts#L119)
+Defined in: [storage/localStorage.ts:119](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/localStorage.ts#L119)
 
 获取 localStorage 所有值
 

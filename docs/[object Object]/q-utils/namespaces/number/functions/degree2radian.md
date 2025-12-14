@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / degree2radian
+[qh5-utils](../../../../README.md) / [number](../README.md) / degree2radian
 
 # Function: degree2radian()
 
 > **degree2radian**(`degree`): `number`
 
-Defined in: [number/unit.ts:79](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/unit.ts#L79)
+Defined in: [number/unit.ts:79](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/unit.ts#L79)
 
 角度转弧度
 

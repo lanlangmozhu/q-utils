@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / seasonality
+[qh5-utils](../../../../README.md) / [number](../README.md) / seasonality
 
 # Function: seasonality()
 
 > **seasonality**(`values`, `period`): `number`[]
 
-Defined in: [number/analysis.ts:240](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/analysis.ts#L240)
+Defined in: [number/analysis.ts:240](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/analysis.ts#L240)
 
 计算季节性
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / getElementBorderSize
+[qh5-utils](../../../../README.md) / [dom](../README.md) / getElementBorderSize
 
 # Function: getElementBorderSize()
 
 > **getElementBorderSize**(`element`): `object`
 
-Defined in: [dom/position.ts:125](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/position.ts#L125)
+Defined in: [dom/position.ts:125](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/position.ts#L125)
 
 获取元素边框尺寸
 

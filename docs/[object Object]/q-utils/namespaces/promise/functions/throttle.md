@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [promise](../README.md) / throttle
+[qh5-utils](../../../../README.md) / [promise](../README.md) / throttle
 
 # Function: throttle()
 
 > **throttle**\<`T`\>(`fn`, `ms`): (...`args`) => `void`
 
-Defined in: [promise/transform.ts:39](https://github.com/lanlangmozhu/q-utils/blob/main/src/promise/transform.ts#L39)
+Defined in: [promise/transform.ts:39](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/promise/transform.ts#L39)
 
 节流
 

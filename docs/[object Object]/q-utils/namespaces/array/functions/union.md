@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / union
+[qh5-utils](../../../../README.md) / [array](../README.md) / union
 
 # Function: union()
 
 > **union**\<`T`\>(`arr1`, `arr2`, `compareFn?`): `T`[]
 
-Defined in: [array/compare.ts:72](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/compare.ts#L72)
+Defined in: [array/compare.ts:72](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/compare.ts#L72)
 
 计算数组并集
 

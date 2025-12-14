@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / pick
+[qh5-utils](../../../../README.md) / [object](../README.md) / pick
 
 # Function: pick()
 
 > **pick**\<`T`, `K`\>(`obj`, `keys`): `T` *extends* `object` ? `Pick`\<`T`\<`T`\>, `K`\> : `Record`\<`string`, `never`\>
 
-Defined in: [object/pick.ts:24](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/pick.ts#L24)
+Defined in: [object/pick.ts:24](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/pick.ts#L24)
 
 从对象中选取指定的属性，创建一个新对象
 

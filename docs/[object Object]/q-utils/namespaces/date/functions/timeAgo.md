@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / timeAgo
+[qh5-utils](../../../../README.md) / [date](../README.md) / timeAgo
 
 # Function: timeAgo()
 
 > **timeAgo**(`date`): `string`
 
-Defined in: [date/format.ts:35](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/format.ts#L35)
+Defined in: [date/format.ts:35](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/format.ts#L35)
 
 获取相对时间描述
 

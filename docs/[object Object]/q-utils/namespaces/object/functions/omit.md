@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / omit
+[qh5-utils](../../../../README.md) / [object](../README.md) / omit
 
 # Function: omit()
 
 > **omit**\<`T`, `K`\>(`obj`, `keys`): `Partial`\<`T`\>
 
-Defined in: [object/omit.ts:12](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/omit.ts#L12)
+Defined in: [object/omit.ts:12](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/omit.ts#L12)
 
 从对象中排除指定的属性，返回新对象
 

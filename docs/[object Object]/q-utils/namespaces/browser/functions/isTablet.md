@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / isTablet
+[qh5-utils](../../../../README.md) / [browser](../README.md) / isTablet
 
 # Function: isTablet()
 
 > **isTablet**(): `boolean`
 
-Defined in: [browser/device.ts:39](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/device.ts#L39)
+Defined in: [browser/device.ts:39](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/device.ts#L39)
 
 检测当前设备是否为平板设备
 

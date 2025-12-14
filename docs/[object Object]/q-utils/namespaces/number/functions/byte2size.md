@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / byte2size
+[qh5-utils](../../../../README.md) / [number](../README.md) / byte2size
 
 # Function: byte2size()
 
 > **byte2size**(`bytes`, `precision`): `string`
 
-Defined in: [number/unit.ts:100](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/unit.ts#L100)
+Defined in: [number/unit.ts:100](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/unit.ts#L100)
 
 字节转可读大小
 

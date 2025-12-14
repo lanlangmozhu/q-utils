@@ -1,6 +1,6 @@
 # 发布指南
 
-本文档介绍了如何将 q-utils 工具库发布到 npm。
+本文档介绍了如何将 qh5-utils 工具库发布到 npm。
 
 ## 准备工作
 
@@ -72,26 +72,26 @@ ls -la dist/
 使用 `pnpm link` 在本地创建软链接进行测试：
 
 ```bash
-# 在 q-utils 项目目录下
+# 在 qh5-utils 项目目录下
 pnpm link --global
 
 # 在测试项目目录下
-pnpm link --global q-utils
+pnpm link --global qh5-utils
 ```
 
 ### 3. 创建测试项目
 
 ```bash
 # 创建测试目录
-mkdir q-utils-test
-cd q-utils-test
+mkdir qh5-utils-test
+cd qh5-utils-test
 
 # 初始化项目
 pnpm init
 pnpm install typescript --save-dev
 
 # 创建测试文件
-echo 'import { string } from "q-utils";
+echo 'import { string } from "qh5-utils";
 console.log(string.capitalize("hello"));' > test.ts
 ```
 
@@ -109,9 +109,9 @@ node test.js
 
 ```bash
 # 在测试项目目录下
-pnpm unlink q-utils
+pnpm unlink qh5-utils
 
-# 在 q-utils 项目目录下
+# 在 qh5-utils 项目目录下
 pnpm unlink --global
 ```
 
@@ -171,7 +171,7 @@ npm publish --tag alpha
 用户可以通过指定标签来安装特定版本：
 
 ```bash
-npm install q-utils@beta
+npm install qh5-utils@beta
 ```
 
 ## 发布后的验证
@@ -181,7 +181,7 @@ npm install q-utils@beta
 1. 在临时目录中创建一个新项目
 2. 安装刚发布的包：
    ```bash
-   npm install q-utils
+   npm install qh5-utils
    ```
 3. 尝试导入并使用包中的功能
 
@@ -190,7 +190,7 @@ npm install q-utils@beta
 如果发现发布的版本有严重问题，可以在发布后的24小时内撤销：
 
 ```bash
-npm unpublish q-utils@1.0.0
+npm unpublish qh5-utils@1.0.0
 ```
 
 注意：npm 不鼓励撤销已发布的包，因为这可能会破坏依赖链。一般情况下，应该发布新版本来修复问题。 

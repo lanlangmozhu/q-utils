@@ -1,11 +1,11 @@
 # 命名空间导入
 
-命名空间导入是 Q-Utils 推荐的使用方式，它提供了清晰的模块组织和良好的代码可读性。
+命名空间导入是 qh5-utils 推荐的使用方式，它提供了清晰的模块组织和良好的代码可读性。
 
 ## 基本用法
 
 ```typescript
-import { string, array, object } from 'q-utils';
+import { string, array, object } from 'qh5-utils';
 
 // 使用字符串工具
 const capitalized = string.capitalize('hello world');
@@ -29,7 +29,7 @@ const merged = object.deepMerge({ a: 1 }, { b: 2 });
 每个功能模块都有独立的命名空间，代码组织清晰：
 
 ```typescript
-import { string, array, object, date, number } from 'q-utils';
+import { string, array, object, date, number } from 'qh5-utils';
 
 // 字符串操作
 string.capitalize('hello');
@@ -57,7 +57,7 @@ number.random(1, 10);
 TypeScript 和现代 IDE 可以提供完整的代码提示：
 
 ```typescript
-import { string } from 'q-utils';
+import { string } from 'qh5-utils';
 
 // 输入 string. 后，IDE 会显示所有可用的字符串函数
 string.capitalize
@@ -71,7 +71,7 @@ string.kebabCase
 命名空间可以避免不同模块之间的函数名冲突：
 
 ```typescript
-import { array, object } from 'q-utils';
+import { array, object } from 'qh5-utils';
 
 // 不同模块可能有同名函数，但通过命名空间区分
 array.get([1, 2, 3], 0);        // 数组的 get
@@ -81,7 +81,7 @@ object.get({ a: 1 }, 'a');     // 对象的 get
 ## 导入所有模块
 
 ```typescript
-import * as qUtils from 'q-utils';
+import * as qUtils from 'qh5-utils';
 
 // 使用
 qUtils.string.capitalize('hello');
@@ -92,7 +92,7 @@ qUtils.object.deepClone({ a: 1 });
 ## 默认导入
 
 ```typescript
-import qUtils from 'q-utils';
+import qUtils from 'qh5-utils';
 
 // 使用
 qUtils.string.capitalize('hello');
@@ -105,7 +105,7 @@ qUtils.array.unique([1, 2, 2, 3]);
 
 ```typescript
 // 只导入需要的模块
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 // 未使用的 object 模块不会被打包
 // const cloned = object.deepClone({ a: 1 }); // 未使用
@@ -119,18 +119,18 @@ import { string, array } from 'q-utils';
 
 ```typescript
 // ✅ 推荐：只导入需要的模块
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 // ❌ 不推荐：导入所有模块（如果不需要）
-import * as qUtils from 'q-utils';
+import * as qUtils from 'qh5-utils';
 ```
 
-命名空间导入是 Q-Utils 推荐的导入方式，它提供了清晰的模块组织和良好的代码提示。
+命名空间导入是 qh5-utils 推荐的导入方式，它提供了清晰的模块组织和良好的代码提示。
 
 ## 基本用法
 
 ```typescript
-import { string, array, object, date } from 'q-utils';
+import { string, array, object, date } from 'qh5-utils';
 
 // 字符串操作
 const capitalized = string.capitalize('hello world');
@@ -159,10 +159,10 @@ const tomorrow = date.addDays(new Date(), 1);
 ## 导入所有模块
 
 ```typescript
-import * as qUtils from 'q-utils';
+import * as qUtils from 'qh5-utils';
 
 // 或者使用默认导入
-import qUtils from 'q-utils';
+import qUtils from 'qh5-utils';
 
 // 使用
 const result = qUtils.string.capitalize('hello');
@@ -172,7 +172,7 @@ const result = qUtils.string.capitalize('hello');
 
 ```typescript
 // 只导入需要的模块
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 // 使用
 const capitalized = string.capitalize('hello');

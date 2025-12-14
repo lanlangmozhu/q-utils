@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / getSolarTerm
+[qh5-utils](../../../../README.md) / [date](../README.md) / getSolarTerm
 
 # Function: getSolarTerm()
 
 > **getSolarTerm**(`date`): `string` \| `undefined`
 
-Defined in: [date/lunar.ts:73](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/lunar.ts#L73)
+Defined in: [date/lunar.ts:73](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/lunar.ts#L73)
 
 获取二十四节气
 

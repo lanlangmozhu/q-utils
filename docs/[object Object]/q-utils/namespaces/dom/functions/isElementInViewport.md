@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / isElementInViewport
+[qh5-utils](../../../../README.md) / [dom](../README.md) / isElementInViewport
 
 # Function: isElementInViewport()
 
 > **isElementInViewport**(`element`, `threshold`): `boolean`
 
-Defined in: [dom/position.ts:46](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/position.ts#L46)
+Defined in: [dom/position.ts:46](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/position.ts#L46)
 
 检查元素是否在视口中
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / standardDeviation
+[qh5-utils](../../../../README.md) / [number](../README.md) / standardDeviation
 
 # Function: standardDeviation()
 
 > **standardDeviation**(`numbers`): `number`
 
-Defined in: [number/statistics.ts:75](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/statistics.ts#L75)
+Defined in: [number/statistics.ts:75](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/statistics.ts#L75)
 
 计算标准差
 

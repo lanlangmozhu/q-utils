@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / supportsOfflineStorage
+[qh5-utils](../../../../README.md) / [browser](../README.md) / supportsOfflineStorage
 
 # Function: supportsOfflineStorage()
 
 > **supportsOfflineStorage**(): `boolean`
 
-Defined in: [browser/browser.ts:241](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L241)
+Defined in: [browser/browser.ts:241](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L241)
 
 检查浏览器是否支持离线存储
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [bigint](../README.md) / isBigInt
+[qh5-utils](../../../../README.md) / [bigint](../README.md) / isBigInt
 
 # Function: isBigInt()
 
 > **isBigInt**(`value`): `value is bigint`
 
-Defined in: [bigint/basic.ts:25](https://github.com/lanlangmozhu/q-utils/blob/main/src/bigint/basic.ts#L25)
+Defined in: [bigint/basic.ts:25](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/bigint/basic.ts#L25)
 
 检查是否为 BigInt
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / groupBy
+[qh5-utils](../../../../README.md) / [array](../README.md) / groupBy
 
 # Function: groupBy()
 
 > **groupBy**\<`T`, `K`\>(`arr`, `keyOrFn`): `Record`\<`string`, `T`[]\>
 
-Defined in: [array/group.ts:17](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/group.ts#L17)
+Defined in: [array/group.ts:17](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/group.ts#L17)
 
 按指定条件将数组元素分组
 

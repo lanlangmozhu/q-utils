@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / buildURL
+[qh5-utils](../../../../README.md) / [network](../README.md) / buildURL
 
 # Function: buildURL()
 
 > **buildURL**(`baseUrl`, `params`): `string`
 
-Defined in: [network/url.ts:82](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/url.ts#L82)
+Defined in: [network/url.ts:82](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/url.ts#L82)
 
 构建 URL，将参数对象添加到基础 URL
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / combine
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / combine
 
 # Function: combine()
 
 > **combine**(`patterns`, `flags?`): `RegExp`
 
-Defined in: [regexp/utils.ts:42](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/utils.ts#L42)
+Defined in: [regexp/utils.ts:42](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/utils.ts#L42)
 
 合并多个正则表达式
 

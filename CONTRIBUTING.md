@@ -1,14 +1,14 @@
 # 贡献指南
 
-感谢你考虑为 q-utils 工具库做出贡献！以下是一些指导方针，希望能帮助你顺利地参与到项目中来。
+感谢你考虑为 qh5-utils 工具库做出贡献！以下是一些指导方针，希望能帮助你顺利地参与到项目中来。
 
 ## 开发环境设置
 
 1. Fork 本仓库
 2. 克隆你 fork 的仓库到本地
    ```bash
-   git clone https://github.com/你的用户名/q-utils.git
-   cd q-utils
+   git clone https://github.com/你的用户名/qh5-utils.git
+   cd qh5-utils
    ```
 3. 安装依赖
    ```bash

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / endOfWeek
+[qh5-utils](../../../../README.md) / [date](../README.md) / endOfWeek
 
 # Function: endOfWeek()
 
 > **endOfWeek**(`date`): `Date`
 
-Defined in: [date/time.ts:50](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/time.ts#L50)
+Defined in: [date/time.ts:50](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/time.ts#L50)
 
 获取周的结束时间
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [file](../README.md) / isValidFileType
+[qh5-utils](../../../../README.md) / [file](../README.md) / isValidFileType
 
 # Function: isValidFileType()
 
 > **isValidFileType**(`file`, `allowedTypes`): `boolean`
 
-Defined in: [file/isValidFileType.ts:30](https://github.com/lanlangmozhu/q-utils/blob/main/src/file/isValidFileType.ts#L30)
+Defined in: [file/isValidFileType.ts:30](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/file/isValidFileType.ts#L30)
 
 检查文件类型是否符合指定的允许类型
 

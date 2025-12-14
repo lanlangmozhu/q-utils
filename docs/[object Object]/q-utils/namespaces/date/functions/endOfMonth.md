@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / endOfMonth
+[qh5-utils](../../../../README.md) / [date](../README.md) / endOfMonth
 
 # Function: endOfMonth()
 
 > **endOfMonth**(`date`): `Date`
 
-Defined in: [date/time.ts:75](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/time.ts#L75)
+Defined in: [date/time.ts:75](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/time.ts#L75)
 
 获取月份的结束时间
 

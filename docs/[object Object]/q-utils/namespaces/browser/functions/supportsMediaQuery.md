@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / supportsMediaQuery
+[qh5-utils](../../../../README.md) / [browser](../README.md) / supportsMediaQuery
 
 # Function: supportsMediaQuery()
 
 > **supportsMediaQuery**(`query`): `boolean`
 
-Defined in: [browser/browser.ts:208](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L208)
+Defined in: [browser/browser.ts:208](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L208)
 
 检查浏览器是否支持某种媒体查询
 

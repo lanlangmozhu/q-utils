@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / random
+[qh5-utils](../../../../README.md) / [number](../README.md) / random
 
 # Function: random()
 
 > **random**(`min`, `max`, `inclusive`): `number`
 
-Defined in: [number/random.ts:15](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/random.ts#L15)
+Defined in: [number/random.ts:15](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/random.ts#L15)
 
 生成指定范围内的随机数
 

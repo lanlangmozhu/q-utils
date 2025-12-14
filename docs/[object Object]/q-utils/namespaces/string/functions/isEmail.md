@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / isEmail
+[qh5-utils](../../../../README.md) / [string](../README.md) / isEmail
 
 # Function: isEmail()
 
 > **isEmail**(`str`): `boolean`
 
-Defined in: [string/validate.ts:65](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/validate.ts#L65)
+Defined in: [string/validate.ts:65](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/validate.ts#L65)
 
 是否为邮箱
 

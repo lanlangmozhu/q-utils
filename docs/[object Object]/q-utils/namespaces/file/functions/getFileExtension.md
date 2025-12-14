@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [file](../README.md) / getFileExtension
+[qh5-utils](../../../../README.md) / [file](../README.md) / getFileExtension
 
 # Function: getFileExtension()
 
 > **getFileExtension**(`filename`, `options`): `string`
 
-Defined in: [file/getFileExtension.ts:32](https://github.com/lanlangmozhu/q-utils/blob/main/src/file/getFileExtension.ts#L32)
+Defined in: [file/getFileExtension.ts:32](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/file/getFileExtension.ts#L32)
 
 获取文件的扩展名
 

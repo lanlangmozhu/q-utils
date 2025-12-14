@@ -1,6 +1,6 @@
-# Q-Utils 文档网站
+# qh5-utils 文档网站
 
-这是 Q-Utils 项目的文档网站，使用 VitePress 构建。
+这是 qh5-utils 项目的文档网站，使用 VitePress 构建。
 
 ## 开发
 

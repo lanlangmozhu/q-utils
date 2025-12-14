@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / getElementPaddingSize
+[qh5-utils](../../../../README.md) / [dom](../README.md) / getElementPaddingSize
 
 # Function: getElementPaddingSize()
 
 > **getElementPaddingSize**(`element`): `object`
 
-Defined in: [dom/position.ts:112](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/position.ts#L112)
+Defined in: [dom/position.ts:112](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/position.ts#L112)
 
 获取元素内边距尺寸
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / setCookie
+[qh5-utils](../../../../README.md) / [storage](../README.md) / setCookie
 
 # Function: setCookie()
 
 > **setCookie**(`name`, `value`, `options`): `void`
 
-Defined in: [storage/cookie.ts:46](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L46)
+Defined in: [storage/cookie.ts:46](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L46)
 
 设置 Cookie
 

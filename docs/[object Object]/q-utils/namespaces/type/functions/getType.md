@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / getType
+[qh5-utils](../../../../README.md) / [type](../README.md) / getType
 
 # Function: getType()
 
 > **getType**(`value`): `string`
 
-Defined in: [type/basic.ts:27](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/basic.ts#L27)
+Defined in: [type/basic.ts:27](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/basic.ts#L27)
 
 获取值的类型
 

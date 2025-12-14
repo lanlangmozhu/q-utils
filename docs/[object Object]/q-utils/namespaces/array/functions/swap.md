@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / swap
+[qh5-utils](../../../../README.md) / [array](../README.md) / swap
 
 # Function: swap()
 
 > **swap**\<`T`\>(`arr`, `index1`, `index2`): `T`[]
 
-Defined in: [array/operation.ts:67](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/operation.ts#L67)
+Defined in: [array/operation.ts:67](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/operation.ts#L67)
 
 交换数组中的两个元素
 

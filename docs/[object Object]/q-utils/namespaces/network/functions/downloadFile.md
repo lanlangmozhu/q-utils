@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / downloadFile
+[qh5-utils](../../../../README.md) / [network](../README.md) / downloadFile
 
 # Function: downloadFile()
 
 > **downloadFile**(`url`, `options`): `Promise`\<`void`\>
 
-Defined in: [network/downloadFile.ts:30](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/downloadFile.ts#L30)
+Defined in: [network/downloadFile.ts:30](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/downloadFile.ts#L30)
 
 从URL下载文件并保存到本地
 

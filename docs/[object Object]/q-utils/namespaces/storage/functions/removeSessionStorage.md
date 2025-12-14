@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / removeSessionStorage
+[qh5-utils](../../../../README.md) / [storage](../README.md) / removeSessionStorage
 
 # Function: removeSessionStorage()
 
 > **removeSessionStorage**(`key`): `boolean`
 
-Defined in: [storage/sessionStorage.ts:104](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/sessionStorage.ts#L104)
+Defined in: [storage/sessionStorage.ts:104](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/sessionStorage.ts#L104)
 
 从 sessionStorage 中移除数据
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / isEqual
+[qh5-utils](../../../../README.md) / [object](../README.md) / isEqual
 
 # Function: isEqual()
 
 > **isEqual**(`value`, `other`): `boolean`
 
-Defined in: [object/isEqual.ts:48](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/isEqual.ts#L48)
+Defined in: [object/isEqual.ts:48](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/isEqual.ts#L48)
 
 深度比较两个值是否相等
 

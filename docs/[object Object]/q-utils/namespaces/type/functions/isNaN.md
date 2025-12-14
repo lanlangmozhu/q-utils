@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isNaN
+[qh5-utils](../../../../README.md) / [type](../README.md) / isNaN
 
 # Function: isNaN()
 
 > **isNaN**(`value`): `value is number`
 
-Defined in: [type/basic.ts:169](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/basic.ts#L169)
+Defined in: [type/basic.ts:169](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/basic.ts#L169)
 
 检查值是否为 NaN
 

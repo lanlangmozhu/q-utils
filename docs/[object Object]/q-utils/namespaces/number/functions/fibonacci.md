@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / fibonacci
+[qh5-utils](../../../../README.md) / [number](../README.md) / fibonacci
 
 # Function: fibonacci()
 
 > **fibonacci**(`n`): `number`[]
 
-Defined in: [number/special.ts:18](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/special.ts#L18)
+Defined in: [number/special.ts:18](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/special.ts#L18)
 
 生成斐波那契数列
 

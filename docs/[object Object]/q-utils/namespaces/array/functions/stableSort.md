@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / stableSort
+[qh5-utils](../../../../README.md) / [array](../README.md) / stableSort
 
 # Function: stableSort()
 
 > **stableSort**\<`T`\>(`arr`, `compareFn`): `T`[]
 
-Defined in: [array/sort.ts:113](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/sort.ts#L113)
+Defined in: [array/sort.ts:113](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/sort.ts#L113)
 
 使用稳定排序算法对数组进行排序
 

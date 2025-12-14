@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / closest
+[qh5-utils](../../../../README.md) / [dom](../README.md) / closest
 
 # Function: closest()
 
 > **closest**(`element`, `selector`): `HTMLElement` \| `null`
 
-Defined in: [dom/basic.ts:40](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/basic.ts#L40)
+Defined in: [dom/basic.ts:40](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/basic.ts#L40)
 
 获取最近的匹配选择器的祖先元素
 

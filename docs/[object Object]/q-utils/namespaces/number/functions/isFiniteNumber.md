@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / isFiniteNumber
+[qh5-utils](../../../../README.md) / [number](../README.md) / isFiniteNumber
 
 # Function: isFiniteNumber()
 
 > **isFiniteNumber**(`value`): `boolean`
 
-Defined in: [number/basic.ts:36](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/basic.ts#L36)
+Defined in: [number/basic.ts:36](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/basic.ts#L36)
 
 检查是否为有限数
 

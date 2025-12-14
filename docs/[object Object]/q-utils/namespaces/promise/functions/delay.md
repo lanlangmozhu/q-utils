@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [promise](../README.md) / delay
+[qh5-utils](../../../../README.md) / [promise](../README.md) / delay
 
 # Function: delay()
 
 > **delay**(`ms`): `Promise`\<`void`\>
 
-Defined in: [promise/control.ts:13](https://github.com/lanlangmozhu/q-utils/blob/main/src/promise/control.ts#L13)
+Defined in: [promise/control.ts:13](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/promise/control.ts#L13)
 
 延迟执行
 

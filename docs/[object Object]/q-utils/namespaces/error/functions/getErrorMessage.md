@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / getErrorMessage
+[qh5-utils](../../../../README.md) / [error](../README.md) / getErrorMessage
 
 # Function: getErrorMessage()
 
 > **getErrorMessage**(`error`): `string`
 
-Defined in: [error/utils.ts:25](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/utils.ts#L25)
+Defined in: [error/utils.ts:25](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/utils.ts#L25)
 
 获取错误消息
 

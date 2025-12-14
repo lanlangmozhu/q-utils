@@ -42,7 +42,7 @@ src/error/
 ## 使用示例
 
 ```typescript
-import { createValidationError, isValidationError, getErrorMessage } from 'q-utils/error';
+import { createValidationError, isValidationError, getErrorMessage } from 'qh5-utils/error';
 
 // 创建错误
 const error = createValidationError('Invalid input', 'E001');

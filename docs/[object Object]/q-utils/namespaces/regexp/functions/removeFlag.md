@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / removeFlag
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / removeFlag
 
 # Function: removeFlag()
 
 > **removeFlag**(`regexp`, `flag`): `RegExp`
 
-Defined in: [regexp/flags.ts:58](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/flags.ts#L58)
+Defined in: [regexp/flags.ts:58](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/flags.ts#L58)
 
 移除正则表达式标志
 

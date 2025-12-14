@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / rem2px
+[qh5-utils](../../../../README.md) / [number](../README.md) / rem2px
 
 # Function: rem2px()
 
 > **rem2px**(`rem`, `baseFontSize`): `number`
 
-Defined in: [number/unit.ts:25](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/unit.ts#L25)
+Defined in: [number/unit.ts:25](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/unit.ts#L25)
 
 rem转像素
 

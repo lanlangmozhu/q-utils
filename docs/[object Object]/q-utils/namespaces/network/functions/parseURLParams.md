@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / parseURLParams
+[qh5-utils](../../../../README.md) / [network](../README.md) / parseURLParams
 
 # Function: parseURLParams()
 
 > **parseURLParams**(`url?`): `Record`\<`string`, `string`\>
 
-Defined in: [network/url.ts:24](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/url.ts#L24)
+Defined in: [network/url.ts:24](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/url.ts#L24)
 
 解析 URL 参数为对象
 

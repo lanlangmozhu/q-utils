@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / jsonp
+[qh5-utils](../../../../README.md) / [network](../README.md) / jsonp
 
 # Function: jsonp()
 
 > **jsonp**\<`T`\>(`url`, `options`): `Promise`\<`T`\>
 
-Defined in: [network/jsonp.ts:27](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/jsonp.ts#L27)
+Defined in: [network/jsonp.ts:27](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/jsonp.ts#L27)
 
 发送JSONP请求，用于跨域获取数据
 

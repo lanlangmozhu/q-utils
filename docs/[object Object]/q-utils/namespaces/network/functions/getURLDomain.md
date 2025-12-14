@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / getURLDomain
+[qh5-utils](../../../../README.md) / [network](../README.md) / getURLDomain
 
 # Function: getURLDomain()
 
 > **getURLDomain**(`url?`): `string`
 
-Defined in: [network/url.ts:147](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/url.ts#L147)
+Defined in: [network/url.ts:147](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/url.ts#L147)
 
 获取 URL 的域名部分
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / startOfWeek
+[qh5-utils](../../../../README.md) / [date](../README.md) / startOfWeek
 
 # Function: startOfWeek()
 
 > **startOfWeek**(`date`): `Date`
 
-Defined in: [date/time.ts:36](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/time.ts#L36)
+Defined in: [date/time.ts:36](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/time.ts#L36)
 
 获取周的开始时间
 

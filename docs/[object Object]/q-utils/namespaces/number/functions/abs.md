@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / abs
+[qh5-utils](../../../../README.md) / [number](../README.md) / abs
 
 # Function: abs()
 
 > **abs**(`value`): `number`
 
-Defined in: [number/math.ts:13](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/math.ts#L13)
+Defined in: [number/math.ts:13](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/math.ts#L13)
 
 获取数字的绝对值
 

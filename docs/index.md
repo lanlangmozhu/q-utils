@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: Q-Utils
+  name: qh5-utils
   text: 前端工具函数库
   tagline: 一个功能丰富的前端工具函数库，提供了日常开发中常用的各类实用工具函数
   image:
     src: /logo.png
-    alt: Q-Utils
+    alt: qh5-utils
   actions:
     - theme: brand
       text: 快速开始
@@ -17,7 +17,7 @@ hero:
       link: /api/
     - theme: alt
       text: GitHub
-      link: https://github.com/lanlangmozhu/q-utils
+      link: https://github.com/lanlangmozhu/qh5-utils
 
 features:
   - icon: 🚀
@@ -44,13 +44,13 @@ features:
 
 ```bash
 # 使用 npm
-npm install q-utils
+npm install qh5-utils
 
 # 使用 pnpm
-pnpm add q-utils
+pnpm add qh5-utils
 
 # 使用 yarn
-yarn add q-utils
+yarn add qh5-utils
 ```
 
 ## 快速开始
@@ -58,7 +58,7 @@ yarn add q-utils
 ### 命名空间导入（推荐）
 
 ```typescript
-import { string, array, object } from 'q-utils';
+import { string, array, object } from 'qh5-utils';
 
 // 使用字符串工具
 const capitalized = string.capitalize('hello world');
@@ -76,9 +76,9 @@ const cloned = object.deepClone({ a: 1, b: { c: 2 } });
 ### 按需导入
 
 ```typescript
-import { capitalize } from 'q-utils/string';
-import { first } from 'q-utils/array';
-import { deepClone } from 'q-utils/object';
+import { capitalize } from 'qh5-utils/string';
+import { first } from 'qh5-utils/array';
+import { deepClone } from 'qh5-utils/object';
 
 const capitalized = capitalize('hello world');
 const firstItem = first([1, 2, 3]);
@@ -87,7 +87,7 @@ const cloned = deepClone({ a: 1 });
 
 ## 功能模块
 
-Q-Utils 提供了以下功能模块：
+qh5-utils 提供了以下功能模块：
 
 - **数组 (Array)**: 数组操作、转换、分组、排序等
 - **字符串 (String)**: 字符串处理、格式化、验证等
@@ -112,4 +112,4 @@ Q-Utils 提供了以下功能模块：
 
 ## 许可证
 
-[MIT](https://github.com/lanlangmozhu/q-utils/blob/main/LICENSE)
+[MIT](https://github.com/lanlangmozhu/qh5-utils/blob/main/LICENSE)

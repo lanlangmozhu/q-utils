@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / toSet
+[qh5-utils](../../../../README.md) / [array](../README.md) / toSet
 
 # Function: toSet()
 
 > **toSet**\<`T`, `R`\>(`arr`, `transformFn?`): `Set`\<`R`\>
 
-Defined in: [array/transform.ts:78](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/transform.ts#L78)
+Defined in: [array/transform.ts:78](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/transform.ts#L78)
 
 将数组转换为Set
 

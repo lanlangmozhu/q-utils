@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [empty](../README.md) / isEmptyDate
+[qh5-utils](../../../../README.md) / [empty](../README.md) / isEmptyDate
 
 # Function: isEmptyDate()
 
 > **isEmptyDate**(`value`): `value is Date`
 
-Defined in: [empty/specific.ts:47](https://github.com/lanlangmozhu/q-utils/blob/main/src/empty/specific.ts#L47)
+Defined in: [empty/specific.ts:47](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/empty/specific.ts#L47)
 
 检查值是否为空 Date
 

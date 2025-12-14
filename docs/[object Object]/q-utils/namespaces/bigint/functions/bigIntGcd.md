@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [bigint](../README.md) / bigIntGcd
+[qh5-utils](../../../../README.md) / [bigint](../README.md) / bigIntGcd
 
 # Function: bigIntGcd()
 
 > **bigIntGcd**(`a`, `b`): `bigint`
 
-Defined in: [bigint/gcd.ts:16](https://github.com/lanlangmozhu/q-utils/blob/main/src/bigint/gcd.ts#L16)
+Defined in: [bigint/gcd.ts:16](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/bigint/gcd.ts#L16)
 
 获取 BigInt 的最大公约数
 

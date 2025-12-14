@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / percentile
+[qh5-utils](../../../../README.md) / [number](../README.md) / percentile
 
 # Function: percentile()
 
 > **percentile**(`numbers`, `percentile`): `number`
 
-Defined in: [number/statistics.ts:87](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/statistics.ts#L87)
+Defined in: [number/statistics.ts:87](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/statistics.ts#L87)
 
 计算百分位数
 

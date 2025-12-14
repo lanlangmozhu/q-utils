@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / afterTax
+[qh5-utils](../../../../README.md) / [number](../README.md) / afterTax
 
 # Function: afterTax()
 
 > **afterTax**(`income`, `taxRate`): `number`
 
-Defined in: [number/finance.ts:146](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/finance.ts#L146)
+Defined in: [number/finance.ts:146](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/finance.ts#L146)
 
 计算税后收入
 

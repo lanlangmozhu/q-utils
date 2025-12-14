@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isString
+[qh5-utils](../../../../README.md) / [type](../README.md) / isString
 
 # Function: isString()
 
 > **isString**(`value`): `value is string`
 
-Defined in: [type/basic.ts:181](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/basic.ts#L181)
+Defined in: [type/basic.ts:181](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/basic.ts#L181)
 
 检查值是否为字符串
 

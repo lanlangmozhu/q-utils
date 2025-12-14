@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isNull
+[qh5-utils](../../../../README.md) / [type](../README.md) / isNull
 
 # Function: isNull()
 
 > **isNull**(`value`): `value is null`
 
-Defined in: [type/basic.ts:107](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/basic.ts#L107)
+Defined in: [type/basic.ts:107](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/basic.ts#L107)
 
 检查值是否为 null
 

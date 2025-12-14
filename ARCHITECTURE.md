@@ -1,4 +1,4 @@
-# Q-Utils 项目架构文档
+# qh5-utils 项目架构文档
 
 ## 📋 目录
 
@@ -15,7 +15,7 @@
 ## 项目结构层级
 
 ```
-q-utils/
+qh5-utils/
 ├── 📁 配置层 (Configuration Layer)
 │   ├── package.json          # 项目配置、依赖、脚本
 │   ├── tsconfig.json         # TypeScript 编译配置
@@ -52,7 +52,7 @@ q-utils/
 ├── 📁 文档层 (Documentation Layer)
 │   ├── docs/
 │   │   ├── api/              # TypeDoc 生成的 API 文档
-│   │   │   └── q-utils/      # 自动生成的文档结构
+│   │   │   └── qh5-utils/      # 自动生成的文档结构
 │   │   └── guide/            # VitePress 使用指南
 │   └── README.md             # 项目主文档
 │
@@ -306,7 +306,7 @@ src/
 ┌─────────────────────────────────────┐
 │      docs/api/                      │
 │  ┌───────────────────────────────┐  │
-│  │ q-utils/                      │  │
+│  │ qh5-utils/                      │  │
 │  │   └── namespaces/             │  │
 │  │       ├── array/              │  │
 │  │       │   └── functions/     │  │
@@ -410,7 +410,7 @@ src/
   └─→ 自动更新（运行命令后）
       ├─→ dist/array/basic.js (npm run build)
       ├─→ dist/array/basic.d.ts (npm run build)
-      └─→ docs/api/q-utils/namespaces/array/functions/*.md (npm run docs)
+      └─→ docs/api/qh5-utils/namespaces/array/functions/*.md (npm run docs)
 ```
 
 #### 场景 2: 更新模块入口 (src/array/index.ts)
@@ -424,7 +424,7 @@ src/
   │
   └─→ 自动更新
       ├─→ dist/array/index.* (所有格式)
-      └─→ docs/api/q-utils/namespaces/array/README.md
+      └─→ docs/api/qh5-utils/namespaces/array/README.md
 ```
 
 #### 场景 3: 更新主入口 (src/index.ts)
@@ -437,7 +437,7 @@ src/
   │
   └─→ 自动更新
       ├─→ dist/index.* (所有格式)
-      └─→ docs/api/q-utils/README.md
+      └─→ docs/api/qh5-utils/README.md
 ```
 
 #### 场景 4: 更新配置文件

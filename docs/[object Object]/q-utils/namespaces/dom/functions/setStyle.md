@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / setStyle
+[qh5-utils](../../../../README.md) / [dom](../README.md) / setStyle
 
 # Function: setStyle()
 
 > **setStyle**(`element`, `property`, `value`): `void`
 
-Defined in: [dom/basic.ts:93](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/basic.ts#L93)
+Defined in: [dom/basic.ts:93](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/basic.ts#L93)
 
 设置样式
 

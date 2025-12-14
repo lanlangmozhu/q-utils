@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / uuid
+[qh5-utils](../../../../README.md) / [string](../README.md) / uuid
 
 # Function: uuid()
 
 > **uuid**(): `string`
 
-Defined in: [string/uuid.ts:18](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/uuid.ts#L18)
+Defined in: [string/uuid.ts:18](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/uuid.ts#L18)
 
 生成 UUID v4 (随机)
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / rotate
+[qh5-utils](../../../../README.md) / [array](../README.md) / rotate
 
 # Function: rotate()
 
 > **rotate**\<`T`\>(`arr`, `count`): `T`[]
 
-Defined in: [array/operation.ts:45](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/operation.ts#L45)
+Defined in: [array/operation.ts:45](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/operation.ts#L45)
 
 旋转数组元素
 

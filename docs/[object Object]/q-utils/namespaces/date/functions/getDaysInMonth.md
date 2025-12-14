@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / getDaysInMonth
+[qh5-utils](../../../../README.md) / [date](../README.md) / getDaysInMonth
 
 # Function: getDaysInMonth()
 
 > **getDaysInMonth**(`year`, `month`): `number`
 
-Defined in: [date/calculation.ts:51](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/calculation.ts#L51)
+Defined in: [date/calculation.ts:51](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/calculation.ts#L51)
 
 获取指定月份的天数
 

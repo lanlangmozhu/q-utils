@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / getFileNameFromURL
+[qh5-utils](../../../../README.md) / [network](../README.md) / getFileNameFromURL
 
 # Function: getFileNameFromURL()
 
 > **getFileNameFromURL**(`url`): `string`
 
-Defined in: [network/url.ts:189](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/url.ts#L189)
+Defined in: [network/url.ts:189](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/url.ts#L189)
 
 从 URL 中提取文件名
 

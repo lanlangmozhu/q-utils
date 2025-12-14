@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [empty](../README.md) / isEmptyAsyncIterator
+[qh5-utils](../../../../README.md) / [empty](../README.md) / isEmptyAsyncIterator
 
 # Function: isEmptyAsyncIterator()
 
 > **isEmptyAsyncIterator**(`value`): `Promise`\<`boolean`\>
 
-Defined in: [empty/collections.ts:78](https://github.com/lanlangmozhu/q-utils/blob/main/src/empty/collections.ts#L78)
+Defined in: [empty/collections.ts:78](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/empty/collections.ts#L78)
 
 检查值是否为空异步迭代器
 

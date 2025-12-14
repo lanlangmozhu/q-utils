@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / generateCalendarWeek
+[qh5-utils](../../../../README.md) / [date](../README.md) / generateCalendarWeek
 
 # Function: generateCalendarWeek()
 
 > **generateCalendarWeek**(`date`): `Date`[]
 
-Defined in: [date/calendar.ts:106](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/calendar.ts#L106)
+Defined in: [date/calendar.ts:106](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/calendar.ts#L106)
 
 生成周历数据
 

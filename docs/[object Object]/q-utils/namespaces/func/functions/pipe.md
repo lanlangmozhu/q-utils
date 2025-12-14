@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / pipe
+[qh5-utils](../../../../README.md) / [func](../README.md) / pipe
 
 # Function: pipe()
 
 > **pipe**\<`R`\>(...`funcs`): (`arg`) => `R`
 
-Defined in: [function/pipe.ts:23](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/pipe.ts#L23)
+Defined in: [function/pipe.ts:23](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/pipe.ts#L23)
 
 函数管道，从左到右组合多个函数
 管道函数方向为：pipe(f, g, h)(x) 等同于 h(g(f(x)))

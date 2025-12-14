@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / setStyles
+[qh5-utils](../../../../README.md) / [dom](../README.md) / setStyles
 
 # Function: setStyles()
 
 > **setStyles**(`element`, `styles`): `void`
 
-Defined in: [dom/basic.ts:112](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/basic.ts#L112)
+Defined in: [dom/basic.ts:112](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/basic.ts#L112)
 
 设置多个样式
 

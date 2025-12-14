@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / outliers
+[qh5-utils](../../../../README.md) / [number](../README.md) / outliers
 
 # Function: outliers()
 
 > **outliers**(`values`, `threshold`): `number`[]
 
-Defined in: [number/analysis.ts:270](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/analysis.ts#L270)
+Defined in: [number/analysis.ts:270](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/analysis.ts#L270)
 
 计算异常值
 

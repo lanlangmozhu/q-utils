@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [bigint](../README.md) / isBigIntEven
+[qh5-utils](../../../../README.md) / [bigint](../README.md) / isBigIntEven
 
 # Function: isBigIntEven()
 
 > **isBigIntEven**(`value`): `boolean`
 
-Defined in: [bigint/validation.ts:14](https://github.com/lanlangmozhu/q-utils/blob/main/src/bigint/validation.ts#L14)
+Defined in: [bigint/validation.ts:14](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/bigint/validation.ts#L14)
 
 检查 BigInt 是否为偶数
 

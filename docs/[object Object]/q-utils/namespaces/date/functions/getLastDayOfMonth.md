@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / getLastDayOfMonth
+[qh5-utils](../../../../README.md) / [date](../README.md) / getLastDayOfMonth
 
 # Function: getLastDayOfMonth()
 
 > **getLastDayOfMonth**(`date`): `Date`
 
-Defined in: [date/special.ts:30](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/special.ts#L30)
+Defined in: [date/special.ts:30](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/special.ts#L30)
 
 获取指定月份的最后一天
 

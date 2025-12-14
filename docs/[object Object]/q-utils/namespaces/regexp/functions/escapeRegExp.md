@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / escapeRegExp
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / escapeRegExp
 
 # Function: escapeRegExp()
 
 > **escapeRegExp**(`str`): `string`
 
-Defined in: [regexp/basic.ts:15](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/basic.ts#L15)
+Defined in: [regexp/basic.ts:15](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/basic.ts#L15)
 
 转义正则表达式中的特殊字符
 

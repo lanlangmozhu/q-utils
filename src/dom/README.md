@@ -1,6 +1,6 @@
 # DOM 操作工具函数
 
-q-utils 提供了一系列常用的 DOM 操作工具函数，用于简化日常 Web 开发中的 DOM 操作。
+qh5-utils 提供了一系列常用的 DOM 操作工具函数，用于简化日常 Web 开发中的 DOM 操作。
 
 ## 元素选择
 
@@ -9,7 +9,7 @@ q-utils 提供了一系列常用的 DOM 操作工具函数，用于简化日常 
 选择 DOM 元素的简便方法。
 
 ```typescript
-import { querySelector, querySelectorAll } from 'q-utils/dom';
+import { querySelector, querySelectorAll } from 'qh5-utils/dom';
 
 // 选择单个元素
 const header = querySelector('#header');
@@ -28,7 +28,7 @@ buttons.forEach(button => {
 简化 CSS 类名操作。
 
 ```typescript
-import { addClass, removeClass, toggleClass, hasClass } from 'q-utils/dom';
+import { addClass, removeClass, toggleClass, hasClass } from 'qh5-utils/dom';
 
 // 添加类
 addClass(element, 'active');
@@ -55,7 +55,7 @@ if (hasClass(element, 'enabled')) {
 获取和设置元素样式。
 
 ```typescript
-import { getStyle, setStyle, setStyles, getStyleNumber } from 'q-utils/dom';
+import { getStyle, setStyle, setStyles, getStyleNumber } from 'qh5-utils/dom';
 
 // 获取样式
 const color = getStyle(element, 'color');
@@ -79,7 +79,7 @@ setStyles(element, {
 获取元素的位置信息。
 
 ```typescript
-import { getDomPosition } from 'q-utils/dom';
+import { getDomPosition } from 'qh5-utils/dom';
 
 const position = getDomPosition(element);
 console.log(`
@@ -96,7 +96,7 @@ console.log(`
 创建和插入 DOM 元素。
 
 ```typescript
-import { createElement, insertAfter, insertBefore } from 'q-utils/dom';
+import { createElement, insertAfter, insertBefore } from 'qh5-utils/dom';
 
 // 创建元素
 const card = createElement('div', {
@@ -130,7 +130,7 @@ insertBefore(newElement, referenceElement);
 事件监听器管理。
 
 ```typescript
-import { on, off, once } from 'q-utils/dom';
+import { on, off, once } from 'qh5-utils/dom';
 
 // 添加事件监听
 const handleClick = (e) => console.log('按钮被点击', e);
@@ -155,7 +155,7 @@ once(button, 'click', () => {
 平滑滚动到指定位置。
 
 ```typescript
-import { scrollTo } from 'q-utils/dom';
+import { scrollTo } from 'qh5-utils/dom';
 
 // 滚动到页面顶部
 scrollTo(window, { top: 0 });

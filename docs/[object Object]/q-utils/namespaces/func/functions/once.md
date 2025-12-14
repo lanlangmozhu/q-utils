@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / once
+[qh5-utils](../../../../README.md) / [func](../README.md) / once
 
 # Function: once()
 
 > **once**\<`T`\>(`func`): (...`args`) => `ReturnType`\<`T`\>
 
-Defined in: [function/once.ts:21](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/once.ts#L21)
+Defined in: [function/once.ts:21](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/once.ts#L21)
 
 创建一个只执行一次的函数
 确保函数无论被调用多少次，只会执行一次，并返回第一次执行的结果

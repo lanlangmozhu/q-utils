@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [bigint](../README.md) / stringToBigInt
+[qh5-utils](../../../../README.md) / [bigint](../README.md) / stringToBigInt
 
 # Function: stringToBigInt()
 
 > **stringToBigInt**(`value`, `radix`): `bigint`
 
-Defined in: [bigint/conversion.ts:27](https://github.com/lanlangmozhu/q-utils/blob/main/src/bigint/conversion.ts#L27)
+Defined in: [bigint/conversion.ts:27](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/bigint/conversion.ts#L27)
 
 将字符串转换为 BigInt
 

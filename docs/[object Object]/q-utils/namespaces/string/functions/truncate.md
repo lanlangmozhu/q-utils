@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / truncate
+[qh5-utils](../../../../README.md) / [string](../README.md) / truncate
 
 # Function: truncate()
 
 > **truncate**(`str`, `length`, `omission`, `countingChineseCharsAsTwo`): `string`
 
-Defined in: [string/substring.ts:21](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/substring.ts#L21)
+Defined in: [string/substring.ts:21](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/substring.ts#L21)
 
 截断字符串，超出指定长度的部分用省略号替代
 

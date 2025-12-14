@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / hasFlag
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / hasFlag
 
 # Function: hasFlag()
 
 > **hasFlag**(`regexp`, `flag`): `boolean`
 
-Defined in: [regexp/flags.ts:30](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/flags.ts#L30)
+Defined in: [regexp/flags.ts:30](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/flags.ts#L30)
 
 检查正则表达式是否包含指定标志
 

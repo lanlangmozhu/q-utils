@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / getLocalStorage
+[qh5-utils](../../../../README.md) / [storage](../README.md) / getLocalStorage
 
 # Function: getLocalStorage()
 
 > **getLocalStorage**\<`T`\>(`key`, `defaultValue`): `T`
 
-Defined in: [storage/localStorage.ts:30](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/localStorage.ts#L30)
+Defined in: [storage/localStorage.ts:30](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/localStorage.ts#L30)
 
 获取 localStorage 数据
 

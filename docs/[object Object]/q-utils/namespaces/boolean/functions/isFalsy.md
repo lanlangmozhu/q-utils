@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [boolean](../README.md) / isFalsy
+[qh5-utils](../../../../README.md) / [boolean](../README.md) / isFalsy
 
 # Function: isFalsy()
 
 > **isFalsy**(`value`): `boolean`
 
-Defined in: [boolean/index.ts:71](https://github.com/lanlangmozhu/q-utils/blob/main/src/boolean/index.ts#L71)
+Defined in: [boolean/index.ts:71](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/boolean/index.ts#L71)
 
 检查值是否为假值
 

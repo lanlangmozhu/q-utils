@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / debounce
+[qh5-utils](../../../../README.md) / [func](../README.md) / debounce
 
 # Function: debounce()
 
 > **debounce**\<`T`\>(`func`, `wait`, `immediate`): `T` & `object`
 
-Defined in: [function/debounce.ts:24](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/debounce.ts#L24)
+Defined in: [function/debounce.ts:24](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/debounce.ts#L24)
 
 创建一个防抖函数，该函数延迟调用原函数，直到上一次被调用后经过指定的时间
 常用于处理连续触发的事件，如输入框输入、窗口调整大小等

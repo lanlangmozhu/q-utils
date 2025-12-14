@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / range
+[qh5-utils](../../../../README.md) / [array](../README.md) / range
 
 # Function: range()
 
 > **range**\<`T`\>(`arr`, `start`, `end`): `T`[]
 
-Defined in: [array/basic.ts:66](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/basic.ts#L66)
+Defined in: [array/basic.ts:66](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/basic.ts#L66)
 
 获取数组指定范围的元素
 

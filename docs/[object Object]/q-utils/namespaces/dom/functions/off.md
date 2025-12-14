@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / off
+[qh5-utils](../../../../README.md) / [dom](../README.md) / off
 
 # Function: off()
 
 > **off**(`element`, `eventType`, `handler`): `void`
 
-Defined in: [dom/event.ts:17](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/event.ts#L17)
+Defined in: [dom/event.ts:17](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/event.ts#L17)
 
 移除事件监听
 

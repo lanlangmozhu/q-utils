@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / fadeIn
+[qh5-utils](../../../../README.md) / [dom](../README.md) / fadeIn
 
 # Function: fadeIn()
 
 > **fadeIn**(`element`, `duration`, `callback?`): `void`
 
-Defined in: [dom/animation.ts:7](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/animation.ts#L7)
+Defined in: [dom/animation.ts:7](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/animation.ts#L7)
 
 淡入效果
 

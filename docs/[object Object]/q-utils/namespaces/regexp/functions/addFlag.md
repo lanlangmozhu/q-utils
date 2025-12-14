@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / addFlag
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / addFlag
 
 # Function: addFlag()
 
 > **addFlag**(`regexp`, `flag`): `RegExp`
 
-Defined in: [regexp/flags.ts:44](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/flags.ts#L44)
+Defined in: [regexp/flags.ts:44](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/flags.ts#L44)
 
 添加正则表达式标志
 

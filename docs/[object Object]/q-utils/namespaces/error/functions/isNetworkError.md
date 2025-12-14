@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / isNetworkError
+[qh5-utils](../../../../README.md) / [error](../README.md) / isNetworkError
 
 # Function: isNetworkError()
 
 > **isNetworkError**(`error`): `error is CustomError`
 
-Defined in: [error/check.ts:49](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/check.ts#L49)
+Defined in: [error/check.ts:49](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/check.ts#L49)
 
 检查是否为网络错误
 

@@ -13,7 +13,7 @@ import * as ts from 'typescript';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const TYPEDOC_OUTPUT = path.resolve(__dirname, '../api/q-utils/namespaces');
+const TYPEDOC_OUTPUT = path.resolve(__dirname, '../api/qh5-utils/namespaces');
 const OUTPUT_DIR = path.resolve(__dirname, '../api');
 // 从 docs/scripts/ 到项目根目录的 src/，或者从项目根目录直接找 src/
 // 优先使用相对于脚本文件的路径，如果不存在则尝试从当前工作目录查找
@@ -109,7 +109,7 @@ function parseFunctionDoc(filePath) {
         !inExample && 
         !result.description &&
         line.trim().length > 0 &&
-        !line.includes('q-utils') &&
+        !line.includes('qh5-utils') &&
         !line.includes('README.md')) {
       result.description = line.trim();
     }

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / reverse
+[qh5-utils](../../../../README.md) / [string](../README.md) / reverse
 
 # Function: reverse()
 
 > **reverse**(`str`): `string`
 
-Defined in: [string/basic.ts:63](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/basic.ts#L63)
+Defined in: [string/basic.ts:63](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/basic.ts#L63)
 
 反转字符串
 

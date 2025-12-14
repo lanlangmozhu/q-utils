@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / toNumber
+[qh5-utils](../../../../README.md) / [string](../README.md) / toNumber
 
 # Function: toNumber()
 
 > **toNumber**(`str`): `number`
 
-Defined in: [string/transform.ts:82](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/transform.ts#L82)
+Defined in: [string/transform.ts:82](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/transform.ts#L82)
 
 转换为数字
 

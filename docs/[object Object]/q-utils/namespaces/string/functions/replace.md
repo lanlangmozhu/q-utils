@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / replace
+[qh5-utils](../../../../README.md) / [string](../README.md) / replace
 
 # Function: replace()
 
 > **replace**(`str`, `searchStr`, `replaceStr`): `string`
 
-Defined in: [string/search.ts:32](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/search.ts#L32)
+Defined in: [string/search.ts:32](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/search.ts#L32)
 
 替换字符串
 

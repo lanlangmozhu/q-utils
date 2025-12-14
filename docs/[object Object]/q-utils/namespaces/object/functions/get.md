@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / get
+[qh5-utils](../../../../README.md) / [object](../README.md) / get
 
 # Function: get()
 
 > **get**\<`T`\>(`obj`, `path`, `defaultValue?`): `T`
 
-Defined in: [object/getValueByPath.ts:25](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/getValueByPath.ts#L25)
+Defined in: [object/getValueByPath.ts:25](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/getValueByPath.ts#L25)
 
 根据路径获取对象中的值，支持点表示法和数组路径
 

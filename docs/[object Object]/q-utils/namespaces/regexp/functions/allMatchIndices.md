@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / allMatchIndices
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / allMatchIndices
 
 # Function: allMatchIndices()
 
 > **allMatchIndices**(`str`, `regexp`): `number`[]
 
-Defined in: [regexp/advanced.ts:16](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/advanced.ts#L16)
+Defined in: [regexp/advanced.ts:16](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/advanced.ts#L16)
 
 获取正则表达式的所有匹配位置
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / count
+[qh5-utils](../../../../README.md) / [array](../README.md) / count
 
 # Function: count()
 
 > **count**\<`T`\>(`arr`): `Record`\<`string`, `number`\>
 
-Defined in: [array/basic.ts:194](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/basic.ts#L194)
+Defined in: [array/basic.ts:194](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/basic.ts#L194)
 
 统计数组元素出现次数
 

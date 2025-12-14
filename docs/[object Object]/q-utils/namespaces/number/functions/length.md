@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / length
+[qh5-utils](../../../../README.md) / [number](../README.md) / length
 
 # Function: length()
 
 > **length**(`value`): `number`
 
-Defined in: [number/math.ts:98](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/math.ts#L98)
+Defined in: [number/math.ts:98](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/math.ts#L98)
 
 获取数字的位数
 

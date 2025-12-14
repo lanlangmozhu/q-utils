@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isFunction
+[qh5-utils](../../../../README.md) / [type](../README.md) / isFunction
 
 # Function: isFunction()
 
 > **isFunction**(`value`): `value is (args: unknown[]) => unknown`
 
-Defined in: [type/object.ts:56](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/object.ts#L56)
+Defined in: [type/object.ts:56](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/object.ts#L56)
 
 检查值是否为函数
 

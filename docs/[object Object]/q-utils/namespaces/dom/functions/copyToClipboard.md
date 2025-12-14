@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / copyToClipboard
+[qh5-utils](../../../../README.md) / [dom](../README.md) / copyToClipboard
 
 # Function: copyToClipboard()
 
 > **copyToClipboard**(`text`): `Promise`\<`void`\>
 
-Defined in: [dom/utils.ts:10](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/utils.ts#L10)
+Defined in: [dom/utils.ts:10](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/utils.ts#L10)
 
 复制文本到剪贴板
 

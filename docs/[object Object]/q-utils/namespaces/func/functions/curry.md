@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / curry
+[qh5-utils](../../../../README.md) / [func](../README.md) / curry
 
 # Function: curry()
 
 > **curry**\<`T`\>(`func`, `arity`): (...`args`) => `any`
 
-Defined in: [function/curry.ts:25](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/curry.ts#L25)
+Defined in: [function/curry.ts:25](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/curry.ts#L25)
 
 函数柯里化，将接受多个参数的函数转换为接受单个参数的函数序列
 

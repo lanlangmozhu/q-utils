@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / growthRate
+[qh5-utils](../../../../README.md) / [number](../README.md) / growthRate
 
 # Function: growthRate()
 
 > **growthRate**(`initialValue`, `finalValue`): `number`
 
-Defined in: [number/analysis.ts:13](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/analysis.ts#L13)
+Defined in: [number/analysis.ts:13](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/analysis.ts#L13)
 
 计算增长率
 

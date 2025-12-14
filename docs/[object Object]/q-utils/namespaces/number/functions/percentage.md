@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / percentage
+[qh5-utils](../../../../README.md) / [number](../README.md) / percentage
 
 # Function: percentage()
 
 > **percentage**(`value`, `options`): `string`
 
-Defined in: [number/format.ts:132](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/format.ts#L132)
+Defined in: [number/format.ts:132](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/format.ts#L132)
 
 将数字转换为百分比
 

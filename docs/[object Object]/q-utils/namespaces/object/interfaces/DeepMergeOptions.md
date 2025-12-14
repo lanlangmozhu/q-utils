@@ -1,12 +1,12 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / DeepMergeOptions
+[qh5-utils](../../../../README.md) / [object](../README.md) / DeepMergeOptions
 
 # Interface: DeepMergeOptions
 
-Defined in: [object/deepMerge.ts:4](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/deepMerge.ts#L4)
+Defined in: [object/deepMerge.ts:4](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/deepMerge.ts#L4)
 
 深度合并对象的选项接口
 
@@ -16,7 +16,7 @@ Defined in: [object/deepMerge.ts:4](https://github.com/lanlangmozhu/q-utils/blob
 
 > `optional` **arrayMode**: `"replace"` \| `"concat"` \| `"merge"`
 
-Defined in: [object/deepMerge.ts:11](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/deepMerge.ts#L11)
+Defined in: [object/deepMerge.ts:11](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/deepMerge.ts#L11)
 
 数组合并模式
 - 'replace': 替换模式（默认）
@@ -29,7 +29,7 @@ Defined in: [object/deepMerge.ts:11](https://github.com/lanlangmozhu/q-utils/blo
 
 > `optional` **clone**: `boolean`
 
-Defined in: [object/deepMerge.ts:15](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/deepMerge.ts#L15)
+Defined in: [object/deepMerge.ts:15](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/deepMerge.ts#L15)
 
 是否克隆源对象
 
@@ -39,7 +39,7 @@ Defined in: [object/deepMerge.ts:15](https://github.com/lanlangmozhu/q-utils/blo
 
 > `optional` **customMerge**: (`key`, `target`, `source`) => `any`
 
-Defined in: [object/deepMerge.ts:19](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/deepMerge.ts#L19)
+Defined in: [object/deepMerge.ts:19](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/deepMerge.ts#L19)
 
 自定义合并函数
 

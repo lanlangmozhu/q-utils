@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / similarity
+[qh5-utils](../../../../README.md) / [string](../README.md) / similarity
 
 # Function: similarity()
 
 > **similarity**(`str1`, `str2`): `number`
 
-Defined in: [string/compare.ts:87](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/compare.ts#L87)
+Defined in: [string/compare.ts:87](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/compare.ts#L87)
 
 计算两个字符串的相似度（Levenshtein距离）
 

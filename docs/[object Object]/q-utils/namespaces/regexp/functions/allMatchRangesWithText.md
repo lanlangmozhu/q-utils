@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / allMatchRangesWithText
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / allMatchRangesWithText
 
 # Function: allMatchRangesWithText()
 
 > **allMatchRangesWithText**(`str`, `regexp`): `object`[]
 
-Defined in: [regexp/advanced.ts:90](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/advanced.ts#L90)
+Defined in: [regexp/advanced.ts:90](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/advanced.ts#L90)
 
 获取正则表达式的所有匹配范围和文本
 

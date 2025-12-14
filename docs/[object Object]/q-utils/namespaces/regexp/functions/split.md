@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / split
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / split
 
 # Function: split()
 
 > **split**(`str`, `regexp`): `string`[]
 
-Defined in: [regexp/search.ts:46](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/search.ts#L46)
+Defined in: [regexp/search.ts:46](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/search.ts#L46)
 
 按正则表达式分割字符串
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / supportsCSSProperty
+[qh5-utils](../../../../README.md) / [browser](../README.md) / supportsCSSProperty
 
 # Function: supportsCSSProperty()
 
 > **supportsCSSProperty**(`property`): `boolean`
 
-Defined in: [browser/browser.ts:192](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L192)
+Defined in: [browser/browser.ts:192](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L192)
 
 检查浏览器是否支持某个 CSS 属性
 

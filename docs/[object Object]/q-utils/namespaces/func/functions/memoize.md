@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / memoize
+[qh5-utils](../../../../README.md) / [func](../README.md) / memoize
 
 # Function: memoize()
 
 > **memoize**\<`T`\>(`func`, `resolver?`): (...`args`) => `ReturnType`\<`T`\>
 
-Defined in: [function/memoize.ts:31](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/memoize.ts#L31)
+Defined in: [function/memoize.ts:31](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/memoize.ts#L31)
 
 创建一个会缓存结果的函数
 对于相同的参数，函数只会计算一次，后续调用直接从缓存返回结果

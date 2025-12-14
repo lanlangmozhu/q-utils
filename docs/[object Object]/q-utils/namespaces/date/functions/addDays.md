@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / addDays
+[qh5-utils](../../../../README.md) / [date](../README.md) / addDays
 
 # Function: addDays()
 
 > **addDays**(`date`, `days`): `Date`
 
-Defined in: [date/calculation.ts:9](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/calculation.ts#L9)
+Defined in: [date/calculation.ts:9](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/calculation.ts#L9)
 
 添加天数
 

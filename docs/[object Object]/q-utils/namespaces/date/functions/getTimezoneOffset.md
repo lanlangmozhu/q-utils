@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / getTimezoneOffset
+[qh5-utils](../../../../README.md) / [date](../README.md) / getTimezoneOffset
 
 # Function: getTimezoneOffset()
 
 > **getTimezoneOffset**(`timezone`): `number`
 
-Defined in: [date/timezone.ts:26](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/timezone.ts#L26)
+Defined in: [date/timezone.ts:26](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/timezone.ts#L26)
 
 获取时区偏移量（小时）
 

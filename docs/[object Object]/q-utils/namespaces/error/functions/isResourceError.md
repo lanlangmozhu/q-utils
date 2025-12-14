@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / isResourceError
+[qh5-utils](../../../../README.md) / [error](../README.md) / isResourceError
 
 # Function: isResourceError()
 
 > **isResourceError**(`error`): `error is CustomError`
 
-Defined in: [error/check.ts:71](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/check.ts#L71)
+Defined in: [error/check.ts:71](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/check.ts#L71)
 
 检查是否为资源错误
 

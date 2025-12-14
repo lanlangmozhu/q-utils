@@ -86,7 +86,7 @@ src/array/
 ## 使用示例
 
 ```typescript
-import { find, groupBy, unique, treeify } from '@q-utils/array';
+import { find, groupBy, unique, treeify } from '@qh5-utils/array';
 
 // 查找元素
 const users = [

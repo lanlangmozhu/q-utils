@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [promise](../README.md) / wrap
+[qh5-utils](../../../../README.md) / [promise](../README.md) / wrap
 
 # Function: wrap()
 
 > **wrap**\<`T`\>(`promise`): `Promise`\<\[`Error` \| `null`, `T` \| `null`\]\>
 
-Defined in: [promise/advanced.ts:17](https://github.com/lanlangmozhu/q-utils/blob/main/src/promise/advanced.ts#L17)
+Defined in: [promise/advanced.ts:17](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/promise/advanced.ts#L17)
 
 包装 Promise
 

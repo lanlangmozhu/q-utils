@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / toScientific
+[qh5-utils](../../../../README.md) / [number](../README.md) / toScientific
 
 # Function: toScientific()
 
 > **toScientific**(`value`, `options`): `string`
 
-Defined in: [number/format.ts:160](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/format.ts#L160)
+Defined in: [number/format.ts:160](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/format.ts#L160)
 
 将数字转换为科学计数法
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / isNumeric
+[qh5-utils](../../../../README.md) / [string](../README.md) / isNumeric
 
 # Function: isNumeric()
 
 > **isNumeric**(`str`): `boolean`
 
-Defined in: [string/validate.ts:17](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/validate.ts#L17)
+Defined in: [string/validate.ts:17](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/validate.ts#L17)
 
 是否为数字字符串
 

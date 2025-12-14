@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / includes
+[qh5-utils](../../../../README.md) / [array](../README.md) / includes
 
 # Function: includes()
 
 > **includes**\<`T`\>(`arr`, `subArr`, `compareFn?`): `boolean`
 
-Defined in: [array/compare.ts:103](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/compare.ts#L103)
+Defined in: [array/compare.ts:103](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/compare.ts#L103)
 
 检查数组是否包含子数组
 

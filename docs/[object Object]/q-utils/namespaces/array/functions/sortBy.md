@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / sortBy
+[qh5-utils](../../../../README.md) / [array](../README.md) / sortBy
 
 # Function: sortBy()
 
 > **sortBy**\<`T`, `K`\>(`arr`, `keyOrFn`, `order`): `T`[]
 
-Defined in: [array/sort.ts:18](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/sort.ts#L18)
+Defined in: [array/sort.ts:18](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/sort.ts#L18)
 
 根据指定条件对数组元素进行排序
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / kg2lb
+[qh5-utils](../../../../README.md) / [number](../README.md) / kg2lb
 
 # Function: kg2lb()
 
 > **kg2lb**(`kg`): `number`
 
-Defined in: [number/unit.ts:168](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/unit.ts#L168)
+Defined in: [number/unit.ts:168](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/unit.ts#L168)
 
 千克转磅
 

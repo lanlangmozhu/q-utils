@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / isHTTPS
+[qh5-utils](../../../../README.md) / [network](../README.md) / isHTTPS
 
 # Function: isHTTPS()
 
 > **isHTTPS**(`url?`): `boolean`
 
-Defined in: [network/url.ts:170](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/url.ts#L170)
+Defined in: [network/url.ts:170](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/url.ts#L170)
 
 判断当前页面是否使用 HTTPS 协议
 

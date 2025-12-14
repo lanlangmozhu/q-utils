@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / delegate
+[qh5-utils](../../../../README.md) / [dom](../README.md) / delegate
 
 # Function: delegate()
 
 > **delegate**(`element`, `eventType`, `selector`, `handler`): `void`
 
-Defined in: [dom/event.ts:42](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/event.ts#L42)
+Defined in: [dom/event.ts:42](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/event.ts#L42)
 
 事件委托
 

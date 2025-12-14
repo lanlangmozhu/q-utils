@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / setData
+[qh5-utils](../../../../README.md) / [dom](../README.md) / setData
 
 # Function: setData()
 
 > **setData**(`element`, `key`, `value`): `void`
 
-Defined in: [dom/element.ts:79](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/element.ts#L79)
+Defined in: [dom/element.ts:79](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/element.ts#L79)
 
 设置数据属性值
 

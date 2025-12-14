@@ -1,12 +1,12 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / CookieOptions
+[qh5-utils](../../../../README.md) / [storage](../README.md) / CookieOptions
 
 # Interface: CookieOptions
 
-Defined in: [storage/cookie.ts:9](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L9)
+Defined in: [storage/cookie.ts:9](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L9)
 
 Cookie 选项配置
 
@@ -16,7 +16,7 @@ Cookie 选项配置
 
 > `optional` **expires**: `number`
 
-Defined in: [storage/cookie.ts:11](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L11)
+Defined in: [storage/cookie.ts:11](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L11)
 
 Cookie 过期时间（天）
 
@@ -26,7 +26,7 @@ Cookie 过期时间（天）
 
 > `optional` **path**: `string`
 
-Defined in: [storage/cookie.ts:13](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L13)
+Defined in: [storage/cookie.ts:13](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L13)
 
 Cookie 路径
 
@@ -36,7 +36,7 @@ Cookie 路径
 
 > `optional` **domain**: `string`
 
-Defined in: [storage/cookie.ts:15](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L15)
+Defined in: [storage/cookie.ts:15](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L15)
 
 Cookie 域名
 
@@ -46,7 +46,7 @@ Cookie 域名
 
 > `optional` **secure**: `boolean`
 
-Defined in: [storage/cookie.ts:17](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L17)
+Defined in: [storage/cookie.ts:17](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L17)
 
 是否仅通过 HTTPS 传输
 
@@ -56,6 +56,6 @@ Defined in: [storage/cookie.ts:17](https://github.com/lanlangmozhu/q-utils/blob/
 
 > `optional` **sameSite**: `"strict"` \| `"lax"` \| `"none"`
 
-Defined in: [storage/cookie.ts:19](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L19)
+Defined in: [storage/cookie.ts:19](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L19)
 
 控制 Cookie 可通过哪些方式访问

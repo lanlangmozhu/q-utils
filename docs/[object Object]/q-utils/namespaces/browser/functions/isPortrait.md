@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / isPortrait
+[qh5-utils](../../../../README.md) / [browser](../README.md) / isPortrait
 
 # Function: isPortrait()
 
 > **isPortrait**(): `boolean`
 
-Defined in: [browser/device.ts:115](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/device.ts#L115)
+Defined in: [browser/device.ts:115](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/device.ts#L115)
 
 检测屏幕是否处于竖屏模式
 

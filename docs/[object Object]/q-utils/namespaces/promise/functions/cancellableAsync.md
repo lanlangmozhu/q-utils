@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [promise](../README.md) / cancellableAsync
+[qh5-utils](../../../../README.md) / [promise](../README.md) / cancellableAsync
 
 # Function: cancellableAsync()
 
 > **cancellableAsync**\<`T`\>(`fn`): () => \[`Promise`\<`T`\>, (`reason?`) => `void`\]
 
-Defined in: [promise/advanced.ts:74](https://github.com/lanlangmozhu/q-utils/blob/main/src/promise/advanced.ts#L74)
+Defined in: [promise/advanced.ts:74](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/promise/advanced.ts#L74)
 
 创建可取消的异步函数
 

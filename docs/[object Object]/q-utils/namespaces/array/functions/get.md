@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / get
+[qh5-utils](../../../../README.md) / [array](../README.md) / get
 
 # Function: get()
 
 > **get**\<`T`\>(`arr`, `index`, `defaultValue?`): `T` \| `undefined`
 
-Defined in: [array/basic.ts:87](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/basic.ts#L87)
+Defined in: [array/basic.ts:87](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/basic.ts#L87)
 
 安全获取数组元素
 

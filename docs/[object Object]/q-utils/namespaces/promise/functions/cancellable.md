@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [promise](../README.md) / cancellable
+[qh5-utils](../../../../README.md) / [promise](../README.md) / cancellable
 
 # Function: cancellable()
 
 > **cancellable**\<`T`\>(): \[`Promise`\<`T`\>, (`reason?`) => `void`\]
 
-Defined in: [promise/advanced.ts:50](https://github.com/lanlangmozhu/q-utils/blob/main/src/promise/advanced.ts#L50)
+Defined in: [promise/advanced.ts:50](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/promise/advanced.ts#L50)
 
 创建可取消的 Promise
 

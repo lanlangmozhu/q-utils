@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / first
+[qh5-utils](../../../../README.md) / [array](../README.md) / first
 
 # Function: first()
 
 > **first**\<`T`\>(`arr`): `T` \| `undefined`
 
-Defined in: [array/basic.ts:30](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/basic.ts#L30)
+Defined in: [array/basic.ts:30](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/basic.ts#L30)
 
 获取数组第一个元素
 

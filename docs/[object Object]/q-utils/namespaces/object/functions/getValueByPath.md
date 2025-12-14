@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / getValueByPath
+[qh5-utils](../../../../README.md) / [object](../README.md) / getValueByPath
 
 # Function: getValueByPath()
 
 > **getValueByPath**\<`T`\>(`obj`, `path`): `T` \| `undefined`
 
-Defined in: [object/getValueByPath.ts:94](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/getValueByPath.ts#L94)
+Defined in: [object/getValueByPath.ts:94](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/getValueByPath.ts#L94)
 
 根据路径获取对象中的值
 

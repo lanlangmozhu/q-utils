@@ -107,7 +107,7 @@ import {
   allMatchRangesWithGroups,
   allMatchPositionsWithNamedGroups,
   allMatchRangesWithNamedGroups
-} from '@q-utils/regexp';
+} from '@qh5-utils/regexp';
 
 // 基础操作
 escapeRegExp('.*+?^${}()|[]\\'); // '\.\*\+\?\^\$\{\}\(\)\|\[\]\\'

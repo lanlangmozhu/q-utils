@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / capitalizeWords
+[qh5-utils](../../../../README.md) / [string](../README.md) / capitalizeWords
 
 # Function: capitalizeWords()
 
 > **capitalizeWords**(`str`, `delimiter`): `string`
 
-Defined in: [string/transform.ts:32](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/transform.ts#L32)
+Defined in: [string/transform.ts:32](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/transform.ts#L32)
 
 每个单词首字母大写
 

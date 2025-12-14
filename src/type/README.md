@@ -82,7 +82,7 @@ import {
   isWeakSet,
   isIterable,
   isAsyncIterable
-} from '@q-utils/type';
+} from '@qh5-utils/type';
 
 // 通用类型检测
 getType(123); // 'number'

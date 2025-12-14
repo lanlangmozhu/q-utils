@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [bigint](../README.md) / bigIntLcm
+[qh5-utils](../../../../README.md) / [bigint](../README.md) / bigIntLcm
 
 # Function: bigIntLcm()
 
 > **bigIntLcm**(`a`, `b`): `bigint`
 
-Defined in: [bigint/gcd.ts:33](https://github.com/lanlangmozhu/q-utils/blob/main/src/bigint/gcd.ts#L33)
+Defined in: [bigint/gcd.ts:33](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/bigint/gcd.ts#L33)
 
 获取 BigInt 的最小公倍数
 

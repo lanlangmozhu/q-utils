@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / constants
+[qh5-utils](../../../../README.md) / [number](../README.md) / constants
 
 # Variable: constants
 
 > `const` **constants**: `object`
 
-Defined in: [number/special.ts:77](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/special.ts#L77)
+Defined in: [number/special.ts:77](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/special.ts#L77)
 
 数学常数
 

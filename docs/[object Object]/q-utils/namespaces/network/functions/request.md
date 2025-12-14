@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / request
+[qh5-utils](../../../../README.md) / [network](../README.md) / request
 
 # Function: request()
 
 > **request**\<`T`\>(`url`, `options`): `Promise`\<`T`\>
 
-Defined in: [network/request.ts:33](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/request.ts#L33)
+Defined in: [network/request.ts:33](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/request.ts#L33)
 
 通用请求函数，支持GET和POST等常见请求方法
 

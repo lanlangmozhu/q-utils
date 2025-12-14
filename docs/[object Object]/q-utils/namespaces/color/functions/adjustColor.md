@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [color](../README.md) / adjustColor
+[qh5-utils](../../../../README.md) / [color](../README.md) / adjustColor
 
 # Function: adjustColor()
 
 > **adjustColor**(`color`, `adjustments`): `string` \| \{ `r`: `number`; `g`: `number`; `b`: `number`; `a?`: `number`; \}
 
-Defined in: [color/adjustColor.ts:31](https://github.com/lanlangmozhu/q-utils/blob/main/src/color/adjustColor.ts#L31)
+Defined in: [color/adjustColor.ts:31](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/color/adjustColor.ts#L31)
 
 调整颜色的亮度、饱和度或色调
 

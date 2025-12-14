@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / countMatches
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / countMatches
 
 # Function: countMatches()
 
 > **countMatches**(`str`, `regexp`): `number`
 
-Defined in: [regexp/utils.ts:57](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/utils.ts#L57)
+Defined in: [regexp/utils.ts:57](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/utils.ts#L57)
 
 获取正则表达式的匹配次数
 

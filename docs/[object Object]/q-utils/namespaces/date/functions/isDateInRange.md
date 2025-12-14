@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / isDateInRange
+[qh5-utils](../../../../README.md) / [date](../README.md) / isDateInRange
 
 # Function: isDateInRange()
 
 > **isDateInRange**(`date`, `startDate`, `endDate`): `boolean`
 
-Defined in: [date/range.ts:10](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/range.ts#L10)
+Defined in: [date/range.ts:10](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/range.ts#L10)
 
 判断日期是否在指定范围内
 

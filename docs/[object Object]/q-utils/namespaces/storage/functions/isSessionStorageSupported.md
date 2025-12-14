@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / isSessionStorageSupported
+[qh5-utils](../../../../README.md) / [storage](../README.md) / isSessionStorageSupported
 
 # Function: isSessionStorageSupported()
 
 > **isSessionStorageSupported**(): `boolean`
 
-Defined in: [storage/sessionStorage.ts:19](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/sessionStorage.ts#L19)
+Defined in: [storage/sessionStorage.ts:19](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/sessionStorage.ts#L19)
 
 检查浏览器是否支持 sessionStorage
 

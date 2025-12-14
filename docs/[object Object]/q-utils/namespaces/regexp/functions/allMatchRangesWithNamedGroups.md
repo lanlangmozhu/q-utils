@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / allMatchRangesWithNamedGroups
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / allMatchRangesWithNamedGroups
 
 # Function: allMatchRangesWithNamedGroups()
 
 > **allMatchRangesWithNamedGroups**(`str`, `regexp`): `object`[]
 
-Defined in: [regexp/advanced.ts:182](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/advanced.ts#L182)
+Defined in: [regexp/advanced.ts:182](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/advanced.ts#L182)
 
 获取正则表达式的所有匹配范围和命名捕获组
 

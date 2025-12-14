@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / getLunarFestival
+[qh5-utils](../../../../README.md) / [date](../README.md) / getLunarFestival
 
 # Function: getLunarFestival()
 
 > **getLunarFestival**(`date`): `string` \| `undefined`
 
-Defined in: [date/lunar.ts:57](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/lunar.ts#L57)
+Defined in: [date/lunar.ts:57](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/lunar.ts#L57)
 
 获取农历节日
 

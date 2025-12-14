@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / set
+[qh5-utils](../../../../README.md) / [object](../README.md) / set
 
 # Function: set()
 
 > **set**\<`T`\>(`obj`, `path`, `value`): `T`
 
-Defined in: [object/setValueByPath.ts:28](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/setValueByPath.ts#L28)
+Defined in: [object/setValueByPath.ts:28](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/setValueByPath.ts#L28)
 
 根据路径设置对象中的值，支持点表示法和数组路径
 

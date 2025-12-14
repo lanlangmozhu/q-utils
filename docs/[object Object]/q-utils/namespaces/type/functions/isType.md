@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isType
+[qh5-utils](../../../../README.md) / [type](../README.md) / isType
 
 # Function: isType()
 
 > **isType**(`value`, `type`): `boolean`
 
-Defined in: [type/basic.ts:77](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/basic.ts#L77)
+Defined in: [type/basic.ts:77](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/basic.ts#L77)
 
 检查值是否为指定类型
 

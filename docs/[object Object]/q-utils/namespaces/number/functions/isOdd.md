@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / isOdd
+[qh5-utils](../../../../README.md) / [number](../README.md) / isOdd
 
 # Function: isOdd()
 
 > **isOdd**(`num`): `boolean`
 
-Defined in: [number/basic.ts:66](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/basic.ts#L66)
+Defined in: [number/basic.ts:66](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/basic.ts#L66)
 
 判断数字是否为奇数
 

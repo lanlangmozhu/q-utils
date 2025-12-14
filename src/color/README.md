@@ -30,7 +30,7 @@ import {
   hexToRgb,
   rgbToHex,
   adjustColor
-} from '@q-utils/color';
+} from '@qh5-utils/color';
 
 // 颜色格式转换
 // 十六进制转 RGB

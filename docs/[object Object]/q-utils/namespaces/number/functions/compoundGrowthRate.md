@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / compoundGrowthRate
+[qh5-utils](../../../../README.md) / [number](../README.md) / compoundGrowthRate
 
 # Function: compoundGrowthRate()
 
 > **compoundGrowthRate**(`initialValue`, `finalValue`, `periods`): `number`
 
-Defined in: [number/analysis.ts:31](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/analysis.ts#L31)
+Defined in: [number/analysis.ts:31](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/analysis.ts#L31)
 
 计算复合增长率
 

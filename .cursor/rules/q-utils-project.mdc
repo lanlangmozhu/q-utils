@@ -1,11 +1,11 @@
 ---
-name: q-utils-project
-description: Q-Utils 项目开发规则和规范
+name: qh5-utils-project
+description: qh5-utils 项目开发规则和规范
 globs: 
 alwaysApply: true
 ---
 
-# Q-Utils 项目开发规则
+# qh5-utils 项目开发规则
 
 ## 1. 技术栈规范
 
@@ -195,13 +195,13 @@ export default { array, string, ... };
 
 ### 7.3 命名空间导入（推荐）
 ```typescript
-import { string, array, func } from 'q-utils';
+import { string, array, func } from 'qh5-utils';
 string.capitalize('hello');
 ```
 
 ### 7.4 按需导入
 ```typescript
-import { capitalize } from 'q-utils/string';
+import { capitalize } from 'qh5-utils/string';
 ```
 
 ## 8. 类型安全规范

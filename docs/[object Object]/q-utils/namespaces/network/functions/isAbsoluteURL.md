@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / isAbsoluteURL
+[qh5-utils](../../../../README.md) / [network](../README.md) / isAbsoluteURL
 
 # Function: isAbsoluteURL()
 
 > **isAbsoluteURL**(`url`): `boolean`
 
-Defined in: [network/url.ts:220](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/url.ts#L220)
+Defined in: [network/url.ts:220](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/url.ts#L220)
 
 检查 URL 是否为绝对 URL
 

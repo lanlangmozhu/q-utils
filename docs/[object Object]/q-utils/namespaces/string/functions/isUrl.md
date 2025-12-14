@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / isUrl
+[qh5-utils](../../../../README.md) / [string](../README.md) / isUrl
 
 # Function: isUrl()
 
 > **isUrl**(`str`): `boolean`
 
-Defined in: [string/validate.ts:82](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/validate.ts#L82)
+Defined in: [string/validate.ts:82](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/validate.ts#L82)
 
 是否为URL
 

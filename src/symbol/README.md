@@ -52,7 +52,7 @@ import {
   createGlobalSymbolArray,
   createSymbolMap,
   createGlobalSymbolMap
-} from '@q-utils/symbol';
+} from '@qh5-utils/symbol';
 
 // 基础操作
 const sym = createSymbol('test'); // Symbol('test')

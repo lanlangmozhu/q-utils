@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [promise](../README.md) / debounce
+[qh5-utils](../../../../README.md) / [promise](../README.md) / debounce
 
 # Function: debounce()
 
 > **debounce**\<`T`\>(`fn`, `ms`): (...`args`) => `void`
 
-Defined in: [promise/transform.ts:17](https://github.com/lanlangmozhu/q-utils/blob/main/src/promise/transform.ts#L17)
+Defined in: [promise/transform.ts:17](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/promise/transform.ts#L17)
 
 防抖
 

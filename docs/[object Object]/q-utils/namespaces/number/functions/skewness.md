@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / skewness
+[qh5-utils](../../../../README.md) / [number](../README.md) / skewness
 
 # Function: skewness()
 
 > **skewness**(`numbers`): `number`
 
-Defined in: [number/statistics.ts:119](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/statistics.ts#L119)
+Defined in: [number/statistics.ts:119](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/statistics.ts#L119)
 
 计算偏度
 

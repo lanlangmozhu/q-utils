@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / includes
+[qh5-utils](../../../../README.md) / [string](../README.md) / includes
 
 # Function: includes()
 
 > **includes**(`str`, `searchStr`): `boolean`
 
-Defined in: [string/search.ts:62](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/search.ts#L62)
+Defined in: [string/search.ts:62](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/search.ts#L62)
 
 是否包含子字符串
 

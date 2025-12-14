@@ -50,7 +50,7 @@ import {
   wrapAsync,
   cancellable,
   cancellableAsync
-} from '@q-utils/promise';
+} from '@qh5-utils/promise';
 
 // 基础操作
 delay(1000).then(() => console.log('1秒后执行'));

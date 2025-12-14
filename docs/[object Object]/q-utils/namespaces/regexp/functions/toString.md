@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / toString
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / toString
 
 # Function: toString()
 
 > **toString**(`regexp`): `string`
 
-Defined in: [regexp/utils.ts:28](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/utils.ts#L28)
+Defined in: [regexp/utils.ts:28](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/utils.ts#L28)
 
 获取正则表达式的完整字符串表示
 

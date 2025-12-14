@@ -3,7 +3,7 @@
 .vitepress/cache
 
 # TypeDoc 生成的原始 API 文档（已转换到新格式）
-api/q-utils/
+api/qh5-utils/
 [object Object]/
 
 # 依赖

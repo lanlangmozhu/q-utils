@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / fadeOut
+[qh5-utils](../../../../README.md) / [dom](../README.md) / fadeOut
 
 # Function: fadeOut()
 
 > **fadeOut**(`element`, `duration`, `callback?`): `void`
 
-Defined in: [dom/animation.ts:38](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/animation.ts#L38)
+Defined in: [dom/animation.ts:38](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/animation.ts#L38)
 
 淡出效果
 

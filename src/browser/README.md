@@ -70,7 +70,7 @@ import {
   getDevicePixelRatio,
   isTouchDevice,
   getDeviceType
-} from '@q-utils/browser';
+} from '@qh5-utils/browser';
 
 // 浏览器检测
 const browserInfo = getBrowserInfo();

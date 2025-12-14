@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / exponentialMovingAverage
+[qh5-utils](../../../../README.md) / [number](../README.md) / exponentialMovingAverage
 
 # Function: exponentialMovingAverage()
 
 > **exponentialMovingAverage**(`values`, `alpha`): `number`[]
 
-Defined in: [number/analysis.ts:75](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/analysis.ts#L75)
+Defined in: [number/analysis.ts:75](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/analysis.ts#L75)
 
 计算指数移动平均
 

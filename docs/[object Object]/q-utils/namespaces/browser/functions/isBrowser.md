@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / isBrowser
+[qh5-utils](../../../../README.md) / [browser](../README.md) / isBrowser
 
 # Function: isBrowser()
 
 > **isBrowser**(`browserName`): `boolean`
 
-Defined in: [browser/browser.ts:98](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L98)
+Defined in: [browser/browser.ts:98](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L98)
 
 检查当前浏览器是否为指定的浏览器类型
 

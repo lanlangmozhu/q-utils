@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isNumber
+[qh5-utils](../../../../README.md) / [type](../README.md) / isNumber
 
 # Function: isNumber()
 
 > **isNumber**(`value`): `value is number`
 
-Defined in: [type/basic.ts:131](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/basic.ts#L131)
+Defined in: [type/basic.ts:131](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/basic.ts#L131)
 
 检查值是否为数字
 

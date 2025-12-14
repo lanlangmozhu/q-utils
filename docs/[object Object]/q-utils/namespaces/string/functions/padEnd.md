@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / padEnd
+[qh5-utils](../../../../README.md) / [string](../README.md) / padEnd
 
 # Function: padEnd()
 
 > **padEnd**(`str`, `length`, `padStr`): `string`
 
-Defined in: [string/substring.ts:76](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/substring.ts#L76)
+Defined in: [string/substring.ts:76](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/substring.ts#L76)
 
 右侧填充
 

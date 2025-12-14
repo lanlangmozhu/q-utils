@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / move
+[qh5-utils](../../../../README.md) / [array](../README.md) / move
 
 # Function: move()
 
 > **move**\<`T`\>(`arr`, `fromIndex`, `toIndex`): `T`[]
 
-Defined in: [array/operation.ts:24](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/operation.ts#L24)
+Defined in: [array/operation.ts:24](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/operation.ts#L24)
 
 移动数组元素到指定位置
 

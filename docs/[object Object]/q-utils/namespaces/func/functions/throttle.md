@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / throttle
+[qh5-utils](../../../../README.md) / [func](../README.md) / throttle
 
 # Function: throttle()
 
 > **throttle**\<`T`\>(`func`, `wait`, `options`): (`this`, ...`args`) => `ReturnType`\<`T`\> \| `undefined`
 
-Defined in: [function/throttle.ts:26](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/throttle.ts#L26)
+Defined in: [function/throttle.ts:26](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/throttle.ts#L26)
 
 创建一个节流函数，限制函数在指定的时间内只能被调用一次
 常用于处理频繁触发的事件，如滚动事件、鼠标移动等

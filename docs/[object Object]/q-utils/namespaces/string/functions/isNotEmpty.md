@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / isNotEmpty
+[qh5-utils](../../../../README.md) / [string](../README.md) / isNotEmpty
 
 # Function: isNotEmpty()
 
 > **isNotEmpty**(`str`): `boolean`
 
-Defined in: [string/basic.ts:33](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/basic.ts#L33)
+Defined in: [string/basic.ts:33](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/basic.ts#L33)
 
 判断字符串是否非空
 

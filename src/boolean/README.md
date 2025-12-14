@@ -23,7 +23,7 @@ src/boolean/
 ## 使用示例
 
 ```typescript
-import { toBoolean, isTruthy, isFalsy } from '@q-utils/boolean';
+import { toBoolean, isTruthy, isFalsy } from '@qh5-utils/boolean';
 
 // 类型转换
 toBoolean('true'); // true

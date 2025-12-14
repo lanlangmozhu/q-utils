@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / matchAll
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / matchAll
 
 # Function: matchAll()
 
 > **matchAll**(`str`, `regexp`): `RegExpMatchArray`[]
 
-Defined in: [regexp/match.ts:16](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/match.ts#L16)
+Defined in: [regexp/match.ts:16](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/match.ts#L16)
 
 获取所有匹配结果
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / isTouchDevice
+[qh5-utils](../../../../README.md) / [browser](../README.md) / isTouchDevice
 
 # Function: isTouchDevice()
 
 > **isTouchDevice**(): `boolean`
 
-Defined in: [browser/device.ts:172](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/device.ts#L172)
+Defined in: [browser/device.ts:172](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/device.ts#L172)
 
 判断是否支持触摸事件
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / encodeUrl
+[qh5-utils](../../../../README.md) / [string](../README.md) / encodeUrl
 
 # Function: encodeUrl()
 
 > **encodeUrl**(`str`): `string`
 
-Defined in: [string/encode.ts:16](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/encode.ts#L16)
+Defined in: [string/encode.ts:16](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/encode.ts#L16)
 
 URL编码
 

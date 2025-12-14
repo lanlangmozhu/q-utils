@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / getBrowserInfo
+[qh5-utils](../../../../README.md) / [browser](../README.md) / getBrowserInfo
 
 # Function: getBrowserInfo()
 
 > **getBrowserInfo**(): [`BrowserInfo`](../interfaces/BrowserInfo.md)
 
-Defined in: [browser/browser.ts:31](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L31)
+Defined in: [browser/browser.ts:31](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L31)
 
 获取当前浏览器的详细信息
 

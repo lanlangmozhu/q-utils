@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / shuffle
+[qh5-utils](../../../../README.md) / [array](../README.md) / shuffle
 
 # Function: shuffle()
 
 > **shuffle**\<`T`\>(`arr`): `T`[]
 
-Defined in: [array/random.ts:61](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/random.ts#L61)
+Defined in: [array/random.ts:61](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/random.ts#L61)
 
 随机打乱数组
 

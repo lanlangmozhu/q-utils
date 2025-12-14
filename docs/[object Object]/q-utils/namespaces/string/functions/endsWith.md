@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / endsWith
+[qh5-utils](../../../../README.md) / [string](../README.md) / endsWith
 
 # Function: endsWith()
 
 > **endsWith**(`str`, `searchStr`): `boolean`
 
-Defined in: [string/search.ts:92](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/search.ts#L92)
+Defined in: [string/search.ts:92](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/search.ts#L92)
 
 是否以某字符串结尾
 

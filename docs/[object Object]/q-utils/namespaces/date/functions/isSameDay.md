@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / isSameDay
+[qh5-utils](../../../../README.md) / [date](../README.md) / isSameDay
 
 # Function: isSameDay()
 
 > **isSameDay**(`date1`, `date2`): `boolean`
 
-Defined in: [date/basic.ts:60](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/basic.ts#L60)
+Defined in: [date/basic.ts:60](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/basic.ts#L60)
 
 判断两个日期是否为同一天
 

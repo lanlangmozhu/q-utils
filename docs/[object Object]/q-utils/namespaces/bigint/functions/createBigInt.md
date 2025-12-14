@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [bigint](../README.md) / createBigInt
+[qh5-utils](../../../../README.md) / [bigint](../README.md) / createBigInt
 
 # Function: createBigInt()
 
 > **createBigInt**(`value`): `bigint`
 
-Defined in: [bigint/basic.ts:14](https://github.com/lanlangmozhu/q-utils/blob/main/src/bigint/basic.ts#L14)
+Defined in: [bigint/basic.ts:14](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/bigint/basic.ts#L14)
 
 创建 BigInt
 

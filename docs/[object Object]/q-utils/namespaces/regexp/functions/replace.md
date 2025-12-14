@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / replace
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / replace
 
 # Function: replace()
 
 > **replace**(`str`, `regexp`, `replacement`): `string`
 
-Defined in: [regexp/replace.ts:32](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/replace.ts#L32)
+Defined in: [regexp/replace.ts:32](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/replace.ts#L32)
 
 替换匹配项
 

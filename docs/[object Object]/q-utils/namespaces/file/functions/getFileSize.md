@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [file](../README.md) / getFileSize
+[qh5-utils](../../../../README.md) / [file](../README.md) / getFileSize
 
 # Function: getFileSize()
 
 > **getFileSize**(`file`, `options`): `string` \| `number`
 
-Defined in: [file/getFileSize.ts:36](https://github.com/lanlangmozhu/q-utils/blob/main/src/file/getFileSize.ts#L36)
+Defined in: [file/getFileSize.ts:36](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/file/getFileSize.ts#L36)
 
 获取文件大小，并可选择格式化为人类可读的形式
 

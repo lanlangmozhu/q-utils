@@ -1,18 +1,18 @@
 # 快速开始
 
-本指南将帮助你快速开始使用 Q-Utils。
+本指南将帮助你快速开始使用 qh5-utils。
 
 ## 安装
 
 ```bash
 # 使用 npm
-npm install q-utils
+npm install qh5-utils
 
 # 使用 pnpm
-pnpm add q-utils
+pnpm add qh5-utils
 
 # 使用 yarn
-yarn add q-utils
+yarn add qh5-utils
 ```
 
 ## 基本使用
@@ -20,7 +20,7 @@ yarn add q-utils
 ### 命名空间导入（推荐）
 
 ```typescript
-import { string, array, object } from 'q-utils';
+import { string, array, object } from 'qh5-utils';
 
 // 字符串操作
 const capitalized = string.capitalize('hello world');
@@ -44,9 +44,9 @@ console.log(cloned); // { a: 1, b: { c: 2 } }
 ### 按需导入
 
 ```typescript
-import { capitalize } from 'q-utils/string';
-import { first } from 'q-utils/array';
-import { deepClone } from 'q-utils/object';
+import { capitalize } from 'qh5-utils/string';
+import { first } from 'qh5-utils/array';
+import { deepClone } from 'qh5-utils/object';
 
 const capitalized = capitalize('hello world');
 const firstItem = first([1, 2, 3]);
@@ -56,7 +56,7 @@ const cloned = deepClone({ a: 1 });
 ### 默认导入
 
 ```typescript
-import qUtils from 'q-utils';
+import qUtils from 'qh5-utils';
 
 const capitalized = qUtils.string.capitalize('hello world');
 const first = qUtils.array.first([1, 2, 3]);
@@ -67,7 +67,7 @@ const first = qUtils.array.first([1, 2, 3]);
 ### 通过 CDN
 
 ```html
-<script src="https://unpkg.com/q-utils/dist/index.umd.js"></script>
+<script src="https://unpkg.com/qh5-utils/dist/index.umd.js"></script>
 <script>
   // 使用全局变量 QUtils
   const capitalized = QUtils.string.capitalize('hello world');
@@ -79,7 +79,7 @@ const first = qUtils.array.first([1, 2, 3]);
 
 ```html
 <script type="module">
-  import { string } from 'https://unpkg.com/q-utils/dist/index.esm.js';
+  import { string } from 'https://unpkg.com/qh5-utils/dist/index.esm.js';
   const capitalized = string.capitalize('hello world');
   console.log(capitalized); // 'Hello world'
 </script>

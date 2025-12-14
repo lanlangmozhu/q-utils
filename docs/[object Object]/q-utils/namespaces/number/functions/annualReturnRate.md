@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / annualReturnRate
+[qh5-utils](../../../../README.md) / [number](../README.md) / annualReturnRate
 
 # Function: annualReturnRate()
 
 > **annualReturnRate**(`initialValue`, `finalValue`, `time`): `number`
 
-Defined in: [number/finance.ts:89](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/finance.ts#L89)
+Defined in: [number/finance.ts:89](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/finance.ts#L89)
 
 计算年化收益率
 

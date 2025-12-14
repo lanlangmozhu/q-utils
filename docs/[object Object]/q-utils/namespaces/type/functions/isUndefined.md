@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isUndefined
+[qh5-utils](../../../../README.md) / [type](../README.md) / isUndefined
 
 # Function: isUndefined()
 
 > **isUndefined**(`value`): `value is undefined`
 
-Defined in: [type/basic.ts:96](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/basic.ts#L96)
+Defined in: [type/basic.ts:96](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/basic.ts#L96)
 
 检查值是否为 undefined
 

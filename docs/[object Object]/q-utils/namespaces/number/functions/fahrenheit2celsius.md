@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / fahrenheit2celsius
+[qh5-utils](../../../../README.md) / [number](../README.md) / fahrenheit2celsius
 
 # Function: fahrenheit2celsius()
 
 > **fahrenheit2celsius**(`fahrenheit`): `number`
 
-Defined in: [number/unit.ts:158](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/unit.ts#L158)
+Defined in: [number/unit.ts:158](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/unit.ts#L158)
 
 华氏度转摄氏度
 

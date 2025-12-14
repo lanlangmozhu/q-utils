@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / setLocalStorage
+[qh5-utils](../../../../README.md) / [storage](../README.md) / setLocalStorage
 
 # Function: setLocalStorage()
 
 > **setLocalStorage**\<`T`\>(`key`, `value`): `void`
 
-Defined in: [storage/localStorage.ts:44](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/localStorage.ts#L44)
+Defined in: [storage/localStorage.ts:44](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/localStorage.ts#L44)
 
 设置 localStorage 数据
 

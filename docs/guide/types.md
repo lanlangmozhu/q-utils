@@ -1,13 +1,13 @@
 # 类型支持
 
-Q-Utils 提供了完整的 TypeScript 类型定义，无需额外安装类型包。
+qh5-utils 提供了完整的 TypeScript 类型定义，无需额外安装类型包。
 
 ## 内置类型定义
 
-Q-Utils 内置了完整的 TypeScript 类型定义，所有函数都有详细的类型注解：
+qh5-utils 内置了完整的 TypeScript 类型定义，所有函数都有详细的类型注解：
 
 ```typescript
-import { string, array, object } from 'q-utils';
+import { string, array, object } from 'qh5-utils';
 
 // 完整的类型提示
 const result: string = string.capitalize('hello');
@@ -22,7 +22,7 @@ const cloned: { a: number; b: { c: number } } = object.deepClone({ a: 1, b: { c:
 现代 IDE（如 VS Code、WebStorm）会自动提供类型提示：
 
 ```typescript
-import { string } from 'q-utils';
+import { string } from 'qh5-utils';
 
 // 输入 string. 后，IDE 会显示所有可用的函数
 string.capitalize('hello');  // ✅ 类型正确
@@ -42,10 +42,10 @@ object.deepClone<T>(obj: T): T
 
 ## 泛型支持
 
-Q-Utils 的许多函数都支持泛型，提供类型安全：
+qh5-utils 的许多函数都支持泛型，提供类型安全：
 
 ```typescript
-import { array, object } from 'q-utils';
+import { array, object } from 'qh5-utils';
 
 // 数组泛型
 const numbers: number[] = array.unique([1, 2, 2, 3]);
@@ -66,7 +66,7 @@ const cloned: User = object.deepClone(user);
 TypeScript 可以自动推断返回类型：
 
 ```typescript
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 // TypeScript 自动推断类型
 const capitalized = string.capitalize('hello');  // string
@@ -79,7 +79,7 @@ const unique = array.unique([1, 2, 2, 3]);       // number[]
 某些函数提供类型守卫功能：
 
 ```typescript
-import { type } from 'q-utils';
+import { type } from 'qh5-utils';
 
 const value: unknown = getValue();
 
@@ -91,10 +91,10 @@ if (type.isString(value)) {
 
 ## 接口和类型定义
 
-Q-Utils 导出了常用的接口和类型：
+qh5-utils 导出了常用的接口和类型：
 
 ```typescript
-import type { BrowserInfo } from 'q-utils';
+import type { BrowserInfo } from 'qh5-utils';
 
 const info: BrowserInfo = {
   name: 'Chrome',
@@ -109,7 +109,7 @@ const info: BrowserInfo = {
 
 ```javascript
 // JavaScript 文件
-import { string } from 'q-utils';
+import { string } from 'qh5-utils';
 
 // VS Code 等 IDE 仍然可以提供类型提示
 const result = string.capitalize('hello');
@@ -133,7 +133,7 @@ const result = string.capitalize('hello');
 ### 类型错误示例
 
 ```typescript
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 // ❌ 类型错误：参数类型不匹配
 string.capitalize(123);  // 期望 string，得到 number
@@ -147,10 +147,10 @@ const str: string = string.capitalize('hello');
 
 ## 自定义类型
 
-你可以结合 Q-Utils 的类型定义创建自定义类型：
+你可以结合 qh5-utils 的类型定义创建自定义类型：
 
 ```typescript
-import { array } from 'q-utils';
+import { array } from 'qh5-utils';
 
 interface User {
   id: number;
@@ -185,16 +185,16 @@ const uniqueUsers = array.uniqueBy(users, user => user.id);
 }
 ```
 
-Q-Utils 提供了完整的 TypeScript 类型定义，提供良好的开发体验。
+qh5-utils 提供了完整的 TypeScript 类型定义，提供良好的开发体验。
 
 ## TypeScript 支持
 
-Q-Utils 内置了完整的 TypeScript 类型定义，无需额外安装 `@types/q-utils`。
+qh5-utils 内置了完整的 TypeScript 类型定义，无需额外安装 `@types/qh5-utils`。
 
 ### 基本使用
 
 ```typescript
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 // 类型自动推导
 const capitalized: string = string.capitalize('hello');
@@ -204,7 +204,7 @@ const first: number | undefined = array.first([1, 2, 3]);
 ### 泛型支持
 
 ```typescript
-import { array, object } from 'q-utils';
+import { array, object } from 'qh5-utils';
 
 // 数组泛型
 const numbers: number[] = array.filter([1, 2, 3], (n) => n > 1);
@@ -223,7 +223,7 @@ const cloned: User = object.deepClone(user);
 ### 类型守卫
 
 ```typescript
-import { type } from 'q-utils';
+import { type } from 'qh5-utils';
 
 function processValue(value: unknown) {
   if (type.isString(value)) {
@@ -242,8 +242,8 @@ function processValue(value: unknown) {
 
 类型定义文件位于：
 
-- 主入口: `node_modules/q-utils/dist/index.d.ts`
-- 子模块: `node_modules/q-utils/dist/[module]/index.d.ts`
+- 主入口: `node_modules/qh5-utils/dist/index.d.ts`
+- 子模块: `node_modules/qh5-utils/dist/[module]/index.d.ts`
 
 ## IDE 支持
 
@@ -265,7 +265,7 @@ WebStorm 同样支持完整的类型提示和自动补全。
 所有类型都可以从主模块导入：
 
 ```typescript
-import type { /* 类型 */ } from 'q-utils';
+import type { /* 类型 */ } from 'qh5-utils';
 ```
 
 ## 常见问题
@@ -274,7 +274,7 @@ import type { /* 类型 */ } from 'q-utils';
 
 如果遇到类型错误，请确保：
 
-1. 安装了最新版本的 Q-Utils
+1. 安装了最新版本的 qh5-utils
 2. TypeScript 版本 >= 4.0
 3. 正确导入了类型
 

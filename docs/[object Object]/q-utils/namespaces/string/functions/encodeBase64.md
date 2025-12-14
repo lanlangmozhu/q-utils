@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / encodeBase64
+[qh5-utils](../../../../README.md) / [string](../README.md) / encodeBase64
 
 # Function: encodeBase64()
 
 > **encodeBase64**(`str`): `string`
 
-Defined in: [string/encode.ts:45](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/encode.ts#L45)
+Defined in: [string/encode.ts:45](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/encode.ts#L45)
 
 Base64编码
 

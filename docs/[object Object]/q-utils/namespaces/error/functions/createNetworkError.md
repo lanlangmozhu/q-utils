@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / createNetworkError
+[qh5-utils](../../../../README.md) / [error](../README.md) / createNetworkError
 
 # Function: createNetworkError()
 
 > **createNetworkError**(`message`, `code?`): [`CustomError`](../classes/CustomError.md)
 
-Defined in: [error/create.ts:56](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/create.ts#L56)
+Defined in: [error/create.ts:56](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/create.ts#L56)
 
 创建网络错误
 

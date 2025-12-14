@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / quartiles
+[qh5-utils](../../../../README.md) / [number](../README.md) / quartiles
 
 # Function: quartiles()
 
 > **quartiles**(`numbers`): `object`
 
-Defined in: [number/statistics.ts:104](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/statistics.ts#L104)
+Defined in: [number/statistics.ts:104](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/statistics.ts#L104)
 
 计算四分位数
 

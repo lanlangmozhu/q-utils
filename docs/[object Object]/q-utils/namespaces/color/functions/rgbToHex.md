@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [color](../README.md) / rgbToHex
+[qh5-utils](../../../../README.md) / [color](../README.md) / rgbToHex
 
 # Function: rgbToHex()
 
 > **rgbToHex**(`r`, `g?`, `b?`, `options?`): `string`
 
-Defined in: [color/rgbToHex.ts:29](https://github.com/lanlangmozhu/q-utils/blob/main/src/color/rgbToHex.ts#L29)
+Defined in: [color/rgbToHex.ts:29](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/color/rgbToHex.ts#L29)
 
 将RGB颜色值转换为十六进制颜色代码
 

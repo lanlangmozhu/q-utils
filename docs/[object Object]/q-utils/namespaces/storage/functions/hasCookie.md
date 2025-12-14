@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / hasCookie
+[qh5-utils](../../../../README.md) / [storage](../README.md) / hasCookie
 
 # Function: hasCookie()
 
 > **hasCookie**(`name`): `boolean`
 
-Defined in: [storage/cookie.ts:147](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L147)
+Defined in: [storage/cookie.ts:147](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L147)
 
 检查 Cookie 是否存在
 

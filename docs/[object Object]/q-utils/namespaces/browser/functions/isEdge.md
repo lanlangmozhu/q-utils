@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / isEdge
+[qh5-utils](../../../../README.md) / [browser](../README.md) / isEdge
 
 # Function: isEdge()
 
 > **isEdge**(): `boolean`
 
-Defined in: [browser/browser.ts:159](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L159)
+Defined in: [browser/browser.ts:159](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L159)
 
 检查当前浏览器是否为 Edge
 

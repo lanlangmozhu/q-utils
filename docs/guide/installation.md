@@ -5,19 +5,19 @@
 ### npm
 
 ```bash
-npm install q-utils
+npm install qh5-utils
 ```
 
 ### pnpm
 
 ```bash
-pnpm add q-utils
+pnpm add qh5-utils
 ```
 
 ### yarn
 
 ```bash
-yarn add q-utils
+yarn add qh5-utils
 ```
 
 ## 在项目中使用
@@ -25,19 +25,19 @@ yarn add q-utils
 ### TypeScript / JavaScript (ES Module)
 
 ```typescript
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 ```
 
 ### CommonJS
 
 ```javascript
-const { string, array } = require('q-utils');
+const { string, array } = require('qh5-utils');
 ```
 
 ### 浏览器 (UMD)
 
 ```html
-<script src="https://unpkg.com/q-utils/dist/index.umd.js"></script>
+<script src="https://unpkg.com/qh5-utils/dist/index.umd.js"></script>
 <script>
   // 使用全局变量 QUtils
   const result = QUtils.string.capitalize('hello');
@@ -48,14 +48,14 @@ const { string, array } = require('q-utils');
 
 ```html
 <script type="module">
-  import { string } from 'https://unpkg.com/q-utils/dist/index.esm.js';
+  import { string } from 'https://unpkg.com/qh5-utils/dist/index.esm.js';
   const result = string.capitalize('hello');
 </script>
 ```
 
 ## 类型定义
 
-Q-Utils 内置了完整的 TypeScript 类型定义，无需额外安装 `@types/q-utils`。
+qh5-utils 内置了完整的 TypeScript 类型定义，无需额外安装 `@types/qh5-utils`。
 
 ## 版本要求
 

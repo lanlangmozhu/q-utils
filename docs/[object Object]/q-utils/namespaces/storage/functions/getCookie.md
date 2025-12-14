@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / getCookie
+[qh5-utils](../../../../README.md) / [storage](../README.md) / getCookie
 
 # Function: getCookie()
 
 > **getCookie**(`name`): `string`
 
-Defined in: [storage/cookie.ts:95](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L95)
+Defined in: [storage/cookie.ts:95](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L95)
 
 获取指定名称的 Cookie 值
 

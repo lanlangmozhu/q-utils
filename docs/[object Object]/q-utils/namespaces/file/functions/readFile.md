@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [file](../README.md) / readFile
+[qh5-utils](../../../../README.md) / [file](../README.md) / readFile
 
 # Function: readFile()
 
 > **readFile**(`file`, `readAs`): `Promise`\<`string` \| `ArrayBuffer`\>
 
-Defined in: [file/readFile.ts:41](https://github.com/lanlangmozhu/q-utils/blob/main/src/file/readFile.ts#L41)
+Defined in: [file/readFile.ts:41](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/file/readFile.ts#L41)
 
 以异步方式读取文件内容
 

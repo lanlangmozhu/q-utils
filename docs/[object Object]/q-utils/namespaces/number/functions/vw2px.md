@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / vw2px
+[qh5-utils](../../../../README.md) / [number](../README.md) / vw2px
 
 # Function: vw2px()
 
 > **vw2px**(`vw`, `viewportWidth`): `number`
 
-Defined in: [number/unit.ts:47](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/unit.ts#L47)
+Defined in: [number/unit.ts:47](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/unit.ts#L47)
 
 vw转像素
 

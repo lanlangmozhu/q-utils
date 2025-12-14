@@ -1,4 +1,4 @@
-# Q-Utils
+# qh5-utils
 
 一个功能丰富的前端工具函数库，提供了日常开发中常用的各类实用工具函数。采用 TypeScript 开发，拥有完整的类型定义和详细的文档注释。
 
@@ -15,13 +15,13 @@
 
 ```bash
 # 使用 npm
-npm install q-utils
+npm install qh5-utils
 
 # 使用 yarn
-yarn add q-utils
+yarn add qh5-utils
 
 # 使用 pnpm（推荐）
-pnpm add q-utils
+pnpm add qh5-utils
 ```
 
 ## 🚀 快速开始
@@ -29,7 +29,7 @@ pnpm add q-utils
 ### 命名空间导入（推荐）
 
 ```typescript
-import { string, array, func, dom } from 'q-utils';
+import { string, array, func, dom } from 'qh5-utils';
 
 // 字符串操作
 string.capitalize('hello'); // 'Hello'
@@ -50,8 +50,8 @@ dom.on(button, 'click', () => console.log('点击'));
 ### 按需导入
 
 ```typescript
-import { capitalize, unique } from 'q-utils/string';
-import { unique } from 'q-utils/array';
+import { capitalize, unique } from 'qh5-utils/string';
+import { unique } from 'qh5-utils/array';
 
 capitalize('hello'); // 'Hello'
 unique([1, 2, 2, 3]); // [1, 2, 3]
@@ -62,7 +62,7 @@ unique([1, 2, 2, 3]); // [1, 2, 3]
 某些函数（如 `once`、`isEmpty`）在不同模块中都有实现，使用命名空间方式可以明确区分：
 
 ```typescript
-import { func, dom, empty, object } from 'q-utils';
+import { func, dom, empty, object } from 'qh5-utils';
 
 // 函数模块的 once（确保函数只执行一次）
 const init = func.once(() => console.log('初始化'));

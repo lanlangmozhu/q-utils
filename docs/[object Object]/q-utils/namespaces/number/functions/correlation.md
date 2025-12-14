@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / correlation
+[qh5-utils](../../../../README.md) / [number](../README.md) / correlation
 
 # Function: correlation()
 
 > **correlation**(`x`, `y`): `number`
 
-Defined in: [number/analysis.ts:164](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/analysis.ts#L164)
+Defined in: [number/analysis.ts:164](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/analysis.ts#L164)
 
 计算相关性
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / getErrorCode
+[qh5-utils](../../../../README.md) / [error](../README.md) / getErrorCode
 
 # Function: getErrorCode()
 
 > **getErrorCode**(`error`): `string` \| `undefined`
 
-Defined in: [error/utils.ts:35](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/utils.ts#L35)
+Defined in: [error/utils.ts:35](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/utils.ts#L35)
 
 获取错误代码
 

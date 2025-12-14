@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [boolean](../README.md) / isTruthy
+[qh5-utils](../../../../README.md) / [boolean](../README.md) / isTruthy
 
 # Function: isTruthy()
 
 > **isTruthy**(`value`): `boolean`
 
-Defined in: [boolean/index.ts:45](https://github.com/lanlangmozhu/q-utils/blob/main/src/boolean/index.ts#L45)
+Defined in: [boolean/index.ts:45](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/boolean/index.ts#L45)
 
 检查值是否为真值
 

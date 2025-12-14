@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / sleep
+[qh5-utils](../../../../README.md) / [func](../README.md) / sleep
 
 # Function: sleep()
 
 > **sleep**(`ms`): `Promise`\<`void`\>
 
-Defined in: [function/sleep.ts:25](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/sleep.ts#L25)
+Defined in: [function/sleep.ts:25](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/sleep.ts#L25)
 
 延迟指定时间
 提供一个Promise，在指定的毫秒数后解析

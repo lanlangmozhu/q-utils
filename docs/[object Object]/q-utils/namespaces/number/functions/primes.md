@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / primes
+[qh5-utils](../../../../README.md) / [number](../README.md) / primes
 
 # Function: primes()
 
 > **primes**(`start`, `end`): `number`[]
 
-Defined in: [number/special.ts:61](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/special.ts#L61)
+Defined in: [number/special.ts:61](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/special.ts#L61)
 
 生成质数序列
 

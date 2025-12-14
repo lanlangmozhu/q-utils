@@ -66,7 +66,7 @@ import {
   isEmptyOrFalsyStrict,
   isEmptyOrFalsyLoose,
   isEmptyOrFalsyStrictest
-} from '@q-utils/empty';
+} from '@qh5-utils/empty';
 
 // 基本类型检测
 isNil(null); // true

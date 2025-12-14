@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / getSessionStorage
+[qh5-utils](../../../../README.md) / [storage](../README.md) / getSessionStorage
 
 # Function: getSessionStorage()
 
 > **getSessionStorage**\<`T`\>(`key`, `defaultValue`): `T`
 
-Defined in: [storage/sessionStorage.ts:46](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/sessionStorage.ts#L46)
+Defined in: [storage/sessionStorage.ts:46](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/sessionStorage.ts#L46)
 
 从 sessionStorage 获取数据
 

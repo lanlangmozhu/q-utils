@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [file](../README.md) / saveFile
+[qh5-utils](../../../../README.md) / [file](../README.md) / saveFile
 
 # Function: saveFile()
 
 > **saveFile**(`content`, `filename`, `options`): `void`
 
-Defined in: [file/saveFile.ts:31](https://github.com/lanlangmozhu/q-utils/blob/main/src/file/saveFile.ts#L31)
+Defined in: [file/saveFile.ts:31](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/file/saveFile.ts#L31)
 
 将内容保存为文件并下载到本地
 

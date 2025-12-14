@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [boolean](../README.md) / toBoolean
+[qh5-utils](../../../../README.md) / [boolean](../README.md) / toBoolean
 
 # Function: toBoolean()
 
 > **toBoolean**(`value`): `boolean`
 
-Defined in: [boolean/index.ts:18](https://github.com/lanlangmozhu/q-utils/blob/main/src/boolean/index.ts#L18)
+Defined in: [boolean/index.ts:18](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/boolean/index.ts#L18)
 
 将值转换为布尔值
 

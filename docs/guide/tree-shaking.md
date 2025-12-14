@@ -1,18 +1,18 @@
 # Tree Shaking
 
-Q-Utils 支持 Tree Shaking，你可以按需导入函数，只打包使用到的代码。
+qh5-utils 支持 Tree Shaking，你可以按需导入函数，只打包使用到的代码。
 
 ## 按需导入
 
-Q-Utils 支持按需导入，可以只导入需要的函数，支持 Tree Shaking，减小打包体积。
+qh5-utils 支持按需导入，可以只导入需要的函数，支持 Tree Shaking，减小打包体积。
 
 ## 基本用法
 
 ```typescript
 // 从特定模块导入函数
-import { capitalize } from 'q-utils/string';
-import { unique } from 'q-utils/array';
-import { deepClone } from 'q-utils/object';
+import { capitalize } from 'qh5-utils/string';
+import { unique } from 'qh5-utils/array';
+import { deepClone } from 'qh5-utils/object';
 
 // 使用
 const capitalized = capitalize('hello world');
@@ -22,14 +22,14 @@ const cloned = deepClone({ a: 1 });
 
 ## 支持的模块路径
 
-Q-Utils 支持以下模块路径：
+qh5-utils 支持以下模块路径：
 
-- `q-utils/string` - 字符串相关函数
-- `q-utils/array` - 数组相关函数
-- `q-utils/object` - 对象相关函数
-- `q-utils/number` - 数字相关函数
-- `q-utils/date` - 日期相关函数
-- `q-utils/function` - 函数相关工具
+- `qh5-utils/string` - 字符串相关函数
+- `qh5-utils/array` - 数组相关函数
+- `qh5-utils/object` - 对象相关函数
+- `qh5-utils/number` - 数字相关函数
+- `qh5-utils/date` - 日期相关函数
+- `qh5-utils/function` - 函数相关工具
 
 ## Tree Shaking
 
@@ -39,8 +39,8 @@ Q-Utils 支持以下模块路径：
 
 ```typescript
 // 只导入需要的函数
-import { capitalize, trim } from 'q-utils/string';
-import { unique, flatten } from 'q-utils/array';
+import { capitalize, trim } from 'qh5-utils/string';
+import { unique, flatten } from 'qh5-utils/array';
 
 // 使用
 const result1 = capitalize('hello');
@@ -55,11 +55,11 @@ const result2 = unique([1, 2, 2, 3]);
 
 ```typescript
 // ❌ 命名空间导入（会导入整个模块）
-import { string } from 'q-utils';
+import { string } from 'qh5-utils';
 string.capitalize('hello');
 
 // ✅ 按需导入（只导入需要的函数）
-import { capitalize } from 'q-utils/string';
+import { capitalize } from 'qh5-utils/string';
 capitalize('hello');
 ```
 
@@ -71,7 +71,7 @@ capitalize('hello');
 
 ```typescript
 // 只需要一个函数
-import { debounce } from 'q-utils/function';
+import { debounce } from 'qh5-utils/function';
 
 const debouncedFn = debounce(() => {
   console.log('执行');
@@ -84,8 +84,8 @@ const debouncedFn = debounce(() => {
 
 ```typescript
 // 只导入需要的函数
-import { formatDate } from 'q-utils/date';
-import { deepClone } from 'q-utils/object';
+import { formatDate } from 'qh5-utils/date';
+import { deepClone } from 'qh5-utils/object';
 ```
 
 ### 3. 与构建工具配合
@@ -95,7 +95,7 @@ import { deepClone } from 'q-utils/object';
 ```typescript
 // webpack.config.js / vite.config.js
 // Tree Shaking 会自动移除未使用的代码
-import { capitalize } from 'q-utils/string';
+import { capitalize } from 'qh5-utils/string';
 ```
 
 ## 与命名空间导入对比
@@ -103,7 +103,7 @@ import { capitalize } from 'q-utils/string';
 ### 命名空间导入
 
 ```typescript
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 string.capitalize('hello');
 array.unique([1, 2, 2, 3]);
@@ -120,8 +120,8 @@ array.unique([1, 2, 2, 3]);
 ### 按需导入
 
 ```typescript
-import { capitalize } from 'q-utils/string';
-import { unique } from 'q-utils/array';
+import { capitalize } from 'qh5-utils/string';
+import { unique } from 'qh5-utils/array';
 
 capitalize('hello');
 unique([1, 2, 2, 3]);
@@ -143,8 +143,8 @@ unique([1, 2, 2, 3]);
 
 ```typescript
 // 混合使用
-import { string, array } from 'q-utils';  // 使用多个函数
-import { debounce } from 'q-utils/function';  // 只使用一个函数
+import { string, array } from 'qh5-utils';  // 使用多个函数
+import { debounce } from 'qh5-utils/function';  // 只使用一个函数
 
 string.capitalize('hello');
 array.unique([1, 2, 2, 3]);
@@ -161,9 +161,9 @@ const debounced = debounce(() => {}, 300);
 
 ```typescript
 // 只导入需要的函数
-import { capitalize } from 'q-utils/string';
-import { first } from 'q-utils/array';
-import { deepClone } from 'q-utils/object';
+import { capitalize } from 'qh5-utils/string';
+import { first } from 'qh5-utils/array';
+import { deepClone } from 'qh5-utils/object';
 
 // 使用
 const capitalized = capitalize('hello');
@@ -175,7 +175,7 @@ const cloned = deepClone({ a: 1 });
 
 ```typescript
 // 从主模块按需导入
-import { string, array } from 'q-utils';
+import { string, array } from 'qh5-utils';
 
 // 使用
 const capitalized = string.capitalize('hello');

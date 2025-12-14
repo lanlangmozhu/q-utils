@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / setAttributes
+[qh5-utils](../../../../README.md) / [dom](../README.md) / setAttributes
 
 # Function: setAttributes()
 
 > **setAttributes**(`element`, `attributes`): `void`
 
-Defined in: [dom/element.ts:57](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/element.ts#L57)
+Defined in: [dom/element.ts:57](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/element.ts#L57)
 
 设置多个属性
 

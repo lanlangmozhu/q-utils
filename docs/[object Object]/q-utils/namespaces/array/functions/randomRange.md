@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / randomRange
+[qh5-utils](../../../../README.md) / [array](../README.md) / randomRange
 
 # Function: randomRange()
 
 > **randomRange**\<`T`\>(`arr`, `start`, `end`): `T` \| `undefined`
 
-Defined in: [array/random.ts:87](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/random.ts#L87)
+Defined in: [array/random.ts:87](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/random.ts#L87)
 
 随机获取指定范围内的元素
 

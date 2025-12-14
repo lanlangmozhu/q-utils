@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / chunkGroups
+[qh5-utils](../../../../README.md) / [array](../README.md) / chunkGroups
 
 # Function: chunkGroups()
 
 > **chunkGroups**\<`T`\>(`arr`, `size`): `T`[][]
 
-Defined in: [array/group.ts:47](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/group.ts#L47)
+Defined in: [array/group.ts:47](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/group.ts#L47)
 
 按大小将数组分组
 

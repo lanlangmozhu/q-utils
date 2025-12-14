@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / execAll
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / execAll
 
 # Function: execAll()
 
 > **execAll**(`str`, `regexp`): `RegExpExecArray`[]
 
-Defined in: [regexp/match.ts:44](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/match.ts#L44)
+Defined in: [regexp/match.ts:44](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/match.ts#L44)
 
 执行所有正则表达式匹配
 

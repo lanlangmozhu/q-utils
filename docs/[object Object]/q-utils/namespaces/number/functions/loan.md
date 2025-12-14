@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / loan
+[qh5-utils](../../../../README.md) / [number](../README.md) / loan
 
 # Function: loan()
 
 > **loan**(`principal`, `annualRate`, `months`): `number`
 
-Defined in: [number/finance.ts:159](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/finance.ts#L159)
+Defined in: [number/finance.ts:159](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/finance.ts#L159)
 
 计算贷款月供
 

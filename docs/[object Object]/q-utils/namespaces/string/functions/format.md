@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / format
+[qh5-utils](../../../../README.md) / [string](../README.md) / format
 
 # Function: format()
 
 > **format**(`template`, ...`args`): `string`
 
-Defined in: [string/format.ts:82](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/format.ts#L82)
+Defined in: [string/format.ts:82](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/format.ts#L82)
 
 格式化字符串，支持位置参数和命名参数
 

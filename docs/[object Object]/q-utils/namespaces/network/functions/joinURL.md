@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / joinURL
+[qh5-utils](../../../../README.md) / [network](../README.md) / joinURL
 
 # Function: joinURL()
 
 > **joinURL**(`baseURL`, `relativeURL`): `string`
 
-Defined in: [network/url.ts:252](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/url.ts#L252)
+Defined in: [network/url.ts:252](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/url.ts#L252)
 
 合并相对 URL 和基础 URL
 

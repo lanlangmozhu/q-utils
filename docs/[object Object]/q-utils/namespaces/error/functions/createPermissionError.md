@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / createPermissionError
+[qh5-utils](../../../../README.md) / [error](../README.md) / createPermissionError
 
 # Function: createPermissionError()
 
 > **createPermissionError**(`message`, `code?`): [`CustomError`](../classes/CustomError.md)
 
-Defined in: [error/create.ts:67](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/create.ts#L67)
+Defined in: [error/create.ts:67](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/create.ts#L67)
 
 创建权限错误
 

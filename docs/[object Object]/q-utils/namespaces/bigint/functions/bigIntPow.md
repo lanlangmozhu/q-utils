@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [bigint](../README.md) / bigIntPow
+[qh5-utils](../../../../README.md) / [bigint](../README.md) / bigIntPow
 
 # Function: bigIntPow()
 
 > **bigIntPow**(`base`, `exponent`): `bigint`
 
-Defined in: [bigint/math.ts:72](https://github.com/lanlangmozhu/q-utils/blob/main/src/bigint/math.ts#L72)
+Defined in: [bigint/math.ts:72](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/bigint/math.ts#L72)
 
 获取 BigInt 的幂
 

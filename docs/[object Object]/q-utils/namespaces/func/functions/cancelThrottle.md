@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / cancelThrottle
+[qh5-utils](../../../../README.md) / [func](../README.md) / cancelThrottle
 
 # Function: cancelThrottle()
 
 > **cancelThrottle**(`throttledFn`): `void`
 
-Defined in: [function/throttle.ts:88](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/throttle.ts#L88)
+Defined in: [function/throttle.ts:88](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/throttle.ts#L88)
 
 取消节流函数的执行
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / isChrome
+[qh5-utils](../../../../README.md) / [browser](../README.md) / isChrome
 
 # Function: isChrome()
 
 > **isChrome**(): `boolean`
 
-Defined in: [browser/browser.ts:114](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/browser.ts#L114)
+Defined in: [browser/browser.ts:114](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/browser.ts#L114)
 
 检查当前浏览器是否为 Chrome
 

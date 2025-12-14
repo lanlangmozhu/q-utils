@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / addYears
+[qh5-utils](../../../../README.md) / [date](../README.md) / addYears
 
 # Function: addYears()
 
 > **addYears**(`date`, `years`): `Date`
 
-Defined in: [date/calculation.ts:37](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/calculation.ts#L37)
+Defined in: [date/calculation.ts:37](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/calculation.ts#L37)
 
 添加年份
 

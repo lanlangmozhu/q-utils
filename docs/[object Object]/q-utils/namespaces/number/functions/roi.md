@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / roi
+[qh5-utils](../../../../README.md) / [number](../README.md) / roi
 
 # Function: roi()
 
 > **roi**(`initialInvestment`, `finalValue`): `number`
 
-Defined in: [number/finance.ts:235](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/finance.ts#L235)
+Defined in: [number/finance.ts:235](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/finance.ts#L235)
 
 计算投资回报率
 

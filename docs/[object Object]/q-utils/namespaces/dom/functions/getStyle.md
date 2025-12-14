@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / getStyle
+[qh5-utils](../../../../README.md) / [dom](../README.md) / getStyle
 
 # Function: getStyle()
 
 > **getStyle**(`element`, `property`): `string` \| `null`
 
-Defined in: [dom/basic.ts:103](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/basic.ts#L103)
+Defined in: [dom/basic.ts:103](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/basic.ts#L103)
 
 获取样式
 

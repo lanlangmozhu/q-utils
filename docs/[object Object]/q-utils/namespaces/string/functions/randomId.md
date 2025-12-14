@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / randomId
+[qh5-utils](../../../../README.md) / [string](../README.md) / randomId
 
 # Function: randomId()
 
 > **randomId**(`length`, `options`): `string`
 
-Defined in: [string/uuid.ts:94](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/uuid.ts#L94)
+Defined in: [string/uuid.ts:94](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/uuid.ts#L94)
 
 生成指定长度的随机字符串ID
 

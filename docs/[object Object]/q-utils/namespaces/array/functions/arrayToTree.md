@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / arrayToTree
+[qh5-utils](../../../../README.md) / [array](../README.md) / arrayToTree
 
 # Function: arrayToTree()
 
 > **arrayToTree**\<`T`\>(`arr`, `options`): `T` & `object`[]
 
-Defined in: [array/tree.ts:21](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/tree.ts#L21)
+Defined in: [array/tree.ts:21](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/tree.ts#L21)
 
 将数组转换为树结构
 

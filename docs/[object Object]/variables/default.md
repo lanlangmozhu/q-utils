@@ -1,76 +1,76 @@
-[**q-utils v1.0.0**](../README.md)
+[**qh5-utils v1.0.0**](../README.md)
 
 ***
 
-[q-utils](../README.md) / default
+[qh5-utils](../README.md) / default
 
 # Variable: default
 
 > `const` **default**: `object`
 
-Defined in: [index.ts:57](https://github.com/lanlangmozhu/q-utils/blob/main/src/index.ts#L57)
+Defined in: [index.ts:57](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/index.ts#L57)
 
 ## Type Declaration
 
 ### array
 
-> **array**: [`array`](../q-utils/namespaces/array/README.md)
+> **array**: [`array`](../qh5-utils/namespaces/array/README.md)
 
 ### browser
 
-> **browser**: [`browser`](../q-utils/namespaces/browser/README.md)
+> **browser**: [`browser`](../qh5-utils/namespaces/browser/README.md)
 
 ### color
 
-> **color**: [`color`](../q-utils/namespaces/color/README.md)
+> **color**: [`color`](../qh5-utils/namespaces/color/README.md)
 
 ### date
 
-> **date**: [`date`](../q-utils/namespaces/date/README.md)
+> **date**: [`date`](../qh5-utils/namespaces/date/README.md)
 
 ### dom
 
-> **dom**: [`dom`](../q-utils/namespaces/dom/README.md)
+> **dom**: [`dom`](../qh5-utils/namespaces/dom/README.md)
 
 ### file
 
-> **file**: [`file`](../q-utils/namespaces/file/README.md)
+> **file**: [`file`](../qh5-utils/namespaces/file/README.md)
 
 ### func
 
-> **func**: [`func`](../q-utils/namespaces/func/README.md)
+> **func**: [`func`](../qh5-utils/namespaces/func/README.md)
 
 ### network
 
-> **network**: [`network`](../q-utils/namespaces/network/README.md)
+> **network**: [`network`](../qh5-utils/namespaces/network/README.md)
 
 ### number
 
-> **number**: [`number`](../q-utils/namespaces/number/README.md)
+> **number**: [`number`](../qh5-utils/namespaces/number/README.md)
 
 ### object
 
-> **object**: [`object`](../q-utils/namespaces/object/README.md)
+> **object**: [`object`](../qh5-utils/namespaces/object/README.md)
 
 ### storage
 
-> **storage**: [`storage`](../q-utils/namespaces/storage/README.md)
+> **storage**: [`storage`](../qh5-utils/namespaces/storage/README.md)
 
 ### string
 
-> **string**: [`string`](../q-utils/namespaces/string/README.md)
+> **string**: [`string`](../qh5-utils/namespaces/string/README.md)
 
 ### type
 
-> **type**: [`type`](../q-utils/namespaces/type/README.md)
+> **type**: [`type`](../qh5-utils/namespaces/type/README.md)
 
 ### empty
 
-> **empty**: [`empty`](../q-utils/namespaces/empty/README.md)
+> **empty**: [`empty`](../qh5-utils/namespaces/empty/README.md)
 
 ### boolean
 
-> **boolean**: [`boolean`](../q-utils/namespaces/boolean/README.md)
+> **boolean**: [`boolean`](../qh5-utils/namespaces/boolean/README.md)
 
 将值转换为布尔值
 
@@ -95,19 +95,19 @@ toBoolean(undefined) // false
 
 ### promise
 
-> **promise**: [`promise`](../q-utils/namespaces/promise/README.md)
+> **promise**: [`promise`](../qh5-utils/namespaces/promise/README.md)
 
 ### regexp
 
-> **regexp**: [`regexp`](../q-utils/namespaces/regexp/README.md)
+> **regexp**: [`regexp`](../qh5-utils/namespaces/regexp/README.md)
 
 ### error
 
-> **error**: [`error`](../q-utils/namespaces/error/README.md)
+> **error**: [`error`](../qh5-utils/namespaces/error/README.md)
 
 ### symbol
 
-> **symbol**: [`symbol`](../q-utils/namespaces/symbol/README.md)
+> **symbol**: [`symbol`](../qh5-utils/namespaces/symbol/README.md)
 
 创建唯一的 Symbol
 
@@ -127,4 +127,4 @@ createSymbol('test') // Symbol('test')
 
 ### bigint
 
-> **bigint**: [`bigint`](../q-utils/namespaces/bigint/README.md)
+> **bigint**: [`bigint`](../qh5-utils/namespaces/bigint/README.md)

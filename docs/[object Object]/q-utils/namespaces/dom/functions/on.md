@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / on
+[qh5-utils](../../../../README.md) / [dom](../README.md) / on
 
 # Function: on()
 
 > **on**(`element`, `eventType`, `handler`): `void`
 
-Defined in: [dom/event.ts:7](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/event.ts#L7)
+Defined in: [dom/event.ts:7](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/event.ts#L7)
 
 添加事件监听
 

@@ -59,7 +59,7 @@ import {
   bigIntPow,
   bigIntGcd,
   bigIntLcm
-} from '@q-utils/bigint';
+} from '@qh5-utils/bigint';
 
 // 创建 BigInt
 const num = createBigInt(123); // 123n

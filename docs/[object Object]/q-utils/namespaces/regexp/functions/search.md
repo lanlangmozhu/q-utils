@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [regexp](../README.md) / search
+[qh5-utils](../../../../README.md) / [regexp](../README.md) / search
 
 # Function: search()
 
 > **search**(`str`, `regexp`): `number`
 
-Defined in: [regexp/search.ts:17](https://github.com/lanlangmozhu/q-utils/blob/main/src/regexp/search.ts#L17)
+Defined in: [regexp/search.ts:17](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/regexp/search.ts#L17)
 
 返回匹配位置
 

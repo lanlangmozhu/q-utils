@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / flatten
+[qh5-utils](../../../../README.md) / [array](../README.md) / flatten
 
 # Function: flatten()
 
 > **flatten**\<`T`\>(`arr`, `depth`): `T`[]
 
-Defined in: [array/basic.ts:127](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/basic.ts#L127)
+Defined in: [array/basic.ts:127](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/basic.ts#L127)
 
 将多维数组扁平化为一维数组
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / setSessionStorage
+[qh5-utils](../../../../README.md) / [storage](../README.md) / setSessionStorage
 
 # Function: setSessionStorage()
 
 > **setSessionStorage**\<`T`\>(`key`, `value`): `boolean`
 
-Defined in: [storage/sessionStorage.ts:79](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/sessionStorage.ts#L79)
+Defined in: [storage/sessionStorage.ts:79](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/sessionStorage.ts#L79)
 
 将数据存储到 sessionStorage
 

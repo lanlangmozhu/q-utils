@@ -1,8 +1,8 @@
-[**q-utils v1.0.0**](../../../README.md)
+[**qh5-utils v1.0.0**](../../../README.md)
 
 ***
 
-[q-utils](../../../README.md) / dom
+[qh5-utils](../../../README.md) / dom
 
 # dom
 

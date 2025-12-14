@@ -42,7 +42,7 @@ import {
   getFileExtension,
   isValidFileType,
   getFileSize
-} from '@q-utils/file';
+} from '@qh5-utils/file';
 
 // 文件读写
 // 读取文件内容

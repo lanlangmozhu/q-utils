@@ -50,7 +50,7 @@ src/object/
 ## 使用示例
 
 ```typescript
-import { deepClone, deepMerge, getValueByPath, isEqual } from '@q-utils/object';
+import { deepClone, deepMerge, getValueByPath, isEqual } from '@qh5-utils/object';
 
 // 深拷贝
 const obj = { a: 1, b: { c: 2 } };

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [storage](../README.md) / deleteCookie
+[qh5-utils](../../../../README.md) / [storage](../README.md) / deleteCookie
 
 # Function: deleteCookie()
 
 > **deleteCookie**(`name`, `options`): `void`
 
-Defined in: [storage/cookie.ts:125](https://github.com/lanlangmozhu/q-utils/blob/main/src/storage/cookie.ts#L125)
+Defined in: [storage/cookie.ts:125](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/storage/cookie.ts#L125)
 
 删除指定的 Cookie
 

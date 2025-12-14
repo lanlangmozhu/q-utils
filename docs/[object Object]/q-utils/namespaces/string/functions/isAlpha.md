@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / isAlpha
+[qh5-utils](../../../../README.md) / [string](../README.md) / isAlpha
 
 # Function: isAlpha()
 
 > **isAlpha**(`str`): `boolean`
 
-Defined in: [string/validate.ts:33](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/validate.ts#L33)
+Defined in: [string/validate.ts:33](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/validate.ts#L33)
 
 是否为字母字符串
 

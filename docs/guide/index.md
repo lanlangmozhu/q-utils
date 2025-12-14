@@ -1,10 +1,10 @@
 # 指南
 
-欢迎使用 Q-Utils！本指南将帮助你快速上手。
+欢迎使用 qh5-utils！本指南将帮助你快速上手。
 
-## 什么是 Q-Utils？
+## 什么是 qh5-utils？
 
-Q-Utils 是一个功能丰富的前端工具函数库，提供了日常开发中常用的各类实用工具函数。它按功能分类组织，支持按需导入，帮助开发者提高开发效率。
+qh5-utils 是一个功能丰富的前端工具函数库，提供了日常开发中常用的各类实用工具函数。它按功能分类组织，支持按需导入，帮助开发者提高开发效率。
 
 ## 核心特性
 
@@ -17,7 +17,7 @@ Q-Utils 是一个功能丰富的前端工具函数库，提供了日常开发中
 
 ## 功能模块
 
-Q-Utils 提供了以下功能模块：
+qh5-utils 提供了以下功能模块：
 
 ### 核心模块
 - **数组 (Array)**: 数组操作、转换、分组、排序、去重等
@@ -57,19 +57,19 @@ Q-Utils 提供了以下功能模块：
 
 ```bash
 # 使用 npm
-npm install q-utils
+npm install qh5-utils
 
 # 使用 pnpm
-pnpm add q-utils
+pnpm add qh5-utils
 
 # 使用 yarn
-yarn add q-utils
+yarn add qh5-utils
 ```
 
 ### 基本使用
 
 ```typescript
-import { string, array, object } from 'q-utils';
+import { string, array, object } from 'qh5-utils';
 
 // 字符串操作
 const capitalized = string.capitalize('hello world');
@@ -87,7 +87,7 @@ const cloned = object.deepClone({ a: 1, b: { c: 2 } });
 ## 学习路径
 
 ### 1. 新手入门
-- [快速开始](./getting-started.md) - 了解如何安装和使用 Q-Utils
+- [快速开始](./getting-started.md) - 了解如何安装和使用 qh5-utils
 - [安装指南](./installation.md) - 详细的安装说明和不同环境的使用方式
 
 ### 2. 使用方式
@@ -108,9 +108,9 @@ const cloned = object.deepClone({ a: 1, b: { c: 2 } });
 
 ## 贡献
 
-欢迎贡献代码、报告问题或提出建议！查看 [GitHub 仓库](https://github.com/lanlangmozhu/q-utils) 了解更多。
+欢迎贡献代码、报告问题或提出建议！查看 [GitHub 仓库](https://github.com/lanlangmozhu/qh5-utils) 了解更多。
 
 ## 许可证
 
-[MIT](https://github.com/lanlangmozhu/q-utils/blob/main/LICENSE)
+[MIT](https://github.com/lanlangmozhu/qh5-utils/blob/main/LICENSE)
 

@@ -53,7 +53,7 @@ import {
   getFileNameFromURL,
   isAbsoluteURL,
   joinURL
-} from '@q-utils/network';
+} from '@qh5-utils/network';
 
 // 请求相关
 // 基本 GET 请求

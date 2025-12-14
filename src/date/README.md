@@ -90,7 +90,7 @@ import {
   addDays, 
   getWorkingDays,
   getLunarDate 
-} from '@q-utils/date';
+} from '@qh5-utils/date';
 
 // 日期格式化
 const formatted = formatDate(new Date(), 'YYYY-MM-DD');

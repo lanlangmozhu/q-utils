@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [browser](../README.md) / isMobile
+[qh5-utils](../../../../README.md) / [browser](../README.md) / isMobile
 
 # Function: isMobile()
 
 > **isMobile**(): `boolean`
 
-Defined in: [browser/device.ts:19](https://github.com/lanlangmozhu/q-utils/blob/main/src/browser/device.ts#L19)
+Defined in: [browser/device.ts:19](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/browser/device.ts#L19)
 
 检测当前设备是否为移动设备
 

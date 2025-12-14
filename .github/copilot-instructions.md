@@ -1,4 +1,4 @@
-# Q-Utils 项目 AI 编码指南
+# qh5-utils 项目 AI 编码指南
 
 本文档为 AI 编码代理提供项目特定的上下文和约定，帮助快速理解代码库结构和开发模式。
 
@@ -14,11 +14,11 @@
 - **导出方式**：主入口 `src/index.ts` 使用命名空间方式导出，避免命名冲突
   ```typescript
   // 命名空间导入（推荐）
-  import { string, array, func } from 'q-utils';
+  import { string, array, func } from 'qh5-utils';
   string.capitalize('hello');
   
   // 按需导入
-  import { capitalize } from 'q-utils/string';
+  import { capitalize } from 'qh5-utils/string';
   ```
 
 ### 关键文件
@@ -76,7 +76,7 @@
 ### 命名冲突处理
 当不同模块存在同名函数时（如 `once` 在 `function` 和 `dom` 模块中），使用命名空间方式区分：
 ```typescript
-import { func, dom } from 'q-utils';
+import { func, dom } from 'qh5-utils';
 func.once(() => {});  // 函数模块的 once
 dom.once(element, 'click', handler);  // DOM 模块的 once
 ```

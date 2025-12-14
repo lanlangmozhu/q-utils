@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / getDatesBetween
+[qh5-utils](../../../../README.md) / [date](../README.md) / getDatesBetween
 
 # Function: getDatesBetween()
 
 > **getDatesBetween**(`startDate`, `endDate`): `Date`[]
 
-Defined in: [date/statistics.ts:33](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/statistics.ts#L33)
+Defined in: [date/statistics.ts:33](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/statistics.ts#L33)
 
 获取两个日期之间的所有日期
 

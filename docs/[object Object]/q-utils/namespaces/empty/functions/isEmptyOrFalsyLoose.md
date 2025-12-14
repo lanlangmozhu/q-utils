@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [empty](../README.md) / isEmptyOrFalsyLoose
+[qh5-utils](../../../../README.md) / [empty](../README.md) / isEmptyOrFalsyLoose
 
 # Function: isEmptyOrFalsyLoose()
 
 > **isEmptyOrFalsyLoose**(`value`): `boolean`
 
-Defined in: [empty/advanced.ts:81](https://github.com/lanlangmozhu/q-utils/blob/main/src/empty/advanced.ts#L81)
+Defined in: [empty/advanced.ts:81](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/empty/advanced.ts#L81)
 
 检查值是否为空或假值（包括空数组和空对象）
 

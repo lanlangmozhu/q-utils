@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / randomItem
+[qh5-utils](../../../../README.md) / [array](../README.md) / randomItem
 
 # Function: randomItem()
 
 > **randomItem**\<`T`\>(`arr`): `T` \| `undefined`
 
-Defined in: [array/random.ts:16](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/random.ts#L16)
+Defined in: [array/random.ts:16](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/random.ts#L16)
 
 从数组中随机获取一个元素
 

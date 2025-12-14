@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / findTreeNode
+[qh5-utils](../../../../README.md) / [array](../README.md) / findTreeNode
 
 # Function: findTreeNode()
 
 > **findTreeNode**\<`T`\>(`tree`, `predicate`, `options`): `T` & `object` \| `undefined`
 
-Defined in: [array/tree.ts:132](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/tree.ts#L132)
+Defined in: [array/tree.ts:132](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/tree.ts#L132)
 
 在树结构中查找节点
 

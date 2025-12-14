@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / trimRight
+[qh5-utils](../../../../README.md) / [string](../README.md) / trimRight
 
 # Function: trimRight()
 
 > **trimRight**(`str`): `string`
 
-Defined in: [string/format.ts:43](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/format.ts#L43)
+Defined in: [string/format.ts:43](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/format.ts#L43)
 
 去除右侧空格
 

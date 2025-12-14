@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / getDateRangeIntersection
+[qh5-utils](../../../../README.md) / [date](../README.md) / getDateRangeIntersection
 
 # Function: getDateRangeIntersection()
 
 > **getDateRangeIntersection**(`range1`, `range2`): \[`Date`, `Date`\] \| `null`
 
-Defined in: [date/range.ts:26](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/range.ts#L26)
+Defined in: [date/range.ts:26](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/range.ts#L26)
 
 计算两个日期范围的交集
 

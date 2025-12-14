@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / stats
+[qh5-utils](../../../../README.md) / [array](../README.md) / stats
 
 # Function: stats()
 
 > **stats**(`arr`): `object`
 
-Defined in: [array/basic.ts:215](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/basic.ts#L215)
+Defined in: [array/basic.ts:215](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/basic.ts#L215)
 
 计算数组的统计信息
 

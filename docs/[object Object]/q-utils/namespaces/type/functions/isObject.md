@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [type](../README.md) / isObject
+[qh5-utils](../../../../README.md) / [type](../README.md) / isObject
 
 # Function: isObject()
 
 > **isObject**(`value`): `value is object`
 
-Defined in: [type/object.ts:16](https://github.com/lanlangmozhu/q-utils/blob/main/src/type/object.ts#L16)
+Defined in: [type/object.ts:16](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/type/object.ts#L16)
 
 检查值是否为对象
 

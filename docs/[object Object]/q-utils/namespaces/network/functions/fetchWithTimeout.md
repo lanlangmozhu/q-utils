@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [network](../README.md) / fetchWithTimeout
+[qh5-utils](../../../../README.md) / [network](../README.md) / fetchWithTimeout
 
 # Function: fetchWithTimeout()
 
 > **fetchWithTimeout**(`url`, `options`, `timeout`): `Promise`\<`Response`\>
 
-Defined in: [network/fetchWithTimeout.ts:34](https://github.com/lanlangmozhu/q-utils/blob/main/src/network/fetchWithTimeout.ts#L34)
+Defined in: [network/fetchWithTimeout.ts:34](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/network/fetchWithTimeout.ts#L34)
 
 带超时功能的fetch函数
 

@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [number](../README.md) / isEven
+[qh5-utils](../../../../README.md) / [number](../README.md) / isEven
 
 # Function: isEven()
 
 > **isEven**(`value`): `boolean`
 
-Defined in: [number/basic.ts:58](https://github.com/lanlangmozhu/q-utils/blob/main/src/number/basic.ts#L58)
+Defined in: [number/basic.ts:58](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/number/basic.ts#L58)
 
 检查是否为偶数
 

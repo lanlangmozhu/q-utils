@@ -1,7 +1,7 @@
 {
-  "name": "q-utils-docs",
+  "name": "qh5-utils-docs",
   "version": "1.0.0",
-  "description": "Q-Utils 文档网站",
+  "description": "qh5-utils 文档网站",
   "private": true,
   "type": "module",
   "scripts": {

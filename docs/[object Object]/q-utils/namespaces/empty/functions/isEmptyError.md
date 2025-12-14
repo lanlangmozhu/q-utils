@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [empty](../README.md) / isEmptyError
+[qh5-utils](../../../../README.md) / [empty](../README.md) / isEmptyError
 
 # Function: isEmptyError()
 
 > **isEmptyError**(`value`): `value is Error`
 
-Defined in: [empty/specific.ts:69](https://github.com/lanlangmozhu/q-utils/blob/main/src/empty/specific.ts#L69)
+Defined in: [empty/specific.ts:69](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/empty/specific.ts#L69)
 
 检查值是否为空 Error
 

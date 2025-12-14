@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [func](../README.md) / cancelDebounce
+[qh5-utils](../../../../README.md) / [func](../README.md) / cancelDebounce
 
 # Function: cancelDebounce()
 
 > **cancelDebounce**(`debouncedFn`): `void`
 
-Defined in: [function/debounce.ts:74](https://github.com/lanlangmozhu/q-utils/blob/main/src/function/debounce.ts#L74)
+Defined in: [function/debounce.ts:74](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/function/debounce.ts#L74)
 
 取消防抖函数的执行
 

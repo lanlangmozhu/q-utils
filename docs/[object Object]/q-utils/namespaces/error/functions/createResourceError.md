@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / createResourceError
+[qh5-utils](../../../../README.md) / [error](../README.md) / createResourceError
 
 # Function: createResourceError()
 
 > **createResourceError**(`message`, `code?`): [`CustomError`](../classes/CustomError.md)
 
-Defined in: [error/create.ts:78](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/create.ts#L78)
+Defined in: [error/create.ts:78](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/create.ts#L78)
 
 创建资源错误
 

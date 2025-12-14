@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [string](../README.md) / normalizeSpace
+[qh5-utils](../../../../README.md) / [string](../README.md) / normalizeSpace
 
 # Function: normalizeSpace()
 
 > **normalizeSpace**(`str`): `string`
 
-Defined in: [string/format.ts:57](https://github.com/lanlangmozhu/q-utils/blob/main/src/string/format.ts#L57)
+Defined in: [string/format.ts:57](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/string/format.ts#L57)
 
 去除多余空格
 

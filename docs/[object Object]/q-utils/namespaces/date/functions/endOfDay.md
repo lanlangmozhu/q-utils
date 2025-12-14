@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [date](../README.md) / endOfDay
+[qh5-utils](../../../../README.md) / [date](../README.md) / endOfDay
 
 # Function: endOfDay()
 
 > **endOfDay**(`date`): `Date`
 
-Defined in: [date/time.ts:23](https://github.com/lanlangmozhu/q-utils/blob/main/src/date/time.ts#L23)
+Defined in: [date/time.ts:23](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/date/time.ts#L23)
 
 获取日期的结束时间（23:59:59）
 

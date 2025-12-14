@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [error](../README.md) / createBusinessError
+[qh5-utils](../../../../README.md) / [error](../README.md) / createBusinessError
 
 # Function: createBusinessError()
 
 > **createBusinessError**(`message`, `code?`): [`CustomError`](../classes/CustomError.md)
 
-Defined in: [error/create.ts:45](https://github.com/lanlangmozhu/q-utils/blob/main/src/error/create.ts#L45)
+Defined in: [error/create.ts:45](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/error/create.ts#L45)
 
 创建业务错误
 

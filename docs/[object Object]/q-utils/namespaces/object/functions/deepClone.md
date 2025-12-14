@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [object](../README.md) / deepClone
+[qh5-utils](../../../../README.md) / [object](../README.md) / deepClone
 
 # Function: deepClone()
 
 > **deepClone**\<`T`\>(`obj`): `T`
 
-Defined in: [object/deepClone.ts:30](https://github.com/lanlangmozhu/q-utils/blob/main/src/object/deepClone.ts#L30)
+Defined in: [object/deepClone.ts:30](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/object/deepClone.ts#L30)
 
 深拷贝对象或数组，创建一个完全独立的副本
 

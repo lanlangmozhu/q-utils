@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [array](../README.md) / uniqueBy
+[qh5-utils](../../../../README.md) / [array](../README.md) / uniqueBy
 
 # Function: uniqueBy()
 
 > **uniqueBy**\<`T`, `K`\>(`arr`, `keyOrFn`): `T`[]
 
-Defined in: [array/basic.ts:164](https://github.com/lanlangmozhu/q-utils/blob/main/src/array/basic.ts#L164)
+Defined in: [array/basic.ts:164](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/array/basic.ts#L164)
 
 根据指定条件去重
 

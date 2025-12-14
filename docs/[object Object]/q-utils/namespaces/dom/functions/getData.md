@@ -1,14 +1,14 @@
-[**q-utils v1.0.0**](../../../../README.md)
+[**qh5-utils v1.0.0**](../../../../README.md)
 
 ***
 
-[q-utils](../../../../README.md) / [dom](../README.md) / getData
+[qh5-utils](../../../../README.md) / [dom](../README.md) / getData
 
 # Function: getData()
 
 > **getData**(`element`, `key`): `string` \| `null`
 
-Defined in: [dom/element.ts:69](https://github.com/lanlangmozhu/q-utils/blob/main/src/dom/element.ts#L69)
+Defined in: [dom/element.ts:69](https://github.com/lanlangmozhu/qh5-utils/blob/main/src/dom/element.ts#L69)
 
 获取数据属性值
 
