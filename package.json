@@ -1,6 +1,6 @@
 {
   "name": "qh5-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "前端实用工具函数库，提供字符串、数组、对象、日期等操作函数",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
