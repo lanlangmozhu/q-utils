@@ -54,7 +54,7 @@ export {
 }
 
 // 创建一个包含所有命名空间的对象，作为默认导出
-const Qh5Utils = {
+const QH5Utils = {
     array,
     browser,
     color,
@@ -78,5 +78,5 @@ const Qh5Utils = {
 };
 
 // 默认导出整个库
-export default Qh5Utils;
+export default QH5Utils;
 

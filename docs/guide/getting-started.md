@@ -56,10 +56,10 @@ const cloned = deepClone({ a: 1 });
 ### 默认导入
 
 ```typescript
-import Qh5Utils from 'qh5-utils';
+import QH5Utils from 'qh5-utils';
 
-const capitalized = Qh5Utils.string.capitalize('hello world');
-const first = Qh5Utils.array.first([1, 2, 3]);
+const capitalized = QH5Utils.string.capitalize('hello world');
+const first = QH5Utils.array.first([1, 2, 3]);
 ```
 
 ## 在浏览器中使用
